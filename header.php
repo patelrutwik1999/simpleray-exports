@@ -101,7 +101,7 @@
                     <!-- Header Logo Start -->
                     <div class="align-self-center gi-header-logo">
                         <div class="header-logo">
-                            <a href="index.html"><img src="assets/img/logo/logo_main.jpg" alt="Site Logo"></a>
+                            <a href="index.html"><img style="width: 230px" src="assets/img/logo/logo-1.png" alt="Site Logo"></a>
                         </div>
                     </div>
                     <!-- Header Logo End -->

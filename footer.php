@@ -6,7 +6,7 @@
                     <div class="row m-minus-991">
                         <div class="col-sm-12 col-lg-3 gi-footer-cat wow fadeInUp">
                             <div class="gi-footer-widget gi-footer-company">
-                                <img src="assets/img/logo/logo.png" class="gi-footer-logo" alt="footer logo">
+                                <img src="assets/img/logo/logo-1.png" class="gi-footer-logo" alt="footer logo">
                                 <p class="gi-footer-detail">Grabit is the biggest market of grocery products. Get your
                                     daily
                                     needs from our store.</p>
