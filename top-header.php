@@ -1,12 +1,13 @@
+<base href="http://localhost/simpleray-exports/">
 <meta charset="UTF-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 <title>Simpleray - exports</title>
-<meta name="keywords"
-    content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery">
+<meta name="keywords" content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery">
 <meta name="description" content="Multipurpose eCommerce HTML Template">
 <meta name="author" content="Rutwik Patel, Charit Patel">
+
 
 <!-- site Favicon -->
 <link rel="icon" href="assets/img/favicon/favicon.png" sizes="32x32">
