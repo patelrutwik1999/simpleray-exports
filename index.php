@@ -10,10 +10,10 @@
 <body>
     <?php
     include './header.html';
-    ?>
-
-    <?php
+    include './sliding-checkout/sliding-checkout.html';
+    include './sliding-images/sliding-images.html';
     include './footer.html';
+    include './sub-footer.html';
     ?>
 </body>
 
