@@ -5,7 +5,7 @@
                 <div class="login-content">
                     <div class="login-logo">
                         <a href="#">
-                            <img src="images/icon/logo.png" alt="CoolAdmin">
+                            <img src="./admin-panel-assets/images/icon/logo-1.png" alt="Simpleray-Exports">
                         </a>
                     </div>
                     <div class="login-form">
