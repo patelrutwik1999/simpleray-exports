@@ -14,7 +14,7 @@
         <div class="page-container">
             <?php
             include '../header-desktop.php';
-            include 'landing-page.html';
+            include 'landing-page.php';
             include '../footer.php';
             include '../sub-footer.php';
             ?>

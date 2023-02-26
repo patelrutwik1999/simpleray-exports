@@ -280,7 +280,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                        <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                        <div class="au-card-title" style="background-image:url('./admin-panel-assets/images/bg-title-01.jpg');">
                             <div class="bg-overlay bg-overlay--blue"></div>
                             <h3>
                                 <i class="zmdi zmdi-account-calendar"></i>26 April, 2018
@@ -351,7 +351,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-                        <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                        <div class="au-card-title" style="background-image:url('./admin-panel-assets/images/bg-title-02.jpg');">
                             <div class="bg-overlay bg-overlay--blue"></div>
                             <h3>
                                 <i class="zmdi zmdi-comment-text"></i>New Messages
@@ -375,7 +375,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                        <img src="admin-panel-assets/images/icon/avatar-02.jpg" alt="John Smith">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -393,7 +393,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap online">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-03.jpg" alt="Nicholas Martinez">
+                                                        <img src="admin-panel-assets/images/icon/avatar-03.jpg" alt="Nicholas Martinez">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -411,7 +411,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap online">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                        <img src="admin-panel-assets/images/icon/avatar-04.jpg" alt="Michelle Sims">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -429,7 +429,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                        <img src="admin-panel-assets/images/icon/avatar-05.jpg" alt="Michelle Sims">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -447,7 +447,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap online">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                        <img src="admin-panel-assets/images/icon/avatar-04.jpg" alt="Michelle Sims">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -465,7 +465,7 @@
                                             <div class="au-message__item-text">
                                                 <div class="avatar-wrap">
                                                     <div class="avatar">
-                                                        <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                        <img src="admin-panel-assets/images/icon/avatar-05.jpg" alt="Michelle Sims">
                                                     </div>
                                                 </div>
                                                 <div class="text">
@@ -488,7 +488,7 @@
                                     <div class="au-chat-info">
                                         <div class="avatar-wrap online">
                                             <div class="avatar avatar--small">
-                                                <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                <img src="admin-panel-assets/images/icon/avatar-02.jpg" alt="John Smith">
                                             </div>
                                         </div>
                                         <span class="nick">
@@ -501,7 +501,7 @@
                                         <span class="mess-time">12 Min ago</span>
                                         <div class="recei-mess__inner">
                                             <div class="avatar avatar--tiny">
-                                                <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                <img src="admin-panel-assets/images/icon/avatar-02.jpg" alt="John Smith">
                                             </div>
                                             <div class="recei-mess-list">
                                                 <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur
