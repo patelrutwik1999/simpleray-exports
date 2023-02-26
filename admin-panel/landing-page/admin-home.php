@@ -13,10 +13,10 @@
         ?>
         <div class="page-container">
             <?php
-            include '../header-desktop.html';
-            include 'landing-page.html';
-            include '../footer.html';
-            include '../sub-footer.html';
+            include '../header-desktop.php';
+            include 'landing-page.php';
+            include '../footer.php';
+            include '../sub-footer.php';
             ?>
         </div>
 
