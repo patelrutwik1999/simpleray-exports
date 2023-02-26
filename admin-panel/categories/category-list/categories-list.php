@@ -1,8 +1,20 @@
 <div class="main-content">
+    <h1 class="title-3 m-b-30" style="text-align: center; margin-top: 5vh;">Category list</h1>
+    <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
+            <div style="margin-left: 1240px; margin-top: 3vh" class="row">
+                <!-- <div class="table-data__tool">
+                    <div class="table-data__tool-right"> -->
+                <a href="categories/add-category/insert-category.php">
+                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                        <i class="zmdi zmdi-plus"></i>add category</button>
+                </a>
+            </div>
+            <!-- </div>
+            </div> -->
             <div class="row">
-                <div style="margin: 200px" class="col-lg-9">
+                <div style="margin: 3.5vh auto" class="col-lg-10">
                     <div class="table-responsive table--no-card m-b-30">
                         <table class="table table-borderless table-striped table-earning">
                             <thead>
@@ -13,6 +25,7 @@
                                     <th class="text-right">price</th>
                                     <th class="text-right">quantity</th>
                                     <th class="text-right">total</th>
+                                    <th class="text-right">action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,6 +36,18 @@
                                     <td class="text-right">$999.00</td>
                                     <td class="text-right">1</td>
                                     <td class="text-right">$999.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-28 01:22</td>
@@ -31,6 +56,18 @@
                                     <td class="text-right">$756.00</td>
                                     <td class="text-right">1</td>
                                     <td class="text-right">$756.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-27 02:12</td>
@@ -39,6 +76,18 @@
                                     <td class="text-right">$22.00</td>
                                     <td class="text-right">2</td>
                                     <td class="text-right">$44.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-26 23:06</td>
@@ -47,6 +96,18 @@
                                     <td class="text-right">$1199.00</td>
                                     <td class="text-right">1</td>
                                     <td class="text-right">$1199.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-25 19:03</td>
@@ -55,6 +116,18 @@
                                     <td class="text-right">$10.00</td>
                                     <td class="text-right">3</td>
                                     <td class="text-right">$30.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-29 05:57</td>
@@ -63,6 +136,18 @@
                                     <td class="text-right">$199.00</td>
                                     <td class="text-right">6</td>
                                     <td class="text-right">$1494.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-24 19:10</td>
@@ -71,6 +156,18 @@
                                     <td class="text-right">$699.00</td>
                                     <td class="text-right">1</td>
                                     <td class="text-right">$699.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2018-09-22 00:43</td>
@@ -79,6 +176,18 @@
                                     <td class="text-right">$10.00</td>
                                     <td class="text-right">3</td>
                                     <td class="text-right">$30.00</td>
+                                    <td>
+                                        <div class="table-data-feature">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <i class="zmdi zmdi-edit"></i>
+                                            </button>
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Delete">
+                                                <i class="zmdi zmdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
