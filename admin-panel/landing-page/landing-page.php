@@ -1,5 +1,5 @@
 <!-- MAIN CONTENT-->
-<div class="main-content">
+<div style = "margin-top: 40px" class="main-content">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row">

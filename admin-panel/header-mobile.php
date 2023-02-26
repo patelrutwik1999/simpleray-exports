@@ -2,9 +2,9 @@
 <header class="header-mobile d-block d-lg-none">
     <div class="header-mobile__bar">
         <div class="container-fluid">
-            <div class="header-mobile-inner">
-                <a class="logo" href="index.html">
-                    <img src="admin-panel-assets/images/icon/logo.png" alt="CoolAdmin" />
+            <div style="height: 11.5vh;" class="header-mobile-inner">
+                <a class="logo" href="landing-page/admin-home.php">
+                    <img src="admin-panel-assets/images/icon/logo-1.png" alt="Simpleray-Exports" />
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
                     <span class="hamburger-box">
