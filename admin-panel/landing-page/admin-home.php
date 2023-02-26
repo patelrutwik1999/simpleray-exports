@@ -9,6 +9,7 @@
 <body class="animsition">
     <div class="page-wrapper">
         <?php
+        include '../header-mobile.php';
         include '../sidebar/menu-sidebar.html';
         ?>
         <div class="page-container">
@@ -16,11 +17,13 @@
             include '../header-desktop.php';
             include 'landing-page.php';
             include '../footer.php';
-            include '../sub-footer.php';
             ?>
         </div>
 
     </div>
+    <?php
+    include '../sub-footer.php';
+    ?>
 </body>
 
 </html>
