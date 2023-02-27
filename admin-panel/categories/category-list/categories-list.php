@@ -3,11 +3,11 @@
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
-            <div style="margin-left: 1240px; margin-top: 3vh" class="row">
+            <div class="row">
                 <!-- <div class="table-data__tool">
                     <div class="table-data__tool-right"> -->
                 <a href="categories/add-category/insert-category.php">
-                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                    <button style="margin-left: 129vh; margin-top: 3vh;" class="au-btn au-btn-icon au-btn--green au-btn--small">
                         <i class="zmdi zmdi-plus"></i>add category</button>
                 </a>
             </div>
