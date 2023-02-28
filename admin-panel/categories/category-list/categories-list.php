@@ -6,9 +6,9 @@
             <div class="row">
                 <!-- <div class="table-data__tool">
                     <div class="table-data__tool-right"> -->
-                <a href="categories/add-category/insert-category.php">
-                    <button style="margin-left: 129vh; margin-top: 3vh;" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add category</button>
+                <a href="categories/add-category/insert-category.php" class = "button1"><i class="zmdi zmdi-plus"></i> Add Category
+                    <!-- <button style="margin-left: 78.4rem; margin-top: 3rem;" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                        <i class="zmdi zmdi-plus"></i>add category</button> -->
                 </a>
             </div>
             <!-- </div>

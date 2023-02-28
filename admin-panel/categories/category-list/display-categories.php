@@ -4,6 +4,7 @@
     <?php
     include '../../top-header.php';
     ?>
+    <link href="categories/category-list/styles.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
