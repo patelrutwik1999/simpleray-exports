@@ -9,19 +9,18 @@
                         </a>
                     </div>
                     <div class="login-form">
-                        <form action="" method="post">
+                        <form action="admin-login/admin-login-validation/admin-login-validation-process.php"
+                            method="POST">
                             <div class="form-group">
                                 <label>Email Address</label>
                                 <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                <input class="au-input au-input--full" type="password" name="password"
+                                    placeholder="Password">
                             </div>
                             <div class="login-checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember">Remember Me
-                                </label>
                                 <label>
                                     <a href="forget-password/forget-password.php">Forgotten Password?</a>
                                 </label>
