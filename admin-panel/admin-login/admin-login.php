@@ -4,6 +4,7 @@
     <title>Signup Form</title>
     <?php
     include '../top-header.php';
+    
     ?>
 </head>
 

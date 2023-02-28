@@ -11,7 +11,7 @@
 
 <body class="animsition">
     <?php
-    include 'admin-login/admin-login.php';
+    include 'admin-login/login-form.php';
     include 'sub-footer.php';
     ?>
 </body>
