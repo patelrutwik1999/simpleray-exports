@@ -1,0 +1,21 @@
+.insert-category-heading {
+    font-size: 2rem;
+}
+
+.insert-category-heading:hover {
+    color: black;
+}
+
+.add-category-form {
+    display: flex;
+    justify-content: center;
+}
+
+.add-category-form-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: black;
+    margin: 1.7rem;
+    font-weight: bolder;
+}

@@ -4,6 +4,7 @@
     <?php
     include '../../top-header.php';
     ?>
+    <link href="categories/add-category/add-category-form.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
@@ -20,6 +21,15 @@
             ?>
         </div>
     </div>
+    <script>
+        document.getElementById('select-sub-category').onchange = function() {
+            if (this.value == '0') {
+                document.getElementById("select-parent-category").disabled = true;
+            } else {
+                document.getElementById("select-parent-category").disabled = false;
+            }
+        }
+    </script>
     <?php
     include '../../sub-footer.php';
     ?>
