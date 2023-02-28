@@ -1,13 +1,15 @@
 <?php
-$servername = "localhost";
+$servername = 'localhost';
 $username = 'root';
-$password = 'root';
-$database_name = 'simpleray-exports';
+$password = '';
+$dbname = 'simplerayexports';
 
-$conn = new mysqli($servername, $username, $password, $database_name);
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+echo "Hello";
 
 if ($conn->connect_error) {
-    die("Connection Failed!!" . $conn->connect_error);
+    die("Connection not established");
 } else {
-    echo "Successful";
+    echo "Connection Successful";
 }
