@@ -4,7 +4,7 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row add-product-button-section">
-                <a href="categories/add-category/insert-category.php" class='add-product'>
+                <a href="products/add-product/insert-product.php" class='add-product'>
                     <i class="zmdi zmdi-plus"></i> Add product
                 </a>
             </div>
