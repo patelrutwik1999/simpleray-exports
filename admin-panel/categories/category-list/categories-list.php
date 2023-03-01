@@ -1,13 +1,13 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30" style="text-align: center; margin-top: 5vh;">Category list</h1>
+    <h1 class="title-3 m-b-30 categories-list-title">Category list</h1>
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row add-category-button-section">
-                
+
                 <a href="categories/add-category/insert-category.php" class='add-category '>
                     <i class="zmdi zmdi-plus"></i> Add Category
-                    
+
                 </a>
             </div>
 
@@ -36,10 +36,12 @@
                                     <td class="text-right">$999.00</td>
                                     <td>
                                         <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
+                                            <a href="categories/edit-category/edit-category.php">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </button>
+                                            </a>
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Delete">
                                                 <i class="zmdi zmdi-delete"></i>
