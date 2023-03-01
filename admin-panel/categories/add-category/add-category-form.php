@@ -10,7 +10,7 @@
                     <div class="card">
                         <div class="card-header insert-category-heading">Category Details</div>
                         <div class="card-body">
-                            <form action="categories/add-category/store-category/store-category.php" method="post" novalidate="novalidate">
+                            <form action="categories/add-category/store-category/store-category.php" method="POST" novalidate="novalidate">
                                 <div class="form-group">
                                     <label for="cc-payment" class="control-label mb-1">Category Name</label>
                                     <input id="cc-pament" name="category_name" type="text" class="form-control" aria-required="true" aria-invalid="false" value="">
