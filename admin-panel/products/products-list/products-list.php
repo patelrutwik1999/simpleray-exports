@@ -4,7 +4,7 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row">
-                    <div class = >
+                    <div>
                         <form class="form-header products-list-search-bar" action="" method="POST">
                             <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search"
                                 placeholder="Search product name..." onkeyup="myFunction()" id="product-search-bar"/>

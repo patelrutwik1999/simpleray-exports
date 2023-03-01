@@ -10,6 +10,7 @@
 .add-category-button-section {
     display: flex;
     justify-content: right;
+    margin-left: 5.5rem;
 }
 
 a.add-category {
@@ -41,3 +42,9 @@ a.add-category:hover {
     }
 }
 
+.categories-list-search-bar {
+    margin-left: 9.2rem;
+    float: left;
+    /* display: flex;
+    justify-content: left; */
+}
