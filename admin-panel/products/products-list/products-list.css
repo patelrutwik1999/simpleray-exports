@@ -1,19 +1,10 @@
-.categories-list-title {
-    display: flex;
-    justify-content: center;
-    font-size: 2.75rem;
-    color: black;
-    margin: 1.7rem;
-    font-weight: bolder;
-}
-
-.add-category-button-section {
+.add-product-button-section {
     display: flex;
     justify-content: right;
     margin-left: 5.5rem;
 }
 
-a.add-category {
+a.add-product {
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
@@ -30,7 +21,7 @@ a.add-category {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-a.add-category:hover {
+a.add-product:hover {
     color: #ffffff;
     background-color: #169e3a;
 }
@@ -42,7 +33,16 @@ a.add-category:hover {
     }
 }
 
-.categories-list-search-bar {
+.products-list-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: black;
+    margin: 1.7rem;
+    font-weight: bolder;
+}
+
+.products-list-search-bar {
     margin-left: 9.2rem;
     float: left;
     /* display: flex;

@@ -1,25 +1,27 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30" style="text-align: center; margin-top: 5vh;">Category list</h1>
+    <h1 class="title-3 m-b-30 categories-list-title">Category list</h1>
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
-            <div class="row add-category-button-section">
-                <!-- <div class="table-data__tool">
-                    <div class="table-data__tool-right"> -->
-                <a href="categories/add-category/insert-category.php" class='add-category '><i
-                        class="zmdi zmdi-plus"></i> Add Category
-                    <!-- <button style="margin-left: 78.4rem; margin-top: 3rem;" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add category</button> -->
-                    <!-- <button type="button" style="background-color: #51ed7a; color: black;" class="btn btn-outline-success"><i class="zmdi zmdi-plus"></i> Add Category</button>     -->
-                </a>
+            <div class="row">
+                <div>
+                    <form class="form-header categories-list-search-bar" action="" method="POST">
+                        <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;"
+                            type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()"
+                            id="category-search-bar" />
+                    </form>
+                </div>
+                <div class="add-category-button-section">
+                    <a href="categories/add-category/insert-category.php" class='add-category'>
+                        <i class="zmdi zmdi-plus"></i> Add Category
+                    </a>
+                </div>
             </div>
 
-            <!-- </div>
-    </div> -->
             <div class="row">
                 <div style="margin: 3.5vh auto" class="col-lg-10">
                     <div class="table-responsive table--no-card m-b-30">
-                        <table class="table table-borderless table-striped table-earning">
+                        <table class="table table-borderless table-striped table-earning" id="category-table">
                             <thead>
                                 <tr>
                                     <th>date</th>
@@ -43,7 +45,9 @@
                                         <div class="table-data-feature">
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                                <a href="categories/edit-category/edit-category.php">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </a>
                                             </button>
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Delete">
