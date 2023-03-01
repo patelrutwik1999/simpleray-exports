@@ -36,12 +36,12 @@
                                     <td class="text-right">$999.00</td>
                                     <td>
                                         <div class="table-data-feature">
-                                            <a href="categories/edit-category/edit-category.php">
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Edit">
+                                            <button class="item" data-toggle="tooltip" data-placement="top"
+                                                title="Edit">
+                                                <a href="categories/edit-category/edit-category.php">
                                                     <i class="zmdi zmdi-edit"></i>
-                                                </button>
-                                            </a>
+                                                </a>
+                                            </button>
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Delete">
                                                 <i class="zmdi zmdi-delete"></i>

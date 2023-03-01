@@ -50,7 +50,9 @@
                                         <div class="table-data-feature">
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
+                                                <a href="products/edit-product/edit-product.php">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </a>
                                             </button>
                                             <button class="item" data-toggle="tooltip" data-placement="top"
                                                 title="Delete">
