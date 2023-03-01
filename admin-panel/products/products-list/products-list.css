@@ -1,6 +1,7 @@
 .add-product-button-section {
     display: flex;
     justify-content: right;
+    margin-left: 5.5rem;
 }
 
 a.add-product {
@@ -39,4 +40,9 @@ a.add-product:hover {
     color: black;
     margin: 1.7rem;
     font-weight: bolder;
+}
+
+.products-list-search-bar {
+    margin-left: 9.2rem;
+    float: left;
 }

@@ -3,10 +3,25 @@
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
-            <div class="row add-product-button-section">
-                <a href="products/add-product/insert-product.php" class='add-product'>
-                    <i class="zmdi zmdi-plus"></i> Add product
-                </a>
+            <div class="row ">
+                <div>
+                    <div class="products-list-search-bar">
+                        <form class="form-header" action="" method="POST">
+                            <input class="au-input au-input--xl" type="text" name="search"
+                                placeholder="Search product..." />
+                            <button class="au-btn--submit" type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="add-product-button-section">
+                        <a href="products/add-product/insert-product.php" class='add-product'>
+                            <i class="zmdi zmdi-plus"></i> Add product
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div style="margin: 3.5vh auto" class="col-lg-10">
