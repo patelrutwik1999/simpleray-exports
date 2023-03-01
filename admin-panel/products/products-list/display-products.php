@@ -4,6 +4,7 @@
     <?php
     include '../../top-header.php';
     ?>
+    <link href="products/products-list/products-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">

@@ -4,18 +4,13 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row add-category-button-section">
-                <!-- <div class="table-data__tool">
-                    <div class="table-data__tool-right"> -->
-                <a href="categories/add-category/insert-category.php" class='add-category '><i
-                        class="zmdi zmdi-plus"></i> Add Category
-                    <!-- <button style="margin-left: 78.4rem; margin-top: 3rem;" class="au-btn au-btn-icon au-btn--green au-btn--small">
-                        <i class="zmdi zmdi-plus"></i>add category</button> -->
-                    <!-- <button type="button" style="background-color: #51ed7a; color: black;" class="btn btn-outline-success"><i class="zmdi zmdi-plus"></i> Add Category</button>     -->
+                
+                <a href="categories/add-category/insert-category.php" class='add-category '>
+                    <i class="zmdi zmdi-plus"></i> Add Category
+                    
                 </a>
             </div>
 
-            <!-- </div>
-    </div> -->
             <div class="row">
                 <div style="margin: 3.5vh auto" class="col-lg-10">
                     <div class="table-responsive table--no-card m-b-30">
