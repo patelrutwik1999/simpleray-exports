@@ -45,4 +45,6 @@ a.add-product:hover {
 .products-list-search-bar {
     margin-left: 9.2rem;
     float: left;
+    /* display: flex;
+    justify-content: left; */
 }
