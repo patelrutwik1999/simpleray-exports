@@ -5,8 +5,42 @@
                 Insert Category
                 <hr class="add-category-shine">
             </div>
+
             <div class="row add-category-form">
                 <div class="col-lg-6 mb-2">
+                    <?php
+                    if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
+                        $_SESSION['message'] = false;
+                    ?>
+                        <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                            <span class="badge badge-pill badge-success">Success</span>
+                            <?php
+                            echo $_SESSION['success-message'];
+                            $_SESSION['success-message'] = '';
+                            ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                    } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
+                        $_SESSION['is-error'] = false;
+                        $_SESSION['message'] = false;
+                    ?>
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                            <span class="badge badge-pill badge-danger">Oops</span>
+                            <?php
+                            echo $_SESSION['error-message'];
+                            $_SESSION['error-message'] = '';
+                            ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                    }
+                    ?>
+
                     <div class="card">
                         <div class="card-header insert-category-heading">Category Details</div>
                         <div class="card-body">
