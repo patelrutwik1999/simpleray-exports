@@ -28,6 +28,7 @@ if ($num == 1) {
                                         <input id="cc-pament" name="category_name" type="text" class="form-control" aria-required="true" aria-invalid="false" value="<?php echo $row['category_name']; ?>">
                                     </div>
 
+
                                     <div class="form-group has-success">
                                         <label for="cc-name" class="control-label mb-1">Is it a sub-category?</label>
                                         <div class="col-20 col-md-20">
@@ -64,6 +65,21 @@ if ($num == 1) {
                                                 <option value="0">No</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cc-payment" class="control-label mb-1">Category Added On</label>
+                                        <input id="cc-pament" readonly type="text" class="form-control" aria-required="true" aria-invalid="false" value="<?php echo $row['added_on']; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cc-payment" class="control-label mb-1">Category Updated On</label>
+                                        <input id="cc-pament" readonly type="text" class="form-control" aria-required="true" aria-invalid="false" value="
+                                        <?php
+                                        if ($row['updated_on'] == null) {
+                                            echo "Category data has not been updated yet.";
+                                        } else {
+                                            echo $row['updated_on'];
+                                        }
+                                        ?>">
                                     </div>
                                     <div>
                                         <button id="submit-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit-button">

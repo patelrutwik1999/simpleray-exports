@@ -1,24 +1,30 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30 categories-list-title">Category list</h1>
-    <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
+
+    <h1 class="title-3 m-b-30 categories-list-title">Category list
+    </h1>
+
+    <hr style=" height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
-            <div class="row">
-                <div>
-                    <form class="form-header categories-list-search-bar" action="" method="POST">
-                        <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
-                    </form>
-                </div>
-                <div class="add-category-button-section">
-                    <a href="categories/add-category/insert-category.php" class='add-category'>
-                        <i class="zmdi zmdi-plus"></i> Add Category
-                    </a>
-                </div>
-            </div>
+
 
             <div class="row">
+
                 <div style="margin: 3.5vh auto" class="col-lg-10">
+                    <div class="row">
+                        <div class="search-and-add-category">
+                            <form class="form-header categories-list-search-bar" action="" method="POST">
+                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
+                            </form>
+                        </div>
+                        <div class="search-and-add-category">
+                            <a href=" categories/add-category/insert-category.php" class='add-category'>
+                                <i class="zmdi zmdi-plus"></i> Add Category
+                            </a>
+                        </div>
+                    </div>
                     <div class="table-responsive table--no-card m-b-30">
+
                         <table class="table table-borderless table-striped table-earning" id="category-table">
                             <thead>
                                 <tr>
