@@ -66,8 +66,16 @@
                                     <div class="col-20 col-md-20">
                                         <select name="parent_category" id="select-parent-category" class="form-control" placeholder="Disabled" disabled='false'>
                                             <option value="2">Please select</option>
-                                            <option value="1">Yes</option>
-                                            <option value="0">No</option>
+                                            <?php
+                                            include '../../../config/config.php';
+                                            $get_categories = "select category_id, category_name from add_category";
+                                            $retrieved_categories = mysqli_query($conn, $get_categories);
+                                            while ($categories = mysqli_fetch_array($retrieved_categories)) {
+                                            ?>
+                                                <option value="<?php echo $categories['category_id'] ?>"><?php echo $categories['category_name'] ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>

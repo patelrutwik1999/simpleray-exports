@@ -2,6 +2,7 @@
 
 <head>
     <?php
+    session_start();
     include '../../top-header.php';
     ?>
     <link href="categories/edit-category/edit-category-form.css" rel="stylesheet" media="all">
@@ -21,15 +22,6 @@
             ?>
         </div>
     </div>
-    <script>
-        document.getElementById('select-sub-category').onchange = function() {
-            if (this.value == '0') {
-                document.getElementById("select-parent-category").disabled = true;
-            } else {
-                document.getElementById("select-parent-category").disabled = false;
-            }
-        }
-    </script>
     <?php
     include '../../sub-footer.php';
     ?>
