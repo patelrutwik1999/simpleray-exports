@@ -28,7 +28,6 @@
                         <table class="table table-borderless table-striped table-earning" id="category-table">
                             <thead>
                                 <tr>
-                                    <th>Category Id</th>
                                     <th>Category Name</th>
                                     <th>Category Added On</th>
                                     <th>action</th>
@@ -45,7 +44,6 @@
                                 while ($retrieved_categories = mysqli_fetch_array($result)) {
                                 ?>
                                     <tr>
-                                        <td><?php echo $retrieved_categories['category_id']; ?></td>
                                         <td><?php echo $retrieved_categories['category_name']; ?></td>
                                         <td><?php echo $retrieved_categories['added_on']; ?></td>
 
