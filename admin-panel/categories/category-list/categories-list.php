@@ -23,6 +23,39 @@
                             </a>
                         </div>
                     </div>
+
+                    <?php
+                    if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
+                        $_SESSION['message'] = false;
+                    ?>
+                        <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
+                            <span class="badge badge-pill badge-success">Success</span>
+                            <?php
+                            echo $_SESSION['success-message'];
+                            $_SESSION['success-message'] = '';
+                            ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                    } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
+                        $_SESSION['is-error'] = false;
+                        $_SESSION['message'] = false;
+                    ?>
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+                            <span class="badge badge-pill badge-danger">Oops</span>
+                            <?php
+                            echo $_SESSION['error-message'];
+                            $_SESSION['error-message'] = '';
+                            ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                    }
+                    ?>
                     <div class="table-responsive table--no-card m-b-30">
 
                         <table class="table table-borderless table-striped table-earning" id="category-table">
@@ -49,19 +82,22 @@
 
                                         <td>
                                             <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <button class=" item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <a href="categories/edit-category/edit-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </a>
                                                 </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                    <i class="zmdi zmdi-delete"></i>
+                                                <button class="take-id-from-here item" data-toggle="modal" data-placement="top" data-target="#mediumModal" title="Delete">
+                                                    <a href="categories/delete-category/delete-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </a>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
                                 <?php
                                 }
+                                mysqli_close($conn);
                                 ?>
                             </tbody>
                         </table>
@@ -71,3 +107,27 @@
         </div>
     </div>
 </div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mediumModalLabel">WARNING!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Are you sure, you want to delete this category?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="id-bring-here btn btn-primary"><a href="categories/delete-category/delete-category.php" style="color:white">Confirm</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Delete Modal End -->
