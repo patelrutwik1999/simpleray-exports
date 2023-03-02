@@ -2,6 +2,7 @@
 
 <head>
     <?php
+    session_start();
     include '../../top-header.php';
     ?>
     <link href="categories/category-list/display-categories.css" rel="stylesheet" media="all">

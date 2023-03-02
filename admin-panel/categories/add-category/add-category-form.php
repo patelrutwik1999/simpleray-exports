@@ -75,6 +75,7 @@
                                                 <option value="<?php echo $categories['category_id'] ?>"><?php echo $categories['category_name'] ?></option>
                                             <?php
                                             }
+                                            mysqli_close($conn);
                                             ?>
                                         </select>
                                     </div>

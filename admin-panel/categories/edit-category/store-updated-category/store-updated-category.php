@@ -28,11 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $update_category = "update add_category SET category_name = '$category_name', hasSubCategory = '$is_subcategory', hasParentCategory = '$has_parent_category', parent_category_id='$parent_category_Id', updated_on='$updated_on' WHERE category_id = '$category_id'";
     }
     if (mysqli_query($conn, $update_category)) {
+        mysqli_close($conn);
         $_SESSION['is-error'] = false;
         $_SESSION['message'] = true;
         $_SESSION['success-message'] = "The category has been updated.";
         header("location:../edit-category.php?category_id=$category_id");
     } else {
+        mysqli_close($conn);
         $_SESSION['is-error'] = true;
         $_SESSION['message'] = true;
         $_SESSION['error-message'] = "The category has not been updated.";

@@ -128,7 +128,7 @@ if ($num == 1) {
                                                     <option value="<?php echo $categories['category_id'] ?>"><?php echo $categories['category_name'] ?></option>
                                                 <?php
                                                 }
-                                                ?>
+
                                                 ?>
                                             </select>
                                         </div>
@@ -164,4 +164,5 @@ if ($num == 1) {
     </div>
 <?php
 }
+mysqli_close($conn);
 ?>
