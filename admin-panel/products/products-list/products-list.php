@@ -104,7 +104,7 @@
                                             <div class="table-data-feature">
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
                                                     title="Edit">
-                                                    <a href="products/edit-product/edit-product.php">
+                                                    <a href="products/edit-product/edit-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </a>
                                                 </button>
