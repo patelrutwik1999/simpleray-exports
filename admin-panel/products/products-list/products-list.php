@@ -95,7 +95,10 @@
                                             <?php echo $retrieved_products['parent_category_name'] ?>
                                         </td>
                                         <td>
-                                            Image
+                                            <a
+                                                href="products/products-list/view-image/view-image.php?path=<?php echo $retrieved_products['photo'] ?>">
+                                                Image
+                                            </a>
                                         </td>
                                         <td>
                                             <div class="table-data-feature">

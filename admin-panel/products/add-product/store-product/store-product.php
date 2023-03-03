@@ -25,7 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $filename = $_FILES["product_photo"]["name"];
         $tempname = $_FILES["product_photo"]["tmp_name"];
         $folder = "admin-panel-assets/product-images/" . $filename;
-        move_uploaded_file($tempname, $folder);
+        if (move_uploaded_file($tempname, $folder)) {
+            echo "<h3>  Image uploaded successfully!</h3>";
+        } else {
+            echo "<h3>  Failed to upload image!</h3>";
+        }
     }
 
 
