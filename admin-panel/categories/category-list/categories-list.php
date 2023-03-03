@@ -14,7 +14,8 @@
                     <div class="row">
                         <div class="search-and-add-category">
                             <form class="form-header categories-list-search-bar" action="" method="POST">
-                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
+                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" 
+                                    type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
                             </form>
                         </div>
                         <div class="search-and-add-category">

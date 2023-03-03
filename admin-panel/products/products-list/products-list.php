@@ -110,11 +110,11 @@
                                                     </a>
                                                 </button>
                                                 <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Delete">
+                                                    title="Delete" onclick = "handleDelete()">
                                                     <a
-                                                        href="products/delete-product/delete-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </a>
+                                                            href="products/delete-product/delete-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </a>
                                                 </button>
                                             </div>
                                         </td>
@@ -126,29 +126,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Delete Modal -->
-<div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="mediumModalLabel">WARNING!!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>
-                    Are you sure, you want to delete this product?
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="id-bring-here btn btn-primary"><a href="products/delete-product/delete-product.php" style="color:white">Confirm</a></button>
             </div>
         </div>
     </div>
