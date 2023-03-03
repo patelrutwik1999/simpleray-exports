@@ -4,19 +4,51 @@
         <div class="row m-b-minus-15px">
             <div class="col-xl-12 border-content-color">
                 <div class="gi-category-block owl-carousel">
-                    <div class="gi-cat-box gi-cat-box-1">
+                    <div class="gi-cat-box gi-cat-box-2">
                         <div class="gi-cat-icon">
-                            <span class="gi-lbl">30%</span>
-                            <i class="fi fi-tr-peach"></i>
+                            <i class="fi fi-tr-bread"></i>
                             <div class="gi-cat-detail">
                                 <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Fruits</h4>
+                                    <h4 class="gi-cat-title">Bakery</h4>
                                 </a>
-                                <p class="items">320 Items</p>
+                                <p class="items">65 Items</p>
                             </div>
                         </div>
                     </div>
-                    <div class="gi-cat-box gi-cat-box-2">
+                    <?php
+                    
+                    echo "hello";
+                    $get_categories = "select * from add_category";
+                    $retrieved_categories = mysqli_query($conn, $get_categories);
+                    while ($category = mysqli_fetch_array($retrieved_categories)) {
+                    ?>
+                        <div class="gi-cat-box gi-cat-box-2">
+                            <div class="gi-cat-icon">
+                                <i class="fi fi-tr-peach"></i>
+                                <div class="gi-cat-detail">
+                                    <a href="shop-left-sidebar-col-3.html">
+                                        <h4 class="gi-cat-title"><?php echo $category['category_name']; ?></h4>
+                                    </a>
+                                    <!-- <p class="items">320 Items</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gi-cat-box gi-cat-box-2">
+                            <div class="gi-cat-icon">
+                                <i class="fi fi-tr-bread"></i>
+                                <div class="gi-cat-detail">
+                                    <a href="shop-left-sidebar-col-3.html">
+                                        <h4 class="gi-cat-title">Bakery</h4>
+                                    </a>
+                                    <p class="items">65 Items</p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+
+                    <!-- <div class="gi-cat-box gi-cat-box-2">
                         <div class="gi-cat-icon">
                             <i class="fi fi-tr-bread"></i>
                             <div class="gi-cat-detail">
@@ -106,7 +138,7 @@
                                 <p class="items">154 Items</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
