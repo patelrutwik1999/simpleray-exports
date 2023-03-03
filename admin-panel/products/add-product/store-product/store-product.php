@@ -1,0 +1,69 @@
+<?php
+include '../../../../config/config.php';
+session_start();
+function checkInput($data)
+{
+    $data = trim($data);
+    $data = stripcslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $productName = checkInput($_POST['product_name']);
+    $productDescription = $_POST['product_description'];
+    $productPrice = $_POST['product_price'];
+    $parentCategoryId = $_POST['parent_category'];
+
+    date_default_timezone_set("Asia/Kolkata");
+    $productAddedOn = date("Y-m-d h:i:s");
+    $productId = uniqid('prod', true);
+
+
+    // if (isset($_POST['submit'])) {
+    if (isset($_FILES) && !empty($_FILES)) {
+        $filename = $_FILES["product_photo"]["name"];
+        $tempname = $_FILES["product_photo"]["tmp_name"];
+        $folder = "admin-panel-assets/product-images/" . $filename;
+        move_uploaded_file($tempname, $folder);
+    }
+
+
+    $findCategoryName = "select category_name from add_category where category_id = '$parentCategoryId'";
+    $retrieved_categories = mysqli_query($conn, $findCategoryName);
+    $categories = mysqli_fetch_array($retrieved_categories);
+    $parentCategoryName = $categories['category_name'];
+
+    $insert_product = "insert into products(
+            product_id,
+            product_name,
+            description,
+            price,
+            parent_category_id,
+            parent_category_name,
+            added_on,
+            photo
+            ) values (
+                '$productId',
+                '$productName',
+                '$productDescription',
+                '$productPrice',
+                '$parentCategoryId',
+                '$parentCategoryName',
+                '$productAddedOn',
+                '$folder'
+            )";
+
+    if (mysqli_query($conn, $insert_product)) {
+        mysqli_close($conn);
+        $_SESSION['is-error'] = false;
+        $_SESSION['message'] = true;
+        $_SESSION['success-message'] = "The product has been added.";
+        header("location:../insert-product.php");
+    } else {
+        $_SESSION['is-error'] = true;
+        $_SESSION['message'] = true;
+        $_SESSION['error-message'] = "The product has not been added.";
+        header("location:../insert-product.php");
+    }
+}
