@@ -67,173 +67,54 @@
                                     <th>Price</th>
                                     <th>Category</th>
                                     <th>Photo</th>
-                                    <th>Action
+                                    <th>Action</th>
                                     <!-- <th class="text-right">price</th> -->
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>100398</td>
-                                    <td>iPhone X 64Gb Grey</td>
-                                    <td class="text-right">$999.00</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">$999.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <a href="products/edit-product/edit-product.php">
-                                                    <i class="zmdi zmdi-edit"></i>
-                                                </a>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-28 01:22</td>
-                                    <td>100397</td>
-                                    <td>Samsung S8 Black</td>
-                                    <td class="text-right">$756.00</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">$756.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-27 02:12</td>
-                                    <td>100396</td>
-                                    <td>Game Console Controller</td>
-                                    <td class="text-right">$22.00</td>
-                                    <td class="text-right">2</td>
-                                    <td class="text-right">$44.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-26 23:06</td>
-                                    <td>100395</td>
-                                    <td>iPhone X 256Gb Black</td>
-                                    <td class="text-right">$1199.00</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">$1199.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-25 19:03</td>
-                                    <td>100393</td>
-                                    <td>USB 3.0 Cable</td>
-                                    <td class="text-right">$10.00</td>
-                                    <td class="text-right">3</td>
-                                    <td class="text-right">$30.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-29 05:57</td>
-                                    <td>100392</td>
-                                    <td>Smartwatch 4.0 LTE Wifi</td>
-                                    <td class="text-right">$199.00</td>
-                                    <td class="text-right">6</td>
-                                    <td class="text-right">$1494.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-24 19:10</td>
-                                    <td>100391</td>
-                                    <td>Camera C430W 4k</td>
-                                    <td class="text-right">$699.00</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">$699.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2018-09-22 00:43</td>
-                                    <td>100393</td>
-                                    <td>USB 3.0 Cable</td>
-                                    <td class="text-right">$10.00</td>
-                                    <td class="text-right">3</td>
-                                    <td class="text-right">$30.00</td>
-                                    <td>
-                                        <div class="table-data-feature">
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Edit">
-                                                <i class="zmdi zmdi-edit"></i>
-                                            </button>
-                                            <button class="item" data-toggle="tooltip" data-placement="top"
-                                                title="Delete">
-                                                <i class="zmdi zmdi-delete"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+
+                                <?php
+                                include '../../../config/config.php';
+
+                                $get_products = "select * from products";
+                                $result = mysqli_query($conn, $get_products);
+                                $num = mysqli_num_rows($result);
+                                while ($retrieved_products = mysqli_fetch_array($result)) {
+                                    ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $retrieved_products['product_name']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $retrieved_products['description'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $retrieved_products['price'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $retrieved_products['parent_category_name'] ?>
+                                        </td>
+                                        <td>
+                                            Image
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                    <a href="products/edit-product/edit-product.php">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </a>
+                                                </button>
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Delete">
+                                                    <i class="zmdi zmdi-delete"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
