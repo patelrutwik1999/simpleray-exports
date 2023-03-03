@@ -19,19 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $productAddedOn = date("Y-m-d h:i:s");
     $productId = uniqid('prod', true);
 
+    // if (isset($_FILES) && !empty($_FILES)) {
+    //     $filename = $_FILES["product_photo"]["name"];
+    //     $tempname = $_FILES["product_photo"]["tmp_name"];
+    //     echo $tempname;
+    //     $folder = "admin-panel-assets/product-images/" . $filename;
+    //     if (move_uploaded_file($tempname, $folder)) {
+    //         echo "<h3>  Image uploaded successfully!</h3>";
+    //     } else {
+    //         echo "<h3>  Failed to upload image!</h3>";
+    //     }
+    // }
 
-    // if (isset($_POST['submit'])) {
-    if (isset($_FILES) && !empty($_FILES)) {
-        $filename = $_FILES["product_photo"]["name"];
-        $tempname = $_FILES["product_photo"]["tmp_name"];
-        $folder = "admin-panel-assets/product-images/" . $filename;
-        if (move_uploaded_file($tempname, $folder)) {
-            echo "<h3>  Image uploaded successfully!</h3>";
-        } else {
-            echo "<h3>  Failed to upload image!</h3>";
-        }
+    $target_dir = "../../../admin-panel-assets/product-images/";
+    $target_file = $target_dir . basename($_FILES["product_photo"]["name"]);
+    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+    move_uploaded_file($_FILES["product_photo"]["tmp_name"], $target_file);
+    $image = basename($_FILES["product_photo"]["name"], $imageFileType); // used to store the filename in a variable
+    $imageFileType = strtolower($imageFileType);
+    if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
+        echo $imageFileType;
+        echo "File Format Not Suppoted";
     }
-
 
     $findCategoryName = "select category_name from add_category where category_id = '$parentCategoryId'";
     $retrieved_categories = mysqli_query($conn, $findCategoryName);
@@ -55,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 '$parentCategoryId',
                 '$parentCategoryName',
                 '$productAddedOn',
-                '$folder'
+                '$target_file'
             )";
 
     if (mysqli_query($conn, $insert_product)) {
