@@ -63,6 +63,7 @@
                                 <tr>
                                     <th>Category Name</th>
                                     <th>Category Added On</th>
+                                    <th>Category Last Updated</th>
                                     <th>action</th>
                                 </tr>
                             </thead>
@@ -79,6 +80,7 @@
                                     <tr>
                                         <td><?php echo $retrieved_categories['category_name']; ?></td>
                                         <td><?php echo $retrieved_categories['added_on']; ?></td>
+                                        <td><?php echo $retrieved_categories['updated_on']; ?></td>
 
                                         <td>
                                             <div class="table-data-feature">
