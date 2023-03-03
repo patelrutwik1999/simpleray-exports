@@ -117,7 +117,8 @@ if ($num == 1) {
                                     </div>
                                     <div class="form-group">
                                         <label for="file-input" class=" form-control-label">Product Photo</label>
-                                        <input type="file" id="file-input" name="product_photo" class="form-control-file">
+                                        <button><a href = "products/products-list/view-image/view-image.php?path=<?php echo $row['photo'] ?>">
+                                        Click here</a></button>
                                     </div>
                                     <!-- <div class="form-group has-success">
                                         <label for="cc-name" class="control-label mb-1">Please select the name of the parent
@@ -131,6 +132,11 @@ if ($num == 1) {
                                             </select>
                                         </div>
                                     </div> -->
+                                    <div class="form-group">
+                                        <label for="file-input" class=" form-control-label">Want to change product image? Upload new one.</label>
+                                        <input type="file" id="file-input" name="product_photo" class="form-control-file">
+                                    </div>
+
                                     <div>
                                         <button id="submit-button" type="submit" class="btn btn-lg btn-info btn-block"
                                             name="submit-button">
