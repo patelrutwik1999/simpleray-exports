@@ -80,3 +80,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("location:../insert-product.php");
     }
 }
+?>

@@ -41,3 +41,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("location:../edit-category.php?category_id=$category_id");
     }
 }
+?>

@@ -55,7 +55,7 @@ if ($num == 1) {
                             <div class="card-header edit-product-heading">Product Details</div>
                             <div class="card-body">
                                 <form action="products/edit-product/store-updated-product/store-updated-product.php"
-                                    method="post" novalidate="novalidate">
+                                    method="post" novalidate="novalidate" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Product Id</label>
                                         <input id="cc-pament" name="product_id" type="text" class="form-control"
@@ -83,12 +83,13 @@ if ($num == 1) {
                                     <div class="form-group has-success">
                                         <label for="cc-name" class="control-label mb-1">Parent Category</label>
                                         <div class="col-20 col-md-20">
-                                            <select name="select-parent-category" id="select-parent-category"
+                                            <select name="parent_category" id="parent-category"
                                                 class="form-control">
                                                 <option value="<?php echo $row['parent_category_id']; ?>"><?php echo $row['parent_category_name']; ?></option>
                                                 
                                                 <?php
-                                                $get_categories = "select category_id, category_name from add_category where hasSubCategory = 0";
+                                                $parent = $row['parent_category_id'];
+                                                $get_categories = "select category_id, category_name from add_category where hasSubCategory = 0 and category_id != '$parent'";
                                                 $retrieved_categories = mysqli_query($conn, $get_categories);
                                                 while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                                 ?>
@@ -116,7 +117,7 @@ if ($num == 1) {
                                     </div>
                                     <div class="form-group">
                                         <label for="file-input" class=" form-control-label">Product Photo</label>
-                                        <input type="file" id="file-input" name="file-input" class="form-control-file">
+                                        <input type="file" id="file-input" name="product_photo" class="form-control-file">
                                     </div>
                                     <!-- <div class="form-group has-success">
                                         <label for="cc-name" class="control-label mb-1">Please select the name of the parent
