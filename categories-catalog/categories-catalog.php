@@ -1,11 +1,4 @@
 <!-- Category section -->
-<?php
-include '../top-header.php';
-include '../header.php';
-include '../sliding-checkout/sliding-checkout.html';
-include '../sliding-images/sliding-images.html';
-
-?>
 <section class="gi-category body-bg padding-tb-40 wow fadeInUp" data-wow-duration="2s">
     <div class="container">
         <div class="row m-b-minus-15px">
@@ -53,8 +46,4 @@ include '../sliding-images/sliding-images.html';
         </div>
     </div>
 </section>
-<?php
-include '../footer.php';
-include '../sub-footer.php';
-?>
 <!-- Category section End -->
