@@ -1,28 +1,36 @@
 <!-- Category section -->
+<?php
+include '../top-header.php';
+include '../header.php';
+include '../sliding-checkout/sliding-checkout.html';
+include '../sliding-images/sliding-images.html';
+
+?>
 <section class="gi-category body-bg padding-tb-40 wow fadeInUp" data-wow-duration="2s">
     <div class="container">
         <div class="row m-b-minus-15px">
             <div class="col-xl-12 border-content-color">
                 <div class="gi-category-block owl-carousel">
-                    <div class="gi-cat-box gi-cat-box-2">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-bread"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Bakery</h4>
-                                </a>
-                                <p class="items">65 Items</p>
-                            </div>
-                        </div>
-                    </div>
+
                     <?php
-                    
-                    echo "hello";
-                    $get_categories = "select * from add_category";
-                    $retrieved_categories = mysqli_query($conn, $get_categories);
-                    while ($category = mysqli_fetch_array($retrieved_categories)) {
+                    include 'config/config.php';
+                    $classNames = ['gi-cat-box-1', 'gi-cat-box-2', 'gi-cat-box-3', 'gi-cat-box-4', 'gi-cat-box-5', 'gi-cat-box-6'];
+                    // echo "hello1";
+                    $get_all_categories = "select * from add_category";
+                    // echo $get_all_categories;
+                    $result = mysqli_query($conn, $get_all_categories);
+                    $num = mysqli_num_rows($result);
+                    // echo $num;
+                    $classId = 0;
+                    while ($category = mysqli_fetch_array($result)) {
+
+                        if ($classId >= 0 && $classId <= 6) {
+                            $className = "$classNames[$classId]";
+                        }
+
+                        $classId++;
                     ?>
-                        <div class="gi-cat-box gi-cat-box-2">
+                        <div class="gi-cat-box <?php echo $className ?>">
                             <div class="gi-cat-icon">
                                 <i class="fi fi-tr-peach"></i>
                                 <div class="gi-cat-detail">
@@ -33,115 +41,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="gi-cat-box gi-cat-box-2">
-                            <div class="gi-cat-icon">
-                                <i class="fi fi-tr-bread"></i>
-                                <div class="gi-cat-detail">
-                                    <a href="shop-left-sidebar-col-3.html">
-                                        <h4 class="gi-cat-title">Bakery</h4>
-                                    </a>
-                                    <p class="items">65 Items</p>
-                                </div>
-                            </div>
-                        </div>
                     <?php
+
+                        if ($classId == 7) {
+                            $classId = 0;
+                        }
                     }
                     ?>
-
-                    <!-- <div class="gi-cat-box gi-cat-box-2">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-bread"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Bakery</h4>
-                                </a>
-                                <p class="items">65 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-3">
-                        <div class="gi-cat-icon">
-                            <span class="gi-lbl">15%</span>
-                            <i class="fi fi-tr-corn"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Vegetables</h4>
-                                </a>
-                                <p class="items">548 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-4">
-                        <div class="gi-cat-icon">
-                            <span class="gi-lbl">10%</span>
-                            <i class="fi fi-tr-coffee-pot"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Dairy & Milk</h4>
-                                </a>
-                                <p class="items">48 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-5">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-french-fries"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Snack & Spice</h4>
-                                </a>
-                                <p class="items">59 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-6">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-hamburger-soda"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Juice & Drinks </h4>
-                                </a>
-                                <p class="items">845 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-1">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-shrimp"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Seafood</h4>
-                                </a>
-                                <p class="items">652 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-2">
-                        <div class="gi-cat-icon">
-                            <span class="gi-lbl">20%</span>
-                            <i class="fi fi-tr-popcorn"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Fast Food</h4>
-                                </a>
-                                <p class="items">253 Items</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gi-cat-box gi-cat-box-3">
-                        <div class="gi-cat-icon">
-                            <i class="fi fi-tr-egg"></i>
-                            <div class="gi-cat-detail">
-                                <a href="shop-left-sidebar-col-3.html">
-                                    <h4 class="gi-cat-title">Eggs</h4>
-                                </a>
-                                <p class="items">154 Items</p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+<?php
+include '../footer.php';
+include '../sub-footer.php';
+?>
 <!-- Category section End -->
