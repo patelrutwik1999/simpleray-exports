@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
     echo $imageFileType."<br>";
     echo $_FILES['product_photo']["tmp_name"]."<br>";
-    move_uploaded_file($_FILES["product_photo"]["tmp_name"], $target_file);
+    // move_uploaded_file($_FILES["product_photo"]["tmp_name"], $target_file);
     if(move_uploaded_file($_FILES["product_photo"]["tmp_name"], $target_file)){
         echo "hi";
     }else{
@@ -98,4 +98,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //     header("location:../insert-product.php");
     // }
 }
-?>
