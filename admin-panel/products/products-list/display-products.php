@@ -2,6 +2,7 @@
 
 <head>
     <?php
+    session_start();
     include '../../top-header.php';
     ?>
     <link href="products/products-list/products-list.css" rel="stylesheet" media="all">

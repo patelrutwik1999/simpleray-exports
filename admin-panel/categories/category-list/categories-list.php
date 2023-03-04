@@ -14,7 +14,8 @@
                     <div class="row">
                         <div class="search-and-add-category">
                             <form class="form-header categories-list-search-bar" action="" method="POST">
-                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
+                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" 
+                                    type="text" name="search" placeholder="Search category name..." onkeyup="myFunction()" id="category-search-bar" />
                             </form>
                         </div>
                         <div class="search-and-add-category">
@@ -63,6 +64,7 @@
                                 <tr>
                                     <th>Category Name</th>
                                     <th>Category Added On</th>
+                                    <th>Category Last Updated</th>
                                     <th>action</th>
                                 </tr>
                             </thead>
@@ -79,6 +81,7 @@
                                     <tr>
                                         <td><?php echo $retrieved_categories['category_name']; ?></td>
                                         <td><?php echo $retrieved_categories['added_on']; ?></td>
+                                        <td><?php echo $retrieved_categories['updated_on']; ?></td>
 
                                         <td>
                                             <div class="table-data-feature">

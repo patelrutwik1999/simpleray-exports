@@ -2,6 +2,7 @@
 
 <head>
     <?php
+    session_start();
     include '../../top-header.php';
     ?>
     <link href="products/edit-product/edit-product-form.css" rel="stylesheet" media="all">
