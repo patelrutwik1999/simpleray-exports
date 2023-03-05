@@ -464,7 +464,7 @@
                                                     class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
                                                 <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="contact-us.html">Contact Us</a></li>
+                                                <li><a href="contact-us/contact-us.php">Contact Us</a></li>
                                                 <li><a href="cart.html">Cart</a></li>
                                                 <li><a href="checkout.html">Checkout</a></li>
                                                 <li><a href="compare.html">Compare</a></li>
@@ -476,8 +476,8 @@
                                                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                             </ul>
                                         </li>
-                                        <li class="non-drop"><a href="shop-banner-left-sidebar-col-3.html">
-                                                <i class="fi-rr-badge-percent"></i>Offers</a>
+                                        <li class="non-drop"><a href="contact-us/contact-us.php">
+                                                <i class="fa fa-address-book" aria-hidden="true"></i>Contact Us</a>
                                         </li>
                                     </ul>
                                 </div>

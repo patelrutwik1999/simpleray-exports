@@ -1,6 +1,9 @@
 <html lang="en">
 
 <head>
+    <!-- Title Page-->
+    <title>Products List</title>
+
     <?php
     session_start();
     include '../../top-header.php';
@@ -23,7 +26,7 @@
         </div>
     </div>
     <script>
-        function myFunction() {
+        function searchProduct() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("product-search-bar");

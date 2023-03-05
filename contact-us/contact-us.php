@@ -6,13 +6,13 @@
     session_start();
     include '../top-header.php';
     ?>
-    <title>Quick Inquiry</title>
+    <title>Contact Us</title>
 </head>
 
 <body>
     <?php
     include '../header.php';
-    include 'inquiry-form.php';
+    include 'general-inquiry-form.php';
     include '../footer.php';
     include '../sub-footer.php';
     ?>

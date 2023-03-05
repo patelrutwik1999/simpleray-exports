@@ -4,6 +4,9 @@
     <?php
     include '../top-header.php';
     ?>
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
 </head>
 
 <body class="animsition">

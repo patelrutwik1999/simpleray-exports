@@ -26,11 +26,11 @@
                         <i class="fas fa-sitemap"></i>Categories</a>
                 </li>
                 <li>
-                    <a href="chart.html">
+                    <a href="products/products-list/display-products.php">
                         <i class="fas fa-tags"></i>Products</a>
                 </li>
                 <li>
-                    <a href="chart.html">
+                    <a href="inquiries/inquiries-list/display-inquiries.php">
                         <i class="fas fa-envelope"></i>Inquiries</a>
                 </li>
                 <li>

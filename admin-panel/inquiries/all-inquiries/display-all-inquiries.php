@@ -2,13 +2,12 @@
 
 <head>
     <!-- Title Page-->
-    <title>Categories List</title>
-
+    <title>Inquiries List</title>
     <?php
     session_start();
     include '../../top-header.php';
     ?>
-    <link href="categories/category-list/display-categories.css" rel="stylesheet" media="all">
+    <link href="inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
@@ -20,18 +19,18 @@
         <div class="page-container">
             <?php
             include '../../header-desktop.php';
-            include 'categories-list.php';
+            include 'all-inquiries-list.php';
             include '../../footer.php';
             ?>
         </div>
     </div>
     <script>
-        function searchCategory() {
+        function searchInquiry() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("category-search-bar");
+            input = document.getElementById("inquiry-search-bar");
             filter = input.value.toUpperCase();
-            table = document.getElementById("category-table");
+            table = document.getElementById("inquiry-table");
             tr = table.getElementsByTagName("tr");
 
             // Loop through all table rows, and hide those who don't match the search query

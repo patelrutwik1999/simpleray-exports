@@ -1,6 +1,9 @@
 <html lang="en">
 
 <head>
+    <!-- Title Page-->
+    <title>Edit Product</title>
+
     <?php
     session_start();
     include '../../top-header.php';
