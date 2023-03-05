@@ -6,6 +6,7 @@
     session_start();
     include '../top-header.php';
     ?>
+    <title>Quick Inquiry</title>
 </head>
 
 <body>

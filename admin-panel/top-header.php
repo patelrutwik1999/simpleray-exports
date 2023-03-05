@@ -11,6 +11,9 @@
 <!-- Title Page-->
 <title>Dashboard</title>
 
+<!-- site Favicon -->
+<link rel="icon" href="admin-panel-assets/images/favicon/favicon.png" sizes="32x32">
+
 <!-- Fontfaces CSS-->
 <link href="admin-panel-assets/css/font-face.css" rel="stylesheet" media="all">
 <link href="admin-panel-assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
