@@ -1,3 +1,6 @@
+<div id="gi-overlay">
+    <div class="loader"></div>
+</div>
 <!-- Header start  -->
 <header class="gi-header">
     <!-- Header Top Start -->
@@ -101,7 +104,8 @@
                     <!-- Header Logo Start -->
                     <div class="align-self-center gi-header-logo">
                         <div class="header-logo">
-                            <a href="index.html"><img style="width: 230px" src="assets/img/logo/logo-1.png" alt="Site Logo"></a>
+                            <a href="index.html"><img style="width: 230px" src="assets/img/logo/logo-1.png"
+                                    alt="Site Logo"></a>
                         </div>
                     </div>
                     <!-- Header Logo End -->

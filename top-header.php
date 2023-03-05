@@ -27,4 +27,5 @@
 
 <!-- Main Style -->
 <link rel="stylesheet" id="main_style" href="assets/css/demo-1.css">
+<link rel="stylesheet" id="main_style" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
