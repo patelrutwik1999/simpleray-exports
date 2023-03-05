@@ -26,7 +26,7 @@
 <section class="gi-register padding-tb-40">
     <div class="container">
         <div class="section-title-2">
-            <h2 class="gi-title">Inquiry<span></span></h2>
+            <h2 class="gi-title">Quick Inquiry<span></span></h2>
             <p>Best place to buy and sell digital products.</p>
         </div>
         <div class="row">
@@ -38,25 +38,20 @@
                                 <label>First Name*</label>
                                 <input type="text" name="firstname" placeholder="Enter your first name" required>
                             </span>
+
                             <span class="gi-register-wrap gi-register-half">
                                 <label>Last Name*</label>
                                 <input type="text" name="lastname" placeholder="Enter your last name" required>
                             </span>
+
                             <span class="gi-register-wrap gi-register-half">
                                 <label>Email*</label>
-                                <input type="email" name="email" placeholder="Enter your email add..." required>
+                                <input type="email" name="email" placeholder="Enter your email add" required>
                             </span>
+
                             <span class="gi-register-wrap gi-register-half">
                                 <label>Phone Number*</label>
                                 <input type="text" name="phonenumber" placeholder="Enter your phone number" required>
-                            </span>
-                            <span class="gi-register-wrap">
-                                <label>Address</label>
-                                <input type="text" name="address" placeholder="Address Line 1">
-                            </span>
-                            <span class="gi-register-wrap gi-register-half">
-                                <label>City</label>
-                                <input type="text" name="city" placeholder="City name">
                             </span>
                             <!-- <span class="gi-register-wrap gi-register-half">
                                 <label>City *</label>
@@ -71,44 +66,33 @@
                                     </select>
                                 </span>
                             </span> -->
+
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Region State</label>
-                                <input type="text" name="regionstate" placeholder="State name">
+                                <label>Category</label>
+                                <input type="text" name="category" placeholder="Category name" disabled>
                             </span>
+
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Country</label>
-                                <input type="text" name="country" placeholder="Country">
+                                <label>Product</label>
+                                <input type="text" name="product" placeholder="Product name" disabled>
                             </span>
-                            <!-- <span class="gi-register-wrap gi-register-half">
-                                <label>Country*</label>
-                                <span class="gi-rg-select-inner">
-                                    <select name="gi_select_country" id="gi-select-country" class="gi-register-select">
-                                        <option selected disabled>Country</option>
-                                        <option value="1">Country 1</option>
-                                        <option value="2">Country 2</option>
-                                        <option value="3">Country 3</option>
-                                        <option value="4">Country 4</option>
-                                        <option value="5">Country 5</option>
-                                    </select>
-                                </span>
-                            </span> -->
-                            <span class="gi-register-wrap gi-register-half">
-                                <label>Post Code</label>
-                                <input type="text" name="postalcode" placeholder="Postal Code">
+
+                            <span class="gi-register-wrap">
+                                <label>Subject*</label>
+                                <input type="text" name="Subject" placeholder="Enter subject" required>
                             </span>
-                            <!-- <span class="gi-register-wrap gi-register-half">
-                                <label>Post Code</label>
-                                <span class="gi-rg-select-inner">
-                                    <select name="gi_select_state" id="gi-select-state" class="gi-register-select">
-                                        <option selected disabled>Region/State</option>
-                                        <option value="1">Region/State 1</option>
-                                        <option value="2">Region/State 2</option>
-                                        <option value="3">Region/State 3</option>
-                                        <option value="4">Region/State 4</option>
-                                        <option value="5">Region/State 5</option>
-                                    </select>
-                                </span>
-                            </span> -->
+
+                            <span class="gi-register-wrap">
+                                <label>Description*</label>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        placeholder="Describe your requirements in detail. We will get back to you soon." required></textarea>
+                                </div>
+                            </span>
+
+                            <span class="gi-register-wrap">
+                                <label></label>
+                            </span>
                             <!-- <span class="gi-register-wrap gi-recaptcha">
                                 <span class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S"
                                     data-callback="verifyRecaptchaCallback"
@@ -118,7 +102,6 @@
                                 <span class="help-block with-errors"></span>
                             </span> -->
                             <span class="gi-register-wrap gi-register-btn">
-                                <!-- <span>Already have an account?<a href="login.html">Login</a></span> -->
                                 <button class="gi-btn-1" type="submit">Submit</button>
                             </span>
                         </form>
