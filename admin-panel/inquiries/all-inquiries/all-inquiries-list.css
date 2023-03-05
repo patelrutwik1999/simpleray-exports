@@ -13,3 +13,11 @@
     /* display: flex;
     justify-content: left; */
 }
+
+.inquiry-table tbody td.status--process {
+    color: #00ad5f;
+}
+
+.inquiry-table tbody td.status--denied {
+    color: #fa4251;
+}

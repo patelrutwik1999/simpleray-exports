@@ -52,7 +52,7 @@
 
 
                     <div class="table-responsive table--no-card m-b-30">
-                        <table class="table table-borderless table-striped table-earning" id="inquiry-table">
+                        <table class="table table-borderless table-striped table-earning inquiry-table" id="inquiry-table">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -106,15 +106,15 @@
                                             }
                                             ?>
                                         </td>
-                                        <td>
+                                      
                                             <?php
-                                            if ($retrieved_product_inquiries['read_status'] == 0) {
-                                                echo "New Inquiry";
-                                            } else {
-                                                echo "Already read";
-                                            }
+                                            if ($retrieved_product_inquiries['read_status'] == 0) {?>
+                                                <td class = "status--process">New</td>
+                                            <?php } else { ?>
+                                                <td class = "status--denied">Processed</td>
+                                            <?php }
                                             ?>
-                                        </td>
+                                        
                                         <td>
                                             <a
                                                 href="inquiries/view-specific-inquiry/view-inquiry.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>">
