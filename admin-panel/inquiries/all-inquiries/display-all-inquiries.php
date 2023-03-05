@@ -7,7 +7,7 @@
     session_start();
     include '../../top-header.php';
     ?>
-    <link href="inquiries/inquiries-list/inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
@@ -19,7 +19,7 @@
         <div class="page-container">
             <?php
             include '../../header-desktop.php';
-            include 'inquiries-list.php';
+            include 'all-inquiries-list.php';
             include '../../footer.php';
             ?>
         </div>
