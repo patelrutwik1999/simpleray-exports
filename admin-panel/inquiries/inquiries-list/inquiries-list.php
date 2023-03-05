@@ -1,23 +1,23 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30 products-list-title">Products list</h1>
+    <h1 class="title-3 m-b-30 inquiries-list-title">Inquiries List</h1>
 
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row">
-                <div>
-                    <form class="form-header products-list-search-bar" action="" method="POST">
+                <!-- <div> -->
+                    <form class="form-header inquiries-list-search-bar" action="" method="POST">
                         <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;"
-                            type="text" name="search" placeholder="Search product name..." onkeyup="searchProduct()"
+                            type="text" name="search" placeholder="Search product name..." onkeyup="searchInquiry()"
                             id="product-search-bar" />
                     </form>
-                </div>
+                <!-- </div> -->
 
-                <div class="add-product-button-section">
+                <!-- <div class="add-product-button-section">
                     <a href="products/add-product/insert-product.php" class='add-product'>
                         <i class="zmdi zmdi-plus"></i> Add product
                     </a>
-                </div>
+                </div> -->
 
             </div>
             <div class="row">

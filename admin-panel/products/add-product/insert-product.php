@@ -1,6 +1,8 @@
 <html lang="en">
 
 <head>
+    <!-- Title Page-->
+    <title>Add Product</title>
     <?php
     session_start();
     include '../../top-header.php';

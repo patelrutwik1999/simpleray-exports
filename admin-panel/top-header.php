@@ -8,9 +8,6 @@
 <meta name="author" content="Hau Nguyen">
 <meta name="keywords" content="au theme template">
 
-<!-- Title Page-->
-<title>Dashboard</title>
-
 <!-- site Favicon -->
 <link rel="icon" href="admin-panel-assets/images/favicon/favicon.png" sizes="32x32">
 
