@@ -31,9 +31,49 @@
         </div>
         <div class="row">
             <div class="gi-register-wrapper">
+                <?php
+                if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
+                    $_SESSION['message'] = false;
+                    ?>
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong>
+
+                        <?php
+                        echo $_SESSION['success-message'];
+                        $_SESSION['success-message'] = '';
+                        ?>
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <?php
+                } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
+                    $_SESSION['is-error'] = false;
+                    $_SESSION['message'] = false;
+                    ?>
+
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Oops!</strong>
+
+                        <?php
+                        echo $_SESSION['error-message'];
+                        $_SESSION['error-message'] = '';
+                        ?>
+
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="gi-register-container">
                     <div class="gi-register-form">
-                        <form action="#" method="post">
+                        <form action="inquiry/store-inquiry/store-inquiry.php" method="POST">
                             <span class="gi-register-wrap gi-register-half">
                                 <label>First Name*</label>
                                 <input type="text" name="firstname" placeholder="Enter your first name" required>
@@ -68,25 +108,25 @@
                             </span> -->
 
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Category</label>
-                                <input type="text" name="category" placeholder="Category name" disabled>
+                                <label>Category Name</label>
+                                <input type="text" name="categoryname" placeholder="Category name">
                             </span>
 
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Product</label>
-                                <input type="text" name="product" placeholder="Product name" disabled>
+                                <label>Product Name</label>
+                                <input type="text" name="productname" placeholder="Product name">
                             </span>
 
                             <span class="gi-register-wrap">
                                 <label>Subject*</label>
-                                <input type="text" name="Subject" placeholder="Enter subject" required>
+                                <input type="text" name="subject" placeholder="Enter subject" required>
                             </span>
 
                             <span class="gi-register-wrap">
                                 <label>Description*</label>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="Describe your requirements in detail. We will get back to you soon." required></textarea>
+                                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1"
+                                        rows="3" placeholder="" required></textarea>
                                 </div>
                             </span>
 

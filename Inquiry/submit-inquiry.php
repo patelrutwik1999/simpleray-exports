@@ -3,6 +3,7 @@
 
 <head>
     <?php
+    session_start();
     include '../top-header.php';
     ?>
 </head>
