@@ -5,13 +5,13 @@
             <div class="col-12">
                 <div class="row gi_breadcrumb_inner">
                     <div class="col-md-6 col-sm-12">
-                        <h2 class="gi-breadcrumb-title">Register Page</h2>
+                        <h2 class="gi-breadcrumb-title">Inquiry Page</h2>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <!-- gi-breadcrumb-list start -->
                         <ul class="gi-breadcrumb-list">
                             <li class="gi-breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="gi-breadcrumb-item active">Register Page</li>
+                            <li class="gi-breadcrumb-item active">Inquiry Page</li>
                         </ul>
                         <!-- gi-breadcrumb-list end -->
                     </div>
@@ -26,7 +26,7 @@
 <section class="gi-register padding-tb-40">
     <div class="container">
         <div class="section-title-2">
-            <h2 class="gi-title">Register<span></span></h2>
+            <h2 class="gi-title">Inquiry<span></span></h2>
             <p>Best place to buy and sell digital products.</p>
         </div>
         <div class="row">
@@ -55,6 +55,10 @@
                                 <input type="text" name="address" placeholder="Address Line 1">
                             </span>
                             <span class="gi-register-wrap gi-register-half">
+                                <label>City</label>
+                                <input type="text" name="city" placeholder="City name">
+                            </span>
+                            <!-- <span class="gi-register-wrap gi-register-half">
                                 <label>City *</label>
                                 <span class="gi-rg-select-inner">
                                     <select name="gi_select_city" id="gi-select-city" class="gi-register-select">
@@ -66,13 +70,17 @@
                                         <option value="5">City 5</option>
                                     </select>
                                 </span>
+                            </span> -->
+                            <span class="gi-register-wrap gi-register-half">
+                                <label>Region State</label>
+                                <input type="text" name="regionstate" placeholder="State name">
                             </span>
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Post Code</label>
-                                <input type="text" name="postalcode" placeholder="Post Code">
+                                <label>Country</label>
+                                <input type="text" name="country" placeholder="Country">
                             </span>
-                            <span class="gi-register-wrap gi-register-half">
-                                <label>Country *</label>
+                            <!-- <span class="gi-register-wrap gi-register-half">
+                                <label>Country*</label>
                                 <span class="gi-rg-select-inner">
                                     <select name="gi_select_country" id="gi-select-country" class="gi-register-select">
                                         <option selected disabled>Country</option>
@@ -83,9 +91,13 @@
                                         <option value="5">Country 5</option>
                                     </select>
                                 </span>
-                            </span>
+                            </span> -->
                             <span class="gi-register-wrap gi-register-half">
-                                <label>Region State</label>
+                                <label>Post Code</label>
+                                <input type="text" name="postalcode" placeholder="Postal Code">
+                            </span>
+                            <!-- <span class="gi-register-wrap gi-register-half">
+                                <label>Post Code</label>
                                 <span class="gi-rg-select-inner">
                                     <select name="gi_select_state" id="gi-select-state" class="gi-register-select">
                                         <option selected disabled>Region/State</option>
@@ -96,18 +108,18 @@
                                         <option value="5">Region/State 5</option>
                                     </select>
                                 </span>
-                            </span>
-                            <span class="gi-register-wrap gi-recaptcha">
+                            </span> -->
+                            <!-- <span class="gi-register-wrap gi-recaptcha">
                                 <span class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S"
                                     data-callback="verifyRecaptchaCallback"
                                     data-expired-callback="expiredRecaptchaCallback"></span>
                                 <input class="form-control d-none" data-recaptcha="true" required
                                     data-error="Please complete the Captcha">
                                 <span class="help-block with-errors"></span>
-                            </span>
+                            </span> -->
                             <span class="gi-register-wrap gi-register-btn">
-                                <span>Already have an account?<a href="login.html">Login</a></span>
-                                <button class="gi-btn-1" type="submit">Register</button>
+                                <!-- <span>Already have an account?<a href="login.html">Login</a></span> -->
+                                <button class="gi-btn-1" type="submit">Submit</button>
                             </span>
                         </form>
                     </div>
