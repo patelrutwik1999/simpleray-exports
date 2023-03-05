@@ -12,7 +12,7 @@
 <body>
     <?php
     include '../header.php';
-    include 'contact-us-form.php';
+    include 'general-inquiry-form.php';
     include '../footer.php';
     include '../sub-footer.php';
     ?>

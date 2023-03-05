@@ -10,7 +10,6 @@ function checkInput($data)
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "Inside if";
     $firstName = $_POST['firstname'];
     $lastName = $_POST['lastname'];
     $email = $_POST['email'];
@@ -20,20 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $subject = $_POST['subject'];
     $description = $_POST['description'];
 
-    echo "Inside if 1";
     //Finds the category id from the category name.
     $findCategoryId = "select category_id from add_category where category_name = '$categoryName'";
-    echo $findCategoryId;
     $retrieved_categories = mysqli_query($conn, $findCategoryId);
     $categories = mysqli_fetch_array($retrieved_categories);
     $categoryId = $categories['category_id'];
-    echo "Inside if 2";
+
     //Finds the product id from the product name.
     $findProductId = "select product_id from products where product_name = '$productName'";
     $retrieved_products = mysqli_query($conn, $findProductId);
     $products = mysqli_fetch_array($retrieved_products);
     $productId = $products['product_id'];
-    echo "Inside if 3";
+
     date_default_timezone_set("Asia/Kolkata");
     $submittedOn = date("Y-m-d h:i:s");
     $inquiryId = uniqid('inqprod', true);
@@ -75,13 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (mysqli_query($conn, $insert_inquiry)) {
         mysqli_close($conn);
-        echo "Success";
         $_SESSION['is-error'] = false;
         $_SESSION['message'] = true;
         $_SESSION['success-message'] = "Thank you for contacting us. We have received your inquiry. We will get back to you soon.";
         header("location:../submit-inquiry.php");
     } else {
-        echo "Failure";
         $_SESSION['is-error'] = true;
         $_SESSION['message'] = true;
         $_SESSION['error-message'] = "Unable to receive your inquiry. Please try again";

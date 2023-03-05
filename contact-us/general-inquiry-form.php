@@ -83,18 +83,57 @@
                 </div>
             </div>
         </div>
+        
         <div class="row p-t-80">
             <div class="col-md-6">
                 <iframe src="//maps.google.com/maps?q=-12.942227,-38.480291&z=15&output=embed"
                     allowfullscreen=""></iframe>
             </div>
             <div class="col-md-6">
-                <form action="inquiry/store-inquiry/store-inquiry.php" method="POST">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+            <?php
+                if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
+                    $_SESSION['message'] = false;
+                    ?>
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong>
+
+                        <?php
+                        echo $_SESSION['success-message'];
+                        $_SESSION['success-message'] = '';
+                        ?>
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+
+                    <?php
+                } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
+                    $_SESSION['is-error'] = false;
+                    $_SESSION['message'] = false;
+                    ?>
+
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Oops!</strong>
+
+                        <?php
+                        echo $_SESSION['error-message'];
+                        $_SESSION['error-message'] = '';
+                        ?>
+
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
+
+                <form action="contact-us/store-general-inquiry/store-general-inquiry.php" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name">
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">
