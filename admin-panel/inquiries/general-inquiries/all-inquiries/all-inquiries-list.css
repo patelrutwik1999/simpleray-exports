@@ -1,0 +1,23 @@
+.inquiries-list-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: black;
+    margin: 1.7rem;
+    font-weight: bolder;
+}
+
+.inquiries-list-search-bar {
+    margin-left: 9.2rem;
+    float: left;
+    /* display: flex;
+    justify-content: left; */
+}
+
+.inquiry-table tbody td.status--process {
+    color: #00ad5f;
+}
+
+.inquiry-table tbody td.status--denied {
+    color: #fa4251;
+}

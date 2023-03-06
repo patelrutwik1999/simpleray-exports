@@ -2,12 +2,12 @@
 
 <head>
     <!-- Title Page-->
-    <title>Product Inquiries List</title>
+    <title>General Inquiries List</title>
     <?php
     session_start();
     include '../../../top-header.php';
     ?>
-    <link href="inquiries/product-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/general-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">

@@ -37,7 +37,8 @@
                                 Inquiries</a>
                         </li>
                         <li>
-                            <a href="index2.html">General Inquiries</a>
+                            <a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
+                                Inquiries</a>
                         </li>
                     </ul>
                 </li>
