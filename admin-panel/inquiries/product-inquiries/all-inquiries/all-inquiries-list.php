@@ -71,7 +71,7 @@
                             <tbody>
 
                                 <?php
-                                include '../../../config/config.php';
+                                include '../../../../config/config.php';
 
                                 $get_product_inquiries = "select * from product_inquiries";
                                 $result = mysqli_query($conn, $get_product_inquiries);

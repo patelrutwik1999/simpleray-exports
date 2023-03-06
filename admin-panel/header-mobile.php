@@ -29,9 +29,17 @@
                     <a href="products/products-list/display-products.php">
                         <i class="fas fa-tags"></i>Products</a>
                 </li>
-                <li>
-                    <a href="inquiries/inquiries-list/display-inquiries.php">
-                        <i class="fas fa-envelope"></i>Inquiries</a>
+                <li class="has-sub">
+                    <a class="js-arrow" href="#"><i class="fas fa-envelope"></i>Inquiries</a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                        <li>
+                            <a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">Product
+                                Inquiries</a>
+                        </li>
+                        <li>
+                            <a href="index2.html">General Inquiries</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="chart.html">

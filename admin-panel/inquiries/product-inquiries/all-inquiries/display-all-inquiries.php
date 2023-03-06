@@ -5,22 +5,22 @@
     <title>Inquiries List</title>
     <?php
     session_start();
-    include '../../top-header.php';
+    include '../../../top-header.php';
     ?>
-    <link href="inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/product-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
     <div class="page-wrapper">
         <?php
-        include '../../header-mobile.php';
-        include '../../sidebar/menu-sidebar.html';
+        include '../../../header-mobile.php';
+        include '../../../sidebar/menu-sidebar.html';
         ?>
         <div class="page-container">
             <?php
-            include '../../header-desktop.php';
+            include '../../../header-desktop.php';
             include 'all-inquiries-list.php';
-            include '../../footer.php';
+            include '../../../footer.php';
             ?>
         </div>
     </div>
@@ -48,7 +48,7 @@
         }
     </script>
     <?php
-    include '../../sub-footer.php';
+    include '../../../sub-footer.php';
     ?>
 </body>
 
