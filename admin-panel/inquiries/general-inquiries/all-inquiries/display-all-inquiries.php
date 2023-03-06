@@ -2,36 +2,35 @@
 
 <head>
     <!-- Title Page-->
-    <title>Categories List</title>
-
+    <title>General Inquiries List</title>
     <?php
     session_start();
-    include '../../top-header.php';
+    include '../../../top-header.php';
     ?>
-    <link href="categories/category-list/display-categories.css" rel="stylesheet" media="all">
+    <link href="inquiries/general-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
     <div class="page-wrapper">
         <?php
-        include '../../header-mobile.php';
-        include '../../sidebar/menu-sidebar.html';
+        include '../../../header-mobile.php';
+        include '../../../sidebar/menu-sidebar.html';
         ?>
         <div class="page-container">
             <?php
-            include '../../header-desktop.php';
-            include 'categories-list.php';
-            include '../../footer.php';
+            include '../../../header-desktop.php';
+            include 'all-inquiries-list.php';
+            include '../../../footer.php';
             ?>
         </div>
     </div>
     <script>
-        function searchCategory() {
+        function searchInquiry() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("category-search-bar");
+            input = document.getElementById("inquiry-search-bar");
             filter = input.value.toUpperCase();
-            table = document.getElementById("category-table");
+            table = document.getElementById("inquiry-table");
             tr = table.getElementsByTagName("tr");
 
             // Loop through all table rows, and hide those who don't match the search query
@@ -49,7 +48,7 @@
         }
     </script>
     <?php
-    include '../../sub-footer.php';
+    include '../../../sub-footer.php';
     ?>
 </body>
 

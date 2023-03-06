@@ -1,6 +1,9 @@
 <html lang="en">
 
 <head>
+    <!-- Title Page-->
+    <title>Add Category</title>
+
     <?php
     session_start();
     include '../../top-header.php';
@@ -23,7 +26,7 @@
         </div>
     </div>
     <script>
-        document.getElementById('select-sub-category').onchange = function() {
+        document.getElementById('select-sub-category').onchange = function () {
             if (this.value == '0') {
                 document.getElementById("select-parent-category").disabled = true;
             } else {

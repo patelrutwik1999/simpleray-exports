@@ -1,6 +1,9 @@
 <html lang="en">
 
 <head>
+    <!-- Title Page-->
+    <title>Edit Category</title>
+
     <?php
     session_start();
     include '../../top-header.php';

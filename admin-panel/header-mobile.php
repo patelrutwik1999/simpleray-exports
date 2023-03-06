@@ -26,12 +26,21 @@
                         <i class="fas fa-sitemap"></i>Categories</a>
                 </li>
                 <li>
-                    <a href="chart.html">
+                    <a href="products/products-list/display-products.php">
                         <i class="fas fa-tags"></i>Products</a>
                 </li>
-                <li>
-                    <a href="chart.html">
-                        <i class="fas fa-envelope"></i>Inquiries</a>
+                <li class="has-sub">
+                    <a class="js-arrow" href="#"><i class="fas fa-envelope"></i>Inquiries</a>
+                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                        <li>
+                            <a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">Product
+                                Inquiries</a>
+                        </li>
+                        <li>
+                            <a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
+                                Inquiries</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="chart.html">

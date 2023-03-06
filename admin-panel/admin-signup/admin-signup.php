@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <title>Signup Form</title>
+    <title>Signup</title>
     <?php
     include '../top-header.php';
     ?>

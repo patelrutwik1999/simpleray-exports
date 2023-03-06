@@ -3,7 +3,6 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-<title>Simpleray - exports</title>
 <meta name="keywords" content="Bootstrap 5.x, ecommerce, farming, food market, grocery market, grocery shop, grocery store, grocery supper market, multi vendor, organic food, supermarket, supermarket grocery">
 <meta name="description" content="Multipurpose eCommerce HTML Template">
 <meta name="author" content="Rutwik Patel, Charit Patel">
@@ -27,4 +26,5 @@
 
 <!-- Main Style -->
 <link rel="stylesheet" id="main_style" href="assets/css/demo-1.css">
+<link rel="stylesheet" id="main_style" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
