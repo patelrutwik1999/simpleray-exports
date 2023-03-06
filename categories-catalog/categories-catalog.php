@@ -16,7 +16,6 @@
                     // echo $num;
                     $classId = 0;
                     while ($category = mysqli_fetch_array($result)) {
-
                         if ($classId >= 0 && $classId <= 6) {
                             $className = "$classNames[$classId]";
                         }

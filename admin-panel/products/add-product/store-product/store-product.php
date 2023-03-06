@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //Finds the parent category name from the parent category id.
     $findCategoryName = "select category_name from add_category where category_id = '$parentCategoryId'";
+
     $retrieved_categories = mysqli_query($conn, $findCategoryName);
     $categories = mysqli_fetch_array($retrieved_categories);
     $parentCategoryName = $categories['category_name'];
