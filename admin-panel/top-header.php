@@ -1,5 +1,6 @@
 <!-- To get the base  -->
-<base href="http://localhost/simpleray-exports/admin-panel/">
+<!-- <base href="http://localhost/simpleray-exports/admin-panel/"> -->
+<base href="https://simplerayexports.herokuapp.com/admin-panel/">
 
 <!-- Required meta tags -->
 <meta charset="UTF-8">
