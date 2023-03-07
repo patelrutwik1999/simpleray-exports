@@ -6,10 +6,26 @@
         <div class="container-fluid">
 
             <div class="row">
+                <div class="gi-tab-title">
+                    <div class="gi-pro-tab">
+                        <ul class="gi-pro-tab-nav nav">
+                            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#snack">Snack &
+                                    Spices</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#fruit">Fruits</a></li>
+                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#veg">Vegetables</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <form class="form-header inquiries-list-search-bar" action="" method="POST">
                     <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;"
-                        type="text" name="search" placeholder="Search inquiry..."
-                        onkeyup="searchInquiry()" id="inquiry-search-bar" />
+                        type="text" name="search" placeholder="Search inquiry..." onkeyup="searchInquiry()"
+                        id="inquiry-search-bar" />
                 </form>
             </div>
 
@@ -52,7 +68,8 @@
 
 
                     <div class="table-responsive table--no-card m-b-30">
-                        <table class="table table-borderless table-striped table-earning inquiry-table" id="inquiry-table">
+                        <table class="table table-borderless table-striped table-earning inquiry-table"
+                            id="inquiry-table">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -98,13 +115,13 @@
                                             }
                                             ?>
                                         </td>
-                                            <?php
-                                            if ($retrieved_product_inquiries['read_status'] == 0) {?>
-                                                <td class = "status--process">New</td>
-                                            <?php } else { ?>
-                                                <td class = "status--denied">Processed</td>
-                                            <?php }
-                                            ?>
+                                        <?php
+                                        if ($retrieved_product_inquiries['read_status'] == 0) { ?>
+                                            <td class="status--process">New</td>
+                                        <?php } else { ?>
+                                            <td class="status--denied">Processed</td>
+                                        <?php }
+                                        ?>
                                         <td>
                                             <a
                                                 href="inquiries/view-specific-inquiry/view-inquiry.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">

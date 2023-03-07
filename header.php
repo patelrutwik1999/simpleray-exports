@@ -479,6 +479,10 @@
                                         <li class="non-drop"><a href="contact-us/contact-us.php">
                                                 <i class="fa fa-address-book" aria-hidden="true"></i>Contact Us</a>
                                         </li>
+                                        <li class="non-drop"><a href="inquiry/submit-inquiry.php">
+                                                <i class="fa fa-question-circle" aria-hidden="true"></i>Quick
+                                                Inquiry</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>

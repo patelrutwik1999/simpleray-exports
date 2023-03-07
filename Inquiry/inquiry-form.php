@@ -10,7 +10,7 @@
                     <div class="col-md-6 col-sm-12">
                         <!-- gi-breadcrumb-list start -->
                         <ul class="gi-breadcrumb-list">
-                            <li class="gi-breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="gi-breadcrumb-item"><a href="index.php">Home</a></li>
                             <li class="gi-breadcrumb-item active">Inquiry Page</li>
                         </ul>
                         <!-- gi-breadcrumb-list end -->
