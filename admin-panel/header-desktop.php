@@ -10,8 +10,6 @@
                     </button>
                 </form>
 
-
-
                 <div class="header-button">
 
                     <?php
@@ -41,40 +39,48 @@
                             ?>
                             <div class="email-dropdown js-dropdown">
                                 <div class="email__title">
-                                    <p>You have <?php echo $general_inquiries_num + $product_inquiries_num; ?> New Emails</p>
+                                    <p>You have
+                                        <?php echo $general_inquiries_num + $product_inquiries_num; ?> new inquiries
+                                    </p>
                                 </div>
                                 <div class="email__item">
                                     <div class="content">
-                                        <p>Meeting about new dashboard...</p>
-                                        <span>Cynthia Harvey, 3 min ago</span>
+                                        <p>
+                                            <a
+                                                href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
+                                                Inquiries
+                                            </a>
+                                        </p>
+                                        <span>You have
+                                            <?php echo $general_inquiries_num ?> new inquiries
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="email__item">
-                                    <div class="image img-cir img-40">
-                                        <img src="./admin-panel-assets/images/icon/avatar-05.jpg"
-                                            alt="Cynthia Harvey" />
-                                    </div>
+
                                     <div class="content">
-                                        <p>Meeting about new dashboard...</p>
-                                        <span>Cynthia Harvey, Yesterday</span>
+
+                                        <p>
+                                            <a
+                                                href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">Product
+                                                Inquiries
+                                            </a>
+                                        </p>
+
+                                        <span>You have
+                                            <?php echo $product_inquiries_num ?> new inquiries
+                                        </span>
                                     </div>
-                                </div>
-                                <div class="email__item">
-                                    <div class="image img-cir img-40">
-                                        <img src="./admin-panel-assets/images/icon/avatar-04.jpg"
-                                            alt="Cynthia Harvey" />
-                                    </div>
-                                    <div class="content">
-                                        <p>Meeting about new dashboard...</p>
-                                        <span>Cynthia Harvey, April 12,,2018</span>
-                                    </div>
+
                                 </div>
                                 <div class="email__footer">
-                                    <a href="#">See all emails</a>
+                                    <a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">See
+                                        all inquiries</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="image">
