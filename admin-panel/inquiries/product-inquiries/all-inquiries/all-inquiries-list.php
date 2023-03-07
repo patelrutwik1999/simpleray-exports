@@ -1,5 +1,5 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30 inquiries-list-title">Inquiries List</h1>
+    <h1 class="title-3 m-b-30 inquiries-list-title">Product Inquiries List</h1>
 
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
@@ -52,11 +52,12 @@
 
 
                     <div class="table-responsive table--no-card m-b-30">
-                        <table class="table table-borderless table-striped table-earning inquiry-table" id="inquiry-table">
+                        <table class="table table-borderless table-striped table-earning inquiry-table"
+                            id="inquiry-table">
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <!-- <th>Email</th> -->
                                     <th>Phone</th>
                                     <th>Category</th>
                                     <th>Product</th>
@@ -82,9 +83,9 @@
                                         <td>
                                             <?php echo $retrieved_product_inquiries['first_name'] . " " . $retrieved_product_inquiries['last_name']; ?>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <?php echo $retrieved_product_inquiries['email']; ?>
-                                        </td>
+                                        </td> -->
                                         <td>
                                             <?php echo $retrieved_product_inquiries['phone_no']; ?>
                                         </td>
@@ -106,39 +107,23 @@
                                             }
                                             ?>
                                         </td>
-                                      
-                                            <?php
-                                            if ($retrieved_product_inquiries['read_status'] == 0) {?>
-                                                <td class = "status--process">New</td>
-                                            <?php } else { ?>
-                                                <td class = "status--denied">Processed</td>
-                                            <?php }
-                                            ?>
-                                        
+
+                                        <?php
+                                        if ($retrieved_product_inquiries['read_status'] == 0) { ?>
+                                            <td class="status--process">New</td>
+                                        <?php } else { ?>
+                                            <td class="status--denied">Processed</td>
+                                        <?php }
+                                        ?>
+
                                         <td>
                                             <a
-                                                href="inquiries/view-specific-inquiry/view-inquiry.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>">
-                                                Open
+                                                href="inquiries/product-inquiries/view-specific-inquiry/view.php?inquiry_id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>">
+                                                <button type="button" class="btn btn-secondary mb-1">
+                                                    Open
+                                                </button>
                                             </a>
                                         </td>
-                                        <!-- <td>
-                                            <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Edit">
-                                                    <a
-                                                        href="products/edit-product/edit-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Delete" onclick="handleDelete()">
-                                                    <a
-                                                        href="products/delete-product/delete-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </a>
-                                                </button>
-                                            </div>
-                                        </td> -->
                                     </tr>
                                     <?php
                                 }

@@ -2,7 +2,7 @@
 include '../../../../config/config.php';
 $inquiryId = $_GET['inquiry_id'];
 
-$get_single_inquiry = "select * from general_inquiries where inquiry_id = '$inquiryId'";
+$get_single_inquiry = "select * from product_inquiries where inquiry_id = '$inquiryId'";
 $single_inquiry = mysqli_query($conn, $get_single_inquiry);
 
 $num = mysqli_num_rows($single_inquiry);
@@ -14,7 +14,7 @@ if ($num == 1) {
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="edit-product-form-title">
-                    General Inquiry
+                    Product Inquiry
                     <hr class="add-category-shine">
                 </div>
                 <div class="row edit-product-form">
@@ -32,7 +32,7 @@ if ($num == 1) {
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Full Name</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['full_name']; ?>">
+                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['first_name'] . " " . $row['last_name']; ?>">
                                     </div>
 
                                     <div class="form-group">
@@ -45,6 +45,24 @@ if ($num == 1) {
                                         <label for="cc-payment" class="control-label mb-1">Phone No</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
                                             aria-required="true" readonly aria-invalid="false" value="<?php echo $row['phone_no']; ?>">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cc-payment" class="control-label mb-1">Category Name</label>
+                                        <input id="cc-pament" name="product_name" type="text" class="form-control"
+                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['category_name']; ?>">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cc-payment" class="control-label mb-1">Product Name</label>
+                                        <input id="cc-pament" name="product_name" type="text" class="form-control"
+                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['product_name']; ?>">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="cc-payment" class="control-label mb-1">Subject</label>
+                                        <input id="cc-pament" name="product_name" type="text" class="form-control"
+                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['subject']; ?>">
                                     </div>
 
                                     <div class="form-group">

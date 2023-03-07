@@ -1,5 +1,5 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30 inquiries-list-title">Inquiries List</h1>
+    <h1 class="title-3 m-b-30 inquiries-list-title">General Inquiries List</h1>
 
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
