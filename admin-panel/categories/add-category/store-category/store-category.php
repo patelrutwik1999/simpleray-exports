@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $categoryid = str_replace(array('.'), '', uniqid('cat', true));
     echo $hasParentCategory;
     if ($hasParentCategory == 0) {
-        $insert_category = "insert into add_category(category_id, category_name, added_on, hasSubCategory, hasParentCategory) values ('$categoryid', '$categoryname', '$categoryaddedon', 0, '$hasParentCategory')";
+        $insert_category = "insert into categories(category_id, category_name, added_on, hasSubCategory, hasParentCategory) values ('$categoryid', '$categoryname', '$categoryaddedon', 0, '$hasParentCategory')";
         if (mysqli_query($conn, $insert_category)) {
             mysqli_close($conn);
             $_SESSION['is-error'] = false;
@@ -33,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("location:../insert-category.php");
         }
     } else {
-        $update_parent_category = "update add_category SET hasSubCategory = 1 where category_id = '$parentCategoryid'";
+        $update_parent_category = "update categories SET hasSubCategory = 1 where category_id = '$parentCategoryid'";
         if (mysqli_query($conn, $update_parent_category)) {
-            $insert_category = "insert into add_category(category_id, category_name, added_on, hasSubCategory, hasParentCategory, parent_category_id) values ('$categoryid', '$categoryname', '$categoryaddedon', 0,'$hasParentCategory', '$parentCategoryid')";
+            $insert_category = "insert into categories(category_id, category_name, added_on, hasSubCategory, hasParentCategory, parent_category_id) values ('$categoryid', '$categoryname', '$categoryaddedon', 0,'$hasParentCategory', '$parentCategoryid')";
             if (mysqli_query($conn, $insert_category)) {
                 mysqli_close($conn);
                 $_SESSION['is-error'] = false;
