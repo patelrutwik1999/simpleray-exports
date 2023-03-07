@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     date_default_timezone_set("Asia/Kolkata");
     $categoryaddedon = date("Y-m-d h:i:s");
-    $categoryid = uniqid('cat', true);
+    $categoryid = str_replace(array('.'), '', uniqid('cat', true));
+    echo $hasParentCategory;
     if ($hasParentCategory == 0) {
-        $insert_category = "insert into add_category(category_id, category_name, added_on, hasSubCategory, hasParentCategory) values ('$categoryid', '$categoryname', '$categoryaddedon', 0, 'hasParentCategory')";
-        echo $insert_category;
+        $insert_category = "insert into add_category(category_id, category_name, added_on, hasSubCategory, hasParentCategory) values ('$categoryid', '$categoryname', '$categoryaddedon', 0, '$hasParentCategory')";
         if (mysqli_query($conn, $insert_category)) {
             mysqli_close($conn);
             $_SESSION['is-error'] = false;

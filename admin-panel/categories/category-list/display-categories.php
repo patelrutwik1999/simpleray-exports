@@ -9,6 +9,7 @@
     include '../../top-header.php';
     ?>
     <link href="categories/category-list/display-categories.css" rel="stylesheet" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body class="animsition">
@@ -26,6 +27,13 @@
         </div>
     </div>
     <script>
+        $('.trash').click(function() {
+            //Getting id
+            var categoryId = $(this).data('id');
+            //Setting href for delete button
+            $("#modal-delete").attr('href', 'categories/delete-category/delete-category.php?category_id=' + categoryId);
+        })
+
         function searchCategory() {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;

@@ -14,8 +14,7 @@
                     <div class="row">
                         <div class="search-and-add-category">
                             <form class="form-header categories-list-search-bar" action="" method="POST">
-                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" 
-                                    type="text" name="search" placeholder="Search category name..." onkeyup="searchCategory()" id="category-search-bar" />
+                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="searchCategory()" id="category-search-bar" />
                             </form>
                         </div>
                         <div class="search-and-add-category">
@@ -85,15 +84,13 @@
 
                                         <td>
                                             <div class="table-data-feature">
-                                                <button class=" item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <a href="categories/edit-category/edit-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </a>
                                                 </button>
-                                                <button class="take-id-from-here item" data-toggle="modal" data-placement="top" data-target="#mediumModal" title="Delete">
-                                                    <a href="categories/delete-category/delete-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </a>
+                                                <button class="trash item" data-id="<?php echo $retrieved_categories['category_id']; ?>" data-toggle="modal" data-placement="top" data-target="#mediumModal" title="Delete">
+                                                    <i class="zmdi zmdi-delete"></i>
                                                 </button>
                                             </div>
                                         </td>
@@ -128,7 +125,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="id-bring-here btn btn-primary"><a href="categories/delete-category/delete-category.php" style="color:white">Confirm</a></button>
+                <a style="color:white" id="modal-delete" href="" class="btn btn-primary">Confirm</a>
             </div>
         </div>
     </div>
