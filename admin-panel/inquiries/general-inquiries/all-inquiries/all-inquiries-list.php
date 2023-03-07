@@ -1,5 +1,5 @@
 <div class="main-content">
-    <h1 class="title-3 m-b-30 inquiries-list-title">Inquiries List</h1>
+    <h1 class="title-3 m-b-30 inquiries-list-title">General Inquiries List</h1>
 
     <hr style="height: 15px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);">
     <div class="section__content section__content--p30">
@@ -61,7 +61,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <!-- <th>Email</th> -->
                                     <th>Phone</th>
                                     <th>Submitted On</th>
                                     <th>Last Read On</th> <!-- Display the time when the inquiry is updated -->
@@ -76,7 +76,7 @@
                                 <?php
                                 include '../../../../config/config.php';
 
-                                $get_general_inquiries = "select * from general_inquiries";
+                                $get_general_inquiries = "select * from general_inquiries order by submitted_on desc";
                                 $result = mysqli_query($conn, $get_general_inquiries);
                                 $num = mysqli_num_rows($result);
                                 while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {
@@ -85,9 +85,9 @@
                                         <td>
                                             <?php echo $retrieved_general_inquiries['full_name']; ?>
                                         </td>
-                                        <td>
-                                            <?php echo $retrieved_general_inquiries['email']; ?>
-                                        </td>
+                                        <!-- <td> -->
+                                        <!-- <?php echo $retrieved_general_inquiries['email']; ?> -->
+                                        <!-- </td> -->
                                         <td>
                                             <?php echo $retrieved_general_inquiries['phone_no']; ?>
                                         </td>
@@ -96,15 +96,15 @@
                                         </td>
                                         <td>
                                             <?php
-                                            if ($retrieved_product_inquiries['updated_on'] == null) {
+                                            if ($retrieved_general_inquiries['updated_on'] == null) {
                                                 echo "Not opened yet";
                                             } else {
-                                                echo $retrieved_product_inquiries['updated_on'];
+                                                echo $retrieved_general_inquiries['updated_on'];
                                             }
                                             ?>
                                         </td>
                                         <?php
-                                        if ($retrieved_product_inquiries['read_status'] == 0) { ?>
+                                        if ($retrieved_general_inquiries['read_status'] == 0) { ?>
                                             <td class="status--process">New</td>
                                         <?php } else { ?>
                                             <td class="status--denied">Processed</td>
@@ -112,28 +112,13 @@
                                         ?>
                                         <td>
                                             <a
-                                                href="inquiries/view-specific-inquiry/view-inquiry.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
-                                                Open
+                                                href="inquiries/general-inquiries/view-specific-inquiry/view.php?inquiry_id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
+                                                <button type="button" class="btn btn-secondary mb-1">
+                                                    Open
+                                                </button>
+
                                             </a>
                                         </td>
-                                        <!-- <td>
-                                            <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Edit">
-                                                    <a
-                                                        href="products/edit-product/edit-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Delete" onclick="handleDelete()">
-                                                    <a
-                                                        href="products/delete-product/delete-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </a>
-                                                </button>
-                                            </div>
-                                        </td> -->
                                     </tr>
                                     <?php
                                 }
@@ -141,11 +126,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </div>

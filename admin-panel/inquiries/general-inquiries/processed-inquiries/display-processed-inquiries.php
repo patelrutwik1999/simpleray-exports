@@ -5,6 +5,7 @@
     <title>General Inquiries List - Processed</title>
     <?php
     session_start();
+    include '../../../../config/config.php';
     include '../../../top-header.php';
     ?>
     <link href="inquiries/general-inquiries/processed-inquiries/processed-inquiries-list.css" rel="stylesheet" media="all">

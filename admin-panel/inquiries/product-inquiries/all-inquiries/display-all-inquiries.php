@@ -5,6 +5,7 @@
     <title>Product Inquiries List</title>
     <?php
     session_start();
+    include '../../../../config/config.php';
     include '../../../top-header.php';
     ?>
     <link href="inquiries/product-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
