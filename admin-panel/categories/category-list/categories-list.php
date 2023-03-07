@@ -71,7 +71,7 @@
                                 <?php
                                 include '../../../config/config.php';
 
-                                $get_categories = "select * from add_category";
+                                $get_categories = "select * from categories";
                                 $result = mysqli_query($conn, $get_categories);
                                 $num = mysqli_num_rows($result);
 

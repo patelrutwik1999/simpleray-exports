@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = $_POST['description'];
 
     //Finds the category id from the category name.
-    $findCategoryId = "select category_id from add_category where category_name = '$categoryName'";
+    $findCategoryId = "select category_id from categories where category_name = '$categoryName'";
     $retrieved_categories = mysqli_query($conn, $findCategoryId);
     $categories = mysqli_fetch_array($retrieved_categories);
     $categoryId = $categories['category_id'];

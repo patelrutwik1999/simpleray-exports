@@ -9,7 +9,7 @@
                     include '../config/config.php';
                     $classNames = ['gi-cat-box-1', 'gi-cat-box-2', 'gi-cat-box-3', 'gi-cat-box-4', 'gi-cat-box-5', 'gi-cat-box-6'];
                     // echo "hello1";
-                    $get_all_categories = "select * from add_category where hasParentCategory = 0";
+                    $get_all_categories = "select * from categories where hasParentCategory = 0";
                     // echo $get_all_categories;
                     $result = mysqli_query($conn, $get_all_categories);
                     $num = mysqli_num_rows($result);

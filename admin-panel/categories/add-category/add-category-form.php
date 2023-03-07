@@ -68,7 +68,7 @@
                                             <option value="2">Please select</option>
                                             <?php
                                             include '../../../config/config.php';
-                                            $get_categories = "select category_id, category_name from add_category";
+                                            $get_categories = "select category_id, category_name from categories";
                                             $retrieved_categories = mysqli_query($conn, $get_categories);
                                             while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                             ?>

@@ -3,7 +3,7 @@ include '../../config/config.php';
 
 $categoryId = $_GET['categoryId'];
 
-$hasASubCategory = "select hasSubCategory from add_category where category_id = '$categoryId'";
+$hasASubCategory = "select hasSubCategory from categories where category_id = '$categoryId'";
 $hasSubCategory = mysqli_query($conn, $hasASubCategory);
 $subCategoryResult = mysqli_num_rows($hasSubCategory);
 if ($subCategoryResult == 1) {
@@ -141,7 +141,7 @@ if ($subCategoryResult == 1) {
                         <ul class="gi-pro-tab-nav nav">
                             <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#all">All</a></li>
                             <?php
-                            $getChildCategory = "select category_id, category_name from add_category where parent_category_id = '$categoryId'";
+                            $getChildCategory = "select category_id, category_name from categories where parent_category_id = '$categoryId'";
                             $retrievedChildCategory = mysqli_query($conn, $getChildCategory);
                             $temp =  mysqli_num_rows($retrievedChildCategory);
                             while ($childCategory = mysqli_fetch_array($retrievedChildCategory)) {
@@ -619,7 +619,7 @@ if ($subCategoryResult == 1) {
                             <!-- 1st Product tab end -->
 
                             <?php
-                            $getChildCategoryForModal = "select category_id, category_name from add_category where parent_category_id = '$categoryId'";
+                            $getChildCategoryForModal = "select category_id, category_name from categories where parent_category_id = '$categoryId'";
                             $retrievedChildCategoryForModal = mysqli_query($conn, $getChildCategoryForModal);
                             $temp =  mysqli_num_rows($retrievedChildCategoryForModal);
                             while ($childCategoryForModal = mysqli_fetch_array($retrievedChildCategoryForModal)) {
@@ -1716,7 +1716,7 @@ if ($subCategoryResult == 1) {
                                     <div class="gi-sb-block-content">
                                         <ul>
                                             <?php
-                                            $getChildCategory = "select category_id, category_name from add_category where parent_category_id = '$categoryId'";
+                                            $getChildCategory = "select category_id, category_name from categories where parent_category_id = '$categoryId'";
                                             $retrievedChildCategory = mysqli_query($conn, $getChildCategory);
                                             $temp =  mysqli_num_rows($retrievedChildCategory);
                                             while ($childCategory = mysqli_fetch_array($retrievedChildCategory)) {

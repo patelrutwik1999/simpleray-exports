@@ -89,7 +89,7 @@ if ($num == 1) {
                                                 
                                                 <?php
                                                 $parent = $row['parent_category_id'];
-                                                $get_categories = "select category_id, category_name from add_category where hasSubCategory = 0 and category_id != '$parent'";
+                                                $get_categories = "select category_id, category_name from categories where hasSubCategory = 0 and category_id != '$parent'";
                                                 $retrieved_categories = mysqli_query($conn, $get_categories);
                                                 while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                                 ?>

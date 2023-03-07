@@ -4,8 +4,9 @@
 <head>
     <?php
     session_start();
-    include 'config/config.php';
     include 'top-header.php';
+    include 'config/config.php';
+
     ?>
     <title>Home</title>
 </head>

@@ -2,7 +2,7 @@
 include '../../../config/config.php';
 $categoryid = $_GET['category_id'];
 
-$get_single_category = "select * from add_category where category_id = '$categoryid'";
+$get_single_category = "select * from categories where category_id = '$categoryid'";
 $single_category = mysqli_query($conn, $get_single_category);
 
 $num = mysqli_num_rows($single_category);
@@ -108,7 +108,7 @@ if ($num == 1) {
                                                 <option value="<?php echo $row['parent_category_id']; ?>">
                                                     <?php
                                                     $categoryIdToSearch = $row['parent_category_id'];
-                                                    $get_category_name = "select category_name from add_category where category_id = '$categoryIdToSearch'";
+                                                    $get_category_name = "select category_name from categories where category_id = '$categoryIdToSearch'";
 
                                                     $retrieved_category_name = mysqli_query($conn, $get_category_name);
 
@@ -121,7 +121,7 @@ if ($num == 1) {
                                                     ?>
                                                 </option>
                                                 <?php
-                                                $get_categories = "select category_id, category_name from add_category";
+                                                $get_categories = "select category_id, category_name from categories";
                                                 $retrieved_categories = mysqli_query($conn, $get_categories);
                                                 while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                                 ?>

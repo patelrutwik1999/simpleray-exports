@@ -1,6 +1,7 @@
 <!-- To get the base  -->
-<base href="http://localhost/simpleray-exports/admin-panel/">
-
+<!-- <base href="http://localhost/simpleray-exports/admin-panel/"> -->
+<base href="https://simplerayexports.herokuapp.com/admin-panel/">
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <!-- Required meta tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

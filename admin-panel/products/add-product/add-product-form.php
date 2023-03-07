@@ -88,7 +88,7 @@
 
                                             <?php
                                             include '../../../config/config.php';
-                                            $get_categories = "select category_id, category_name from add_category where hasSubCategory = 0";
+                                            $get_categories = "select category_id, category_name from categories where hasSubCategory = 0";
                                             $retrieved_categories = mysqli_query($conn, $get_categories);
                                             while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                                 ?>
