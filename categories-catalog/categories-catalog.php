@@ -6,10 +6,10 @@
                 <div class="gi-category-block owl-carousel">
 
                     <?php
-                    include 'config/config.php';
+                    include '../config/config.php';
                     $classNames = ['gi-cat-box-1', 'gi-cat-box-2', 'gi-cat-box-3', 'gi-cat-box-4', 'gi-cat-box-5', 'gi-cat-box-6'];
                     // echo "hello1";
-                    $get_all_categories = "select * from add_category";
+                    $get_all_categories = "select * from add_category where hasParentCategory = 0";
                     // echo $get_all_categories;
                     $result = mysqli_query($conn, $get_all_categories);
                     $num = mysqli_num_rows($result);
@@ -26,7 +26,8 @@
                             <div class="gi-cat-icon">
                                 <i class="fi fi-tr-peach"></i>
                                 <div class="gi-cat-detail">
-                                    <a href="shop-left-sidebar-col-3.html">
+                                    <a href="products/product-display.php?categoryId=<?php echo $category['category_id']; ?>">
+                                        <!-- <a href="shop-left-sidebar-col-3.html"> -->
                                         <h4 class="gi-cat-title"><?php echo $category['category_name']; ?></h4>
                                     </a>
                                     <!-- <p class="items">320 Items</p> -->
