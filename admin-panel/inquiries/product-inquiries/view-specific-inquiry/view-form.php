@@ -32,60 +32,68 @@ if ($num == 1) {
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Full Name</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['first_name'] . " " . $row['last_name']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['first_name'] . " " . $row['last_name']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Email</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['email']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['email']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Phone No</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['phone_no']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['phone_no']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Category Name</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['category_name']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['category_name']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Product Name</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['product_name']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['product_name']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Subject</label>
                                         <input id="cc-pament" name="product_name" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['subject']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['subject']; ?>">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="textarea-input" class="form-control-label">Message</label>
                                         <textarea name="product_description" id="textarea-input" rows="3"
-                                            class="form-control" aria-required="true" aria-invalid="false"><?php echo $row['description']; ?></textarea>
+                                            class="form-control" aria-required="true"
+                                            aria-invalid="false"><?php echo $row['description']; ?></textarea>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Submitted On</label>
                                         <input id="cc-pament" name="product_price" type="text" class="form-control"
-                                            aria-required="true" readonly aria-invalid="false" value="<?php echo $row['submitted_on']; ?>">
+                                            aria-required="true" readonly aria-invalid="false"
+                                            value="<?php echo $row['submitted_on']; ?>">
                                     </div>
 
                                     <!-- <div class="form-group">
                                         <label for="cc-payment" class="control-label mb-1">Processed On</label>
                                         <input id="cc-pament" readonly type="text" class="form-control" aria-required="true" aria-invalid="false" value="<?php
-                                                                                                                                                            if ($row['updated_on'] == null) {
-                                                                                                                                                                echo "Request has not been processed yet";
-                                                                                                                                                            } else {
-                                                                                                                                                                echo $row['updated_on'];
-                                                                                                                                                            }
-                                                                                                                                                            ?>">
+                                        if ($row['updated_on'] == null) {
+                                            echo "Request has not been processed yet";
+                                        } else {
+                                            echo $row['updated_on'];
+                                        }
+                                        ?>">
                                     </div> -->
 
                                     <div>
@@ -104,7 +112,16 @@ if ($num == 1) {
             </div>
         </div>
     </div>
-<?php
+    <?php
+    if ($row['read_status'] == 0) {
+        $update_status = "
+        update product_inquiries set
+        read_status = 1
+        where
+        inquiry_id = '$inquiryId'
+    ";
+        mysqli_query($conn, $update_status);
+    }
 }
 mysqli_close($conn);
 ?>

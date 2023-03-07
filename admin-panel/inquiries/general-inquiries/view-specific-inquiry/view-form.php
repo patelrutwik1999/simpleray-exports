@@ -99,14 +99,7 @@ if ($num == 1) {
             where
             inquiry_id = '$inquiryId'
         ";
-
-        if (mysqli_query($conn, $update_status)) {
-            echo "Success";
-
-        } else {
-            echo "Failure";
-
-        }
+        mysqli_query($conn, $update_status);
     }
 }
 mysqli_close($conn);
