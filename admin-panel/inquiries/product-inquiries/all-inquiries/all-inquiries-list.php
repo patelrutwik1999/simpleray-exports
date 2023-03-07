@@ -74,7 +74,7 @@
                                 <?php
                                 include '../../../../config/config.php';
 
-                                $get_product_inquiries = "select * from product_inquiries";
+                                $get_product_inquiries = "select * from product_inquiries order by submitted_on desc";
                                 $result = mysqli_query($conn, $get_product_inquiries);
                                 $num = mysqli_num_rows($result);
                                 while ($retrieved_product_inquiries = mysqli_fetch_array($result)) {
