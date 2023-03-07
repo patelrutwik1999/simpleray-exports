@@ -5,45 +5,9 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
 
-            <!-- <div class="row">
-                <div class="gi-tab-title">
-                    <div class="gi-pro-tab">
-                        <ul class="gi-pro-tab-nav nav">
-                            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#snack">Snack &
-                                    Spices</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#fruit">Fruits</a></li>
-                            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#veg">Vegetables</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-            <div style="display: flex; justify-content: right;">
-                <nav class="navbar navbar-dark bg-dark" style="width: 17%">
-                    <a class="navbar-brand" href="#">Filter Inquiries</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">All <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">New</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="inquiries/general-inquiries/processed-inquiries/display-processed-inquiries.php">Processed</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            <?php
+            include '../navigation-bar/navigation-bar.php';
+            ?>
 
             <div class="row">
                 <form class="form-header inquiries-list-search-bar" action="" method="POST">

@@ -8,6 +8,7 @@
     include '../../../top-header.php';
     ?>
     <link href="inquiries/general-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/general-inquiries/navigation-bar/navigation-bar.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
