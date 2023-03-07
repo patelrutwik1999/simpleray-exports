@@ -4,6 +4,7 @@
     <?php
     session_start();
     include '../top-header.php';
+    include '../../config/config.php';
     ?>
     <!-- Title Page-->
     <title>Dashboard</title>

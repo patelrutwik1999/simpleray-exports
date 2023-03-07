@@ -6,6 +6,7 @@
 
     <?php
     session_start();
+    include '../../../config/config.php';
     include '../../top-header.php';
     ?>
     <link href="categories/add-category/add-category-form.css" rel="stylesheet" media="all">

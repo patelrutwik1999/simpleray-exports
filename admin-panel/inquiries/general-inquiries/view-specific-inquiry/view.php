@@ -5,6 +5,7 @@
     <title>Details</title>
     <?php
     session_start();
+    include '../../../../config/config.php';
     include '../../../top-header.php';
     ?>
     <link href="inquiries/general-inquiries/view-specific-inquiry/view-form.css" rel="stylesheet" media="all">

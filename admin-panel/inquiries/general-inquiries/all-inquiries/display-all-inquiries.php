@@ -5,6 +5,7 @@
     <title>General Inquiries List - All</title>
     <?php
     session_start();
+    include '../../../../config/config.php';
     include '../../../top-header.php';
     ?>
     <link href="inquiries/general-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
