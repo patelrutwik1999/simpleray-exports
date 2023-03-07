@@ -47,6 +47,10 @@
                 }
             }
         }
+
+        function displayInquiry(element) {
+            console.log(element)
+        }
     </script>
     <?php
     include '../../../sub-footer.php';

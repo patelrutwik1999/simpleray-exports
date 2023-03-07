@@ -61,7 +61,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <!-- <th>Email</th> -->
                                     <th>Phone</th>
                                     <th>Submitted On</th>
                                     <th>Last Read On</th> <!-- Display the time when the inquiry is updated -->
@@ -85,9 +85,9 @@
                                         <td>
                                             <?php echo $retrieved_general_inquiries['full_name']; ?>
                                         </td>
-                                        <td>
-                                            <?php echo $retrieved_general_inquiries['email']; ?>
-                                        </td>
+                                        <!-- <td> -->
+                                        <!-- <?php echo $retrieved_general_inquiries['email']; ?> -->
+                                        <!-- </td> -->
                                         <td>
                                             <?php echo $retrieved_general_inquiries['phone_no']; ?>
                                         </td>
@@ -112,8 +112,11 @@
                                         ?>
                                         <td>
                                             <a
-                                                href="inquiries/view-specific-inquiry/view-inquiry.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
-                                                Open
+                                                href="inquiries/general-inquiries/view-specific-inquiry/view.php?inquiry_id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
+                                                <button type="button" class="btn btn-secondary mb-1">
+                                                    Open
+                                                </button>
+
                                             </a>
                                         </td>
                                         <!-- <td>
@@ -141,11 +144,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </div>
