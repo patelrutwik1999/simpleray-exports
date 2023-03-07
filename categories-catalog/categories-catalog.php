@@ -19,8 +19,6 @@
                         if ($classId >= 0 && $classId <= 6) {
                             $className = "$classNames[$classId]";
                         }
-
-                        $classId++;
                     ?>
                         <div class="gi-cat-box <?php echo $className ?>">
                             <div class="gi-cat-icon">
@@ -35,7 +33,7 @@
                             </div>
                         </div>
                     <?php
-
+                        $classId++;
                         if ($classId == 7) {
                             $classId = 0;
                         }
