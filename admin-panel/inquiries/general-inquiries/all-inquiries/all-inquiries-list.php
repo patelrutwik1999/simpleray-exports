@@ -96,15 +96,15 @@
                                         </td>
                                         <td>
                                             <?php
-                                            if ($retrieved_product_inquiries['updated_on'] == null) {
+                                            if ($retrieved_general_inquiries['updated_on'] == null) {
                                                 echo "Not opened yet";
                                             } else {
-                                                echo $retrieved_product_inquiries['updated_on'];
+                                                echo $retrieved_general_inquiries['updated_on'];
                                             }
                                             ?>
                                         </td>
                                         <?php
-                                        if ($retrieved_product_inquiries['read_status'] == 0) { ?>
+                                        if ($retrieved_general_inquiries['read_status'] == 0) { ?>
                                             <td class="status--process">New</td>
                                         <?php } else { ?>
                                             <td class="status--denied">Processed</td>
@@ -119,24 +119,6 @@
 
                                             </a>
                                         </td>
-                                        <!-- <td>
-                                            <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Edit">
-                                                    <a
-                                                        href="products/edit-product/edit-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </a>
-                                                </button>
-                                                <button class="item" data-toggle="tooltip" data-placement="top"
-                                                    title="Delete" onclick="handleDelete()">
-                                                    <a
-                                                        href="products/delete-product/delete-product.php?product_id=<?php echo $retrieved_products['product_id'] ?>">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </a>
-                                                </button>
-                                            </div>
-                                        </td> -->
                                     </tr>
                                     <?php
                                 }
