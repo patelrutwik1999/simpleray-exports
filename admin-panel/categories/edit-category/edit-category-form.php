@@ -64,7 +64,7 @@ if ($num == 1) {
                                         <input id="cc-pament" name="category_name" type="text" class="form-control" aria-required="true" aria-invalid="false" value="<?php echo $row['category_name']; ?>">
                                     </div>
                                     <div class="form-group has-success">
-                                        <label for="cc-name" class="control-label mb-1">Is it a sub-category?</label>
+                                        <label for="cc-name" class="control-label mb-1">Does it have a sub-category?</label>
                                         <div class="col-20 col-md-20">
                                             <select name="has_sub_category" id="select-sub-category" class="form-control">
                                                 <option value="<?php echo $row['hasSubCategory']; ?>">
