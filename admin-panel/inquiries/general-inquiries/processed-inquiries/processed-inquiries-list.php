@@ -30,15 +30,14 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">All <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">New</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="inquiries/general-inquiries/processed-inquiries/display-processed-inquiries.php">Processed</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="inquiries/general-inquiries/processed-inquiries/display-processed-inquiries.php">Processed</a>
                             </li>
                         </ul>
                     </div>
@@ -112,7 +111,7 @@
                                 <?php
                                 include '../../../../config/config.php';
 
-                                $get_general_inquiries = "select * from general_inquiries";
+                                $get_general_inquiries = "select * from general_inquiries where read_status = 1";
                                 $result = mysqli_query($conn, $get_general_inquiries);
                                 $num = mysqli_num_rows($result);
                                 while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {

@@ -2,12 +2,12 @@
 
 <head>
     <!-- Title Page-->
-    <title>General Inquiries List - All</title>
+    <title>General Inquiries List - Processed</title>
     <?php
     session_start();
     include '../../../top-header.php';
     ?>
-    <link href="inquiries/general-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/general-inquiries/processed-inquiries/processed-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body class="animsition">
@@ -19,7 +19,7 @@
         <div class="page-container">
             <?php
             include '../../../header-desktop.php';
-            include 'all-inquiries-list.php';
+            include 'processed-inquiries-list.php';
             include '../../../footer.php';
             ?>
         </div>
