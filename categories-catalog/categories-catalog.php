@@ -16,7 +16,7 @@
                     // echo $num;
                     $classId = 0;
                     while ($category = mysqli_fetch_array($result)) {
-                        if ($classId >= 0 && $classId <= 6) {
+                        if ($classId >= 0 && $classId <= 5) {
                             $className = "$classNames[$classId]";
                         }
                     ?>
@@ -34,7 +34,7 @@
                         </div>
                     <?php
                         $classId++;
-                        if ($classId == 7) {
+                        if ($classId == 6) {
                             $classId = 0;
                         }
                     }
