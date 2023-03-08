@@ -8,8 +8,7 @@
                     <div class="page-title">
                         <h4>Dashboard</h4>
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Morvin</a></li>
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray-Exports</a></li>
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                     </div>

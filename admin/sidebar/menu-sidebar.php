@@ -26,13 +26,14 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
-                        <i class="dripicons-home"></i><span class="badge rounded-pill bg-info float-end">3</span>
+                    <a href="landing-page/dashboard.php" class="waves-effect">
+                        <i class="dripicons-home"></i>
+                        <!-- <span class="badge rounded-pill bg-info float-end">3</span> -->
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="calendar.html" class=" waves-effect">
                         <i class="dripicons-calendar"></i>
                         <span>Calendar</span>
@@ -44,12 +45,12 @@
                         <i class="dripicons-message"></i>
                         <span>Chat</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="dripicons-cart"></i>
-                        <span>Ecommerce</span>
+                        <i class="dripicons-network-3"></i>
+                        <span>Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="ecommerce-products.html">Products</a></li>
@@ -59,6 +60,22 @@
                         <li><a href="ecommerce-cart.html">Cart</a></li>
                         <li><a href="ecommerce-checkout.html">Checkout</a></li>
                         <li><a href="ecommerce-shops.html">Shops</a></li>
+                        <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="dripicons-tags"></i>
+                        <span>Products</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="products/products-list/display-products.php">Products Detail</a></li>
+                        <!-- <li><a href="ecommerce-orders.html">Orders</a></li>
+                        <li><a href="ecommerce-customers.html">Customers</a></li>
+                        <li><a href="ecommerce-cart.html">Cart</a></li>
+                        <li><a href="ecommerce-checkout.html">Checkout</a></li>
+                        <li><a href="ecommerce-shops.html">Shops</a></li> -->
                         <li><a href="ecommerce-add-product.html">Add Product</a></li>
                     </ul>
                 </li>
