@@ -40,7 +40,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="categories/category-list/display-categories.php">Categories List</a></li>
-                        <li><a href="">Add Category</a></li>
+                        <li><a href="categories/add-category/insert-category.php">Add Category</a></li>
                     </ul>
                 </li>
 
