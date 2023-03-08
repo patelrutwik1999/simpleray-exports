@@ -11,24 +11,24 @@
 
                 <div class="card-box shadow-none p-4">
                     <div class="p-2">
-                        <div class="text-center mt-4">
-                            <a href="index.html"><img src="assets/images/logo-dark.png" height="22" alt="logo"></a>
+                        <div class="text-center mt-2">
+                            <a href="index.php"><img src="assets/images/logo-1.png" height="130" alt="logo"></a>
                         </div>
 
-                        <h4 class="font-size-18 mt-5 text-center">Welcome Back !</h4>
+                        <h4 class="font-size-18 mt-4 text-center">Welcome Back !</h4>
                         <p class="text-muted text-center">Sign in to continue to Simpleray Exports.</p>
 
-                        <form class="mt-4" action="#">
+                        <form class="mt-4" action="admin-login/login-validation/validation.php" method="POST">
 
                             <div class="mb-3">
-                                <label class="form-label" for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
                             </div>
 
 
                             <div class="mb-3">
-                                <label class="form-label" for="userpassword">Password</label>
-                                <input type="password" class="form-control" id="userpassword"
+                                <label class="form-label" for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password"
                                     placeholder="Enter password">
                             </div>
 
