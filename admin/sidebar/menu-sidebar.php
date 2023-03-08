@@ -76,7 +76,7 @@
                         <li><a href="ecommerce-cart.html">Cart</a></li>
                         <li><a href="ecommerce-checkout.html">Checkout</a></li>
                         <li><a href="ecommerce-shops.html">Shops</a></li> -->
-                        <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                        <li><a href="products/add-product/insert-product.php">Add Product</a></li>
                     </ul>
                 </li>
 
