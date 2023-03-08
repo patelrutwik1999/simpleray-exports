@@ -45,3 +45,4 @@ if ($conn->query($category_deletion) === TRUE) {
     $_SESSION['error-message'] = "The category and its related sub-categories, and products are not deleted.";
     header("location:../category-list/display-categories.php");
 }
+?>
