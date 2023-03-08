@@ -14,7 +14,10 @@
                     <div class="row">
                         <div class="search-and-add-category">
                             <form class="form-header categories-list-search-bar" action="" method="POST">
-                                <input class="au-input au-input--xl" style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search" placeholder="Search category name..." onkeyup="searchCategory()" id="category-search-bar" />
+                                <input class="au-input au-input--xl"
+                                    style="border: 1px solid #453456; border-radius: 1rem;" type="text" name="search"
+                                    placeholder="Search category name..." onkeyup="searchCategory()"
+                                    id="category-search-bar" />
                             </form>
                         </div>
                         <div class="search-and-add-category">
@@ -27,7 +30,7 @@
                     <?php
                     if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
                         $_SESSION['message'] = false;
-                    ?>
+                        ?>
                         <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                             <span class="badge badge-pill badge-success">Success</span>
                             <?php
@@ -38,11 +41,11 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    <?php
+                        <?php
                     } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
                         $_SESSION['is-error'] = false;
                         $_SESSION['message'] = false;
-                    ?>
+                        ?>
                         <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
                             <span class="badge badge-pill badge-danger">Oops</span>
                             <?php
@@ -53,7 +56,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                    <?php
+                        <?php
                     }
                     ?>
                     <div class="table-responsive table--no-card m-b-30">
@@ -76,26 +79,43 @@
                                 $num = mysqli_num_rows($result);
 
                                 while ($retrieved_categories = mysqli_fetch_array($result)) {
-                                ?>
+                                    ?>
                                     <tr>
-                                        <td><?php echo $retrieved_categories['category_name']; ?></td>
-                                        <td><?php echo $retrieved_categories['added_on']; ?></td>
-                                        <td><?php echo $retrieved_categories['updated_on']; ?></td>
+                                        <td>
+                                            <?php echo $retrieved_categories['category_name']; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $retrieved_categories['added_on']; ?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            if ($retrieved_categories['updated_on'] == null) {
+                                                echo "Not updated yet";
+                                            } else {
+                                                echo $retrieved_categories['updated_on'];
+                                            }
+                                            ?>
+                                        </td>
 
                                         <td>
                                             <div class="table-data-feature">
-                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <a href="categories/edit-category/edit-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
+                                                <button class="item" data-toggle="tooltip" data-placement="top"
+                                                    title="Edit">
+                                                    <a
+                                                        href="categories/edit-category/edit-category.php?category_id=<?php echo $retrieved_categories['category_id'] ?>">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </a>
                                                 </button>
-                                                <button class="trash item" data-id="<?php echo $retrieved_categories['category_id']; ?>" data-toggle="modal" data-placement="top" data-target="#mediumModal" title="Delete">
+                                                <button class="trash item"
+                                                    data-id="<?php echo $retrieved_categories['category_id']; ?>"
+                                                    data-toggle="modal" data-placement="top" data-target="#mediumModal"
+                                                    title="Delete">
                                                     <i class="zmdi zmdi-delete"></i>
                                                 </button>
                                             </div>
                                         </td>
                                     </tr>
-                                <?php
+                                    <?php
                                 }
                                 mysqli_close($conn);
                                 ?>
@@ -109,7 +129,8 @@
 </div>
 
 <!-- Delete Modal -->
-<div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+<div class="modal fade" id="mediumModal" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
