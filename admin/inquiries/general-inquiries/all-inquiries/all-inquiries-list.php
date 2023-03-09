@@ -62,8 +62,10 @@
                                     <li>
                                         <div class="col-mail col-mail-1">
                                             <div class="checkbox-wrapper-mail">
-                                                <input type="checkbox" id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
-                                                <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>" class="toggle"></label>
+                                                <input type="checkbox"
+                                                    id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
+                                                <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                                    class="toggle"></label>
                                             </div>
                                             <a href="#" class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
@@ -72,19 +74,19 @@
                                         </div>
                                         <div class="col-mail col-mail-2">
                                             <a href="#" class="subject">
-                                                <?php 
-                                                if($retrieved_general_inquiries['read_status'] == 1) {
-                                                ?>
-                                                <span class="bg-danger badge me-2">
-                                                    Processed
-                                                </span>
-                                                <?php 
+                                                <?php
+                                                if ($retrieved_general_inquiries['read_status'] == 1) {
+                                                    ?>
+                                                    <span class="bg-danger badge me-2">
+                                                        Processed
+                                                    </span>
+                                                <?php
                                                 } else {
-                                                ?>
-                                                <span class="bg-success badge me-2">
-                                                &nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;
-                                                </span>
-                                                <?php 
+                                                    ?>
+                                                    <span class="bg-success badge me-2">
+                                                        &nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;
+                                                    </span>
+                                                <?php
                                                 }
                                                 ?>
                                                 <strong>
@@ -95,14 +97,15 @@
                                                 </span>
                                             </a>
                                             <div class="date">
-                                                <?php  $date = substr($retrieved_general_inquiries['submitted_on'], 0, 10);
-                                                    $month = substr(date('F', strtotime($date)), 0, 3);
-                                                    $year = date('Y', strtotime($date));
-                                                    // // $name_day = date('l',$convert_date);
-                                                    $day = date('j', strtotime($date));
-                                                    $date_of_submission = $month . " " . $day . ", " . $year;
-                                                    echo $date_of_submission;
-                                            ?></div>
+                                                <?php $date = substr($retrieved_general_inquiries['submitted_on'], 0, 10);
+                                                $month = substr(date('F', strtotime($date)), 0, 3);
+                                                $year = date('Y', strtotime($date));
+                                                // // $name_day = date('l',$convert_date);
+                                                $day = date('j', strtotime($date));
+                                                $date_of_submission = $month . " " . $day . ", " . $year;
+                                                echo $date_of_submission;
+                                                ?>
+                                            </div>
                                         </div>
                                     </li>
                                     <?php
@@ -116,14 +119,29 @@
                             <div class="col-7">
                                 Showing 1 - 20 of 1,524
                             </div>
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link">Previous</a>
-                                </li>
-                                <!-- <li class="page-item"><a class="page-link">1</a></li>
-                                <li class="page-item"><a class="page-link">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                                <li class="page-item"><a class="page-link">Next</a></li>
-                            </ul>
+                            <div class="col-5">
+                                <ul class="pagination">
+                                    <!-- <li class="page-item"><a class="page-link">Previous</a></li> -->
+                                    <?php
+                                    $i = 1;
+                                    $records_per_page = 3;
+                                    $sum = 0;
+                                    $count_query = "SELECT COUNT(*) FROM general_inquiries";
+                                    $count_query_execute = mysqli_query($conn, $count_query);
+                                    $count_query_rows = mysqli_fetch_row($count_query_execute);
+                                    $total_records = $count_query_rows[0];
+                                    while ($sum < $total_records) {
+                                        ?>
+                                        <li class="page-item"><a class="page-link">
+                                                <?php echo $i; ?>
+                                            </a></li>
+                                        <?php
+                                        $sum = $sum + $records_per_page;
+                                        $i = $i + 1;
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
                             <!-- <div class="col-5">
                                                 <div class="btn-group float-end">
                                                     <button type="button" class="btn btn-sm btn-success waves-effect"><i class="fa fa-chevron-left"></i></button>
