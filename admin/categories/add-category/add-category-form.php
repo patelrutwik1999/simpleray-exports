@@ -9,16 +9,12 @@
                         <h4>Add Category</h4>
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="categories/categories-list/display-products.php">Categories</a></li>
-                            <li class="breadcrumb-item active">Add Product</li>
+                            <li class="breadcrumb-item"><a href="categories/category-list/display-categories.php">Categories</a></li>
+                            <li class="breadcrumb-item active">Add Category</li>
                         </ol>
                     </div>
                 </div>
-                <!-- <div class="col-sm-6">
-                    <div class="float-end d-none d-sm-block">
-                        <a href="" class="btn btn-success">Add Widget</a>
-                    </div>
-                </div> -->
+
             </div>
         </div>
     </div>
@@ -29,41 +25,95 @@
         <div class="page-content-wrapper">
 
             <div class="row">
-                <div class="col-9" style="margin: auto">
+                <div style="margin: auto">
                     <div class="card">
                         <div class="card-body">
+                            <h4 class="header-title" style="color: #525ce5">Insert Category Details</h4>
+                            <!-- Checking whether the category has been added successfully or not. -->
+                            <?php
+                            if (($_SESSION['is-error'] == false) && ($_SESSION['message'] == true)) {
+                                $_SESSION['message'] = false;
+                            ?>
+                                <div class="row" style="text-align: center;">
+                                    <div class="col-lg-6" style="margin: auto">
+                                        <div class="card alert alert-dismissible border p-0 mb-0">
+                                            <div class="card-header bg-soft-success">
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
 
-                            <h4 class="header-title" style="color: #525ce5">Insert Product Details</h4>
+                                                </button>
+                                                <h5 class="font-size-16 text-success my-1">Success</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="mb-4">
+                                                        <i class="mdi mdi-checkbox-marked-circle-outline display-4 text-success"></i>
+                                                    </div>
+                                                    <h4 class="alert-heading font-size-18">Well done!</h4>
+                                                    <p>The category has been added successfully.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php
+                            } elseif (($_SESSION['is-error'] == true) && ($_SESSION['message'] == true)) {
+                                $_SESSION['is-error'] = false;
+                                $_SESSION['message'] = false;
+                            ?>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card alert alert-dismissible border mt-4 mt-lg-0 p-0 mb-0">
+                                            <div class="card-header bg-soft-danger">
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+                                                </button>
+                                                <h5 class="font-size-16 text-danger my-1">Oops</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <div class="mb-4">
+                                                        <i class="mdi mdi-alert-outline display-4 text-danger"></i>
+                                                    </div>
+                                                    <h4 class="alert-heading font-size-18">Something went wrong</h4>
+                                                    <p>Sorry ! The category was not added.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+
                             <!-- <p class="card-title-desc">Here are examples of <code class="highlighter-rouge">.form-control</code> applied to each
                                                 textual HTML5 <code class="highlighter-rouge">&lt;input&gt;</code> <code class="highlighter-rouge">type</code>.</p> -->
-                            <form class="custom-validation" action="products/add-product/store-product/store-product.php" method="POST">
+                            <form class="custom-validation" action="categories/add-category/store-category/store-category.php" method="POST">
                                 <div class="row mb-3 mt-3">
-                                    <label for="example-text-input" class="col-sm-2 col-form-label">Product Name</label>
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="text" placeholder="Name" name="product_name" id="example-text-input" required>
+                                        <input class="form-control" type="text" placeholder="Category Name" name="category_name" id="example-text-input" required>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="example-search-input" class="col-sm-2 col-form-label">Description</label>
+                                    <label class="col-sm-2 col-form-label">Is it a sub-category?</label>
                                     <div class="col-sm-10">
-                                        <textarea required class="form-control" rows="5" placeholder="Type here" id="example-text-input" name="product_description"></textarea>
+                                        <select class="form-select" id="select-sub-category" aria-label="Default select example" required name="has_parent_category">
+                                            <option selected="">Open this select menu</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="example-email-input" class="col-sm-2 col-form-label">Price</label>
+                                    <label class="col-sm-2 col-form-label">Parent Category, if applicable</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" type="number" placeholder="Price" id="example-email-input" name="product_price" required>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label">Parent Category</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-select" aria-label="Default select example" name="parent_category">
+                                        <select class="form-select" id="select-parent-category" aria-label="Default select example" required name="parent_category" disabled='false'>
                                             <option selected="">Open this select menu</option>
 
                                             <?php
                                             include '../../../config/config.php';
-                                            $get_categories = "select category_id, category_name from categories where hasSubCategory = 0";
+                                            $get_categories = "select category_id, category_name from categories";
                                             $retrieved_categories = mysqli_query($conn, $get_categories);
                                             while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                             ?>
@@ -76,25 +126,10 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="example-color-input" class="col-sm-2 col-form-label">Product
-                                        Photo</label>
-                                    <div class="col-sm-10">
-                                        <input type="file" class="form-control form-control-color w-100" id="customFile" name="product_photo">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
                                     <div>
-                                        <!-- <a href="products/add-product/store-product/store-product.php"> -->
                                         <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-
-                                            Submit
+                                            Submit Details
                                         </button>
-                                        <!-- </a> -->
-                                        <!-- <a href="products/products-list/display-products.php">
-                                            <button type="reset" class="btn btn-secondary waves-effect">
-                                                Cancel
-                                            </button>
-                                        </a> -->
                                     </div>
                                 </div>
                             </form>

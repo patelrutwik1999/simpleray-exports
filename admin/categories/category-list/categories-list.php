@@ -55,7 +55,7 @@
 
                                     while ($retrieved_categories = mysqli_fetch_array($result)) {
                                     ?>
-                                        <tr>
+                                        <tr style="word-wrap: break-word;">
                                             <td><?php echo $retrieved_categories['category_name']; ?></td>
                                             <td>
                                                 <?php
@@ -72,7 +72,7 @@
                                                         echo $category_name['category_name'];
                                                     }
                                                 } else {
-                                                    echo "It has no sub-category.";
+                                                    echo "No parent-category";
                                                 }
                                                 ?>
                                             </td>
@@ -83,14 +83,20 @@
                                                     $getChildCategories =
                                                         "select category_name from categories where parent_category_id = '$idToLookFor'";
                                                     $retrieved_child_category_names = mysqli_query($conn, $getChildCategories);
-
+                                                    // echo $getChildCategories;
                                                     $childCategoriesList = "";
                                                     while ($child_categories = mysqli_fetch_array($retrieved_child_category_names)) {
-                                                        $childCategoriesList = $childCategoriesList + " " + $category_name['category_name'];
+                                                        if ($childCategoriesList == "") {
+                                                            $childCategoriesList = $child_categories['category_name'];
+                                                            // echo $childCategoriesList;
+                                                        } else {
+                                                            $childCategoriesList = $childCategoriesList . ", <br> " . $child_categories['category_name'];
+                                                        }
                                                     }
-                                                    echo rtrim($childCategoriesList, ".");
+                                                    $childCategoriesList = ltrim($childCategoriesList, ",");
+                                                    echo rtrim($childCategoriesList, ",");
                                                 } else {
-                                                    echo "No child categories exist.";
+                                                    echo "No sub-category";
                                                 }
                                                 ?>
                                             </td>
