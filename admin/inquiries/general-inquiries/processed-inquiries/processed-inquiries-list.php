@@ -15,9 +15,9 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports</a></li>
                             <li class="breadcrumb-item"><a
-                                    href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">Product
+                                    href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
                                     Inquiries</a></li>
-                            <li class="breadcrumb-item active">All Inquiries</li>
+                            <li class="breadcrumb-item active">Processed Inquiries</li>
                         </ol>
                     </div>
                 </div>
@@ -55,12 +55,12 @@
                                 <?php
                                 include '../../../../config/config.php';
 
-                                $get_product_inquiries = "select * from product_inquiries order by submitted_on desc";
-                                $result = mysqli_query($conn, $get_product_inquiries);
+                                $get_general_inquiries = "select * from general_inquiries where read_status = 1 order by submitted_on desc";
+                                $result = mysqli_query($conn, $get_general_inquiries);
                                 $num = mysqli_num_rows($result);
 
-                                while ($retrieved_product_inquiries = mysqli_fetch_array($result)) {
-                                    if ($retrieved_product_inquiries['read_status'] == 1) {
+                                while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {
+                                    if ($retrieved_general_inquiries['read_status'] == 1) {
                                         ?>
                                         <li>
                                             <?php
@@ -73,21 +73,21 @@
                                         <div class="col-mail col-mail-1">
                                             <div class="checkbox-wrapper-mail">
                                                 <input type="checkbox"
-                                                    id="<?php echo $retrieved_product_inquiries['inquiry_id'] ?>">
-                                                <label for="<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
+                                                    id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
+                                                <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                     class="toggle"></label>
                                             </div>
-                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="title">
-                                                <?php echo $retrieved_product_inquiries["full_name"]; ?>
+                                                <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="subject">
                                                 <?php
-                                                if ($retrieved_product_inquiries['read_status'] == 1) {
+                                                if ($retrieved_general_inquiries['read_status'] == 1) {
                                                     ?>
                                                     <span class="bg-danger badge me-2">
                                                         Processed
@@ -102,14 +102,14 @@
                                                 }
                                                 ?>
                                                 <strong>
-                                                    <?php echo $retrieved_product_inquiries['subject']; ?> -
+                                                    <?php echo $retrieved_general_inquiries['subject']; ?> -
                                                 </strong>
                                                 <span class="teaser">
-                                                    <?php echo $retrieved_product_inquiries['description']; ?>
+                                                    <?php echo $retrieved_general_inquiries['description']; ?>
                                                 </span>
                                             </a>
                                             <div class="date">
-                                                <?php $date = substr($retrieved_product_inquiries['submitted_on'], 0, 10);
+                                                <?php $date = substr($retrieved_general_inquiries['submitted_on'], 0, 10);
                                                 $month = substr(date('F', strtotime($date)), 0, 3);
                                                 $year = date('Y', strtotime($date));
                                                 // // $name_day = date('l',$convert_date);
@@ -131,7 +131,7 @@
                         $i = 1;
                         $records_per_page = 5;
                         $sum = 0;
-                        $count_query = "SELECT COUNT(*) FROM product_inquiries";
+                        $count_query = "SELECT COUNT(*) FROM general_inquiries where read_status = 1";
                         $count_query_execute = mysqli_query($conn, $count_query);
                         $count_query_rows = mysqli_fetch_row($count_query_execute);
                         $total_records = $count_query_rows[0];

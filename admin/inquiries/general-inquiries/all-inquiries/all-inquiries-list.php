@@ -15,7 +15,7 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports</a></li>
                             <li class="breadcrumb-item"><a
-                                    href="inquiries/general-inquiries/all-inquiries/all-inquiries.php">General
+                                    href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
                                     Inquiries</a></li>
                             <li class="breadcrumb-item active">All Inquiries</li>
                         </ol>
@@ -33,17 +33,20 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Right Sidebar -->
-                    <div class="email-rightbar mb-3 col-lg-12" style="margin: auto;">
+                    <div class="email-rightbar mb-3" style="margin: auto;">
 
                         <div class="card">
                             <div class="btn-toolbar p-3" role="toolbar">
-                                <div class="btn-group me-2 mb-2 mb-sm-0">
-                                    <button type="button" class="btn btn-primary waves-light waves-effect"><i
-                                            class="far fa-trash-alt"></i></button>
+                                <div class="col-md-8">
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <button type="button" class="btn btn-primary waves-light waves-effect"><i
+                                                class="far fa-trash-alt"></i></button>
+                                    </div>
                                 </div>
 
-                                <div class="me-2 mb-2 mb-sm-0 mt-1">
-                                    <input type="text" id="search-input">
+                                <div class="col-lg-4">
+                                    <input class="btn-group mb-2 mb-sm-0" style="width: 100%" type="text"
+                                        id="search-input" placeholder="Search...">
 
                                 </div>
                             </div>
@@ -74,13 +77,15 @@
                                                 <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                     class="toggle"></label>
                                             </div>
-                                            <a href="#" class="title">
+                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                                class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="#" class="subject">
+                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                                class="subject">
                                                 <?php
                                                 if ($retrieved_general_inquiries['read_status'] == 1) {
                                                     ?>
@@ -122,7 +127,7 @@
 
                         </div> <!-- card -->
 
-                        <?php 
+                        <?php
                         $i = 1;
                         $records_per_page = 5;
                         $sum = 0;
@@ -133,7 +138,8 @@
                         ?>
                         <div class="row">
                             <div class="col">
-                                Found total of <?php echo $total_records; ?> records
+                                Found total of
+                                <?php echo $total_records; ?> records
                             </div>
                             <div class="col">
                                 <ul class="pagination">
