@@ -134,7 +134,7 @@
                                     </div> -->
 
                                     <a href="email-compose.html" class="btn btn-secondary waves-effect mt-4"><i
-                                            class="mdi mdi-reply"></i> Reply</a>
+                                            class="mdi mdi-reply"></i>Back</a>
                                     <a href="email-compose.html" class="btn btn-secondary waves-effect mt-4"><i
                                             class="mdi mdi-reply"></i> Reply</a>
                                 </div>

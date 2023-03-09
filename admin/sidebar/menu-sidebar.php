@@ -59,7 +59,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="dripicons-tags"></i>
+                        <i class="dripicons-conversation"></i>
                         <span>General Inquiry</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -70,7 +70,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="dripicons-tags"></i>
+                        <i class="dripicons-inbox"></i>
                         <span>Product Inquiry</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

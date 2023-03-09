@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     date_default_timezone_set("Asia/Kolkata");
     $productAddedOn = date("Y-m-d h:i:s");
-    $productId = uniqid('prod', true);
+    $productId = str_replace(array('.'), '', uniqid('prod', true));;
 
     //Uploads the file at specific location and stores the path info in the database
     $target_dir = "../../../../admin-panel/admin-panel-assets/product-images/";

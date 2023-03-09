@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     date_default_timezone_set("Asia/Kolkata");
     $submittedOn = date("Y-m-d h:i:s");
-    $inquiryId = uniqid('inqgen', true);
+    $inquiryId = str_replace(array('.'), '', uniqid('inqgen', true));
 
     //Unread status
     $readStatus = 0;
