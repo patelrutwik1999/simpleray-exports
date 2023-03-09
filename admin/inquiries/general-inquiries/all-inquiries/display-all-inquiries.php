@@ -28,6 +28,7 @@
         <!-- end main content-->
     </div>
     <?php
+    include '../../../sidebar/right-sidebar.html';
     include '../../../sub-footer.php';
     ?>
     <!-- Required datatable js -->
@@ -86,19 +87,19 @@
             items.forEach((item) => {
                 const text = item.textContent.toLowerCase();
                 if (text.includes(query)) {
-                item.style.display = 'block';
+                    item.style.display = 'block';
                 } else {
-                item.style.display = 'none';
+                    item.style.display = 'none';
                 }
             });
         }
 
         function debounce(func, delay) {
             let timer;
-            return function() {
+            return function () {
                 clearTimeout(timer);
                 timer = setTimeout(() => {
-                func.apply(this, arguments);
+                    func.apply(this, arguments);
                 }, delay);
             };
         }

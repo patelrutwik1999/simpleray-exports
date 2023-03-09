@@ -45,7 +45,8 @@
                                 </div>
 
                                 <div class="col-lg-4">
-                                        <input class="btn-group mb-2 mb-sm-0" style="width: 100%" type="text" id="search-input" placeholder="Search..." >
+                                    <input class="btn-group mb-2 mb-sm-0" style="width: 100%" type="text"
+                                        id="search-input" placeholder="Search...">
 
                                 </div>
                             </div>
@@ -76,13 +77,15 @@
                                                 <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                     class="toggle"></label>
                                             </div>
-                                            <a href="#" class="title">
+                                            <a href="inquiries/general-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                                class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="#" class="subject">
+                                            <a href="inquiries/general-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                                class="subject">
                                                 <?php
                                                 if ($retrieved_general_inquiries['read_status'] == 1) {
                                                     ?>
