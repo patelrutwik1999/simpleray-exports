@@ -17,7 +17,7 @@
                             <li class="breadcrumb-item"><a
                                     href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
                                     Inquiries</a></li>
-                            <li class="breadcrumb-item active">Processed Inquiries</li>
+                            <li class="breadcrumb-item active">New Inquiries</li>
                         </ol>
                     </div>
                 </div>
@@ -77,14 +77,14 @@
                                                 <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                     class="toggle"></label>
                                             </div>
-                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/new-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/new-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="subject">
                                                 <?php
                                                 if ($retrieved_general_inquiries['read_status'] == 1) {
