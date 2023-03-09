@@ -15,9 +15,9 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports</a></li>
                             <li class="breadcrumb-item"><a
-                                    href="inquiries/general-inquiries/all-inquiries/all-inquiries.php">General
+                                    href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
                                     Inquiries</a></li>
-                            <li class="breadcrumb-item active">All Inquiries</li>
+                            <li class="breadcrumb-item active">Processed Inquiries</li>
                         </ol>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                                 <?php
                                 include '../../../../config/config.php';
 
-                                $get_general_inquiries = "select * from general_inquiries order by submitted_on desc";
+                                $get_general_inquiries = "select * from general_inquiries where read_status = 1 order by submitted_on desc";
                                 $result = mysqli_query($conn, $get_general_inquiries);
                                 $num = mysqli_num_rows($result);
 
@@ -77,14 +77,14 @@
                                                 <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                     class="toggle"></label>
                                             </div>
-                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
+                                            <a href="inquiries/general-inquiries/processed-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="subject">
                                                 <?php
                                                 if ($retrieved_general_inquiries['read_status'] == 1) {
@@ -131,7 +131,7 @@
                         $i = 1;
                         $records_per_page = 5;
                         $sum = 0;
-                        $count_query = "SELECT COUNT(*) FROM general_inquiries";
+                        $count_query = "SELECT COUNT(*) FROM general_inquiries where read_status = 1";
                         $count_query_execute = mysqli_query($conn, $count_query);
                         $count_query_rows = mysqli_fetch_row($count_query_execute);
                         $total_records = $count_query_rows[0];

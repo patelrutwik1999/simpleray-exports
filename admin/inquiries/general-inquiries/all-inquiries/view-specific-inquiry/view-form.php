@@ -8,10 +8,10 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports</a></li>
                             <li class="breadcrumb-item"><a
-                                    href="inquiries/general-inquiries/all-inquiries/all-inquiries.php">General
+                                    href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">All General
                                     Inquiries</a>
                             </li>
-                            <li class="breadcrumb-item active">All Inquiries</li>
+                            <li class="breadcrumb-item active">View Inquiry</li>
                         </ol>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
 
             <?php
 
-            include '../../../../config/config.php';
+            include '../../../../../config/config.php';
             $inquiryId = $_GET['id'];
 
             $get_single_inquiry = "select * from general_inquiries where inquiry_id = '$inquiryId'";
@@ -74,7 +74,7 @@
                                         <table class="table mb-5">
                                             <thead>
                                                 <tr>
-                                                    
+
                                                     <th>Full Name</th>
                                                     <th>Email</th>
                                                     <th>Phone No</th>
@@ -84,24 +84,33 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    
-                                                    <td><?php echo $row['full_name'] ?></td>
-                                                    <td><?php echo $row['email'] ?></td>
-                                                    <td><?php echo $row['phone_no'] ?></td>
-                                                    <td><?php echo $row['submitted_on'] ?></td>
-                                                    <td><?php 
-                                                    if($row['updated_on'] == null) {
-                                                        echo "<p>New Inquiry</p>";
-                                                    } else {
-                                                    echo $row['updated_on']; 
-                                                    }
-                                                    ?>
+
+                                                    <td>
+                                                        <?php echo $row['full_name'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['email'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['phone_no'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['submitted_on'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php
+                                                        if ($row['updated_on'] == null) {
+                                                            echo "<p>New Inquiry</p>";
+                                                        } else {
+                                                            echo $row['updated_on'];
+                                                        }
+                                                        ?>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    
+
 
                                     <!-- <div class="row">
                                         <div class="col-xl-2 col-6">
@@ -144,6 +153,16 @@
                 ";
                 mysqli_query($conn, $update_status);
             }
+            date_default_timezone_set("Asia/Kolkata");
+            $updated_on = date("Y-m-d h:i:s");
+
+            $update_updated_on = "
+                    update general_inquiries set
+                    updated_on = '$updated_on'
+                    where
+                    inquiry_id = '$inquiryId'
+                ";
+            mysqli_query($conn, $update_updated_on);
             }
             ?>
     </div>
