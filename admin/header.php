@@ -31,15 +31,13 @@
 
         <div class="d-flex">
             <div class="dropdown d-none d-lg-inline-block">
-                <button type="button" class="btn header-item toggle-search noti-icon waves-effect"
-                    data-target="#search-wrap">
+                <button type="button" class="btn header-item toggle-search noti-icon waves-effect" data-target="#search-wrap">
                     <i class="mdi mdi-magnify"></i>
                 </button>
             </div>
 
             <div class="dropdown d-none d-md-block ms-2">
-                <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="me-2" src="assets/images/flags/us.jpg" alt="Header Language" height="16"> English
                     <!-- <span class="mdi mdi-chevron-down"></span> -->
                 </button>
@@ -65,25 +63,22 @@
 
 
             <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item noti-icon waves-effect"
-                    id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="mdi mdi-bell-outline bx-tada"></i>
 
                     <?php
                     if ($general_inquiries_num != 0 || $product_inquiries_num !== 0) {
-                        ?>
+                    ?>
 
                         <span class="badge bg-danger rounded-pill">
                             <?php echo $general_inquiries_num + $product_inquiries_num; ?>
                         </span>
 
-                        <?php
+                    <?php
                     }
                     ?>
                 </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                    aria-labelledby="page-header-notifications-dropdown">
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
@@ -120,7 +115,7 @@
                             </div>
                         </a>
                         <a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php" class="text-reset notification-item">
-                        <div class="media">
+                            <div class="media">
                                 <div class="avatar-xs me-3">
                                     <!-- <span class="avatar-title bg-primary rounded-circle font-size-16">
                                         <i class="mdi mdi-cart text-white"></i>
@@ -143,36 +138,7 @@
                                 </div>
                             </div>
                         </a>
-                        <!-- <a href="" class="text-reset notification-item">
-                            <div class="media">
-                                <div class="avatar-xs me-3">
-                                    <span class="avatar-title bg-success rounded-circle font-size-16">
-                                        <i class="mdi mdi-check text-white"></i>
-                                    </span>
-                                </div>
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Your item is shipped</h6>
-                                    <div class="font-size-13 text-muted">
-                                        <p class="mb-1">If several languages coalesce the grammar</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a> -->
 
-                        <!-- <a href="" class="text-reset notification-item">
-                            <div class="media">
-                                <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs"
-                                    alt="user-pic">
-                                <div class="media-body">
-                                    <h6 class="mt-0 mb-1">Salena Layfield</h6>
-                                    <div class="font-size-13 text-muted">
-                                        <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
-                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a> -->
                     </div>
                     <div class="p-2 border-top">
                         <a class="btn btn-sm btn-link font-size-14 w-100 text-center" href="javascript:void(0)">
@@ -183,10 +149,8 @@
             </div>
 
             <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-7.jpg"
-                        alt="Header Avatar">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-7.jpg" alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1">
                         <?php echo $_SESSION['username']; ?>
                     </span>
@@ -194,17 +158,12 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="#"><i
-                            class="mdi mdi-account-circle-outline font-size-16 align-middle me-1"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i
-                            class="mdi mdi-wallet-outline font-size-16 align-middle me-1"></i> My Wallet</a>
-                    <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-end">11</span><i
-                            class="mdi mdi-cog-outline font-size-16 align-middle me-1"></i> Settings</a>
-                    <a class="dropdown-item" href="#"><i
-                            class="mdi mdi-lock-open-outline font-size-16 align-middle me-1"></i> Lock screen</a>
+                    <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle-outline font-size-16 align-middle me-1"></i> Profile</a>
+                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet-outline font-size-16 align-middle me-1"></i> My Wallet</a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-end">11</span><i class="mdi mdi-cog-outline font-size-16 align-middle me-1"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-16 align-middle me-1"></i> Lock screen</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i
-                            class="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</a>
+                    <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power font-size-16 align-middle me-1 text-danger"></i> Logout</a>
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 <div class="page-content">
-
     <!-- start page title -->
     <div class="page-title-box">
         <div class="container-fluid">
@@ -21,9 +20,7 @@
     <!-- end page title -->
 
     <div class="container-fluid">
-
         <div class="page-content-wrapper">
-
             <div class="row">
                 <div style="margin: auto">
                     <div class="card">

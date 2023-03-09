@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($is_subcategory == 0) {
         $update_category = "update categories SET category_name = '$category_name', hasSubCategory = '$is_subcategory', hasParentCategory = '0', parent_category_id='NULL', updated_on='$updated_on' WHERE category_id = '$category_id'";
     } else {
-        $update_category = "update categories SET category_name = '$category_name', hasSubCategory = '$is_subcategory', hasParentCategory = '$has_parent_category', parent_category_id='$parent_category_Id', updated_on='$updated_on' WHERE category_id = '$category_id'";
+        
     }
     if (mysqli_query($conn, $update_category)) {
         mysqli_close($conn);

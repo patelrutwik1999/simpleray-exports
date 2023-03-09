@@ -1,0 +1,15 @@
+.fa-trash-alt:before {
+    content: "\f2ed";
+    
+}
+
+.action-buttons {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #74788d;
+
+}
+
+.action-buttons:hover {
+    color: #525ce5;
+}
