@@ -29,13 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['is-error'] = false;
             $_SESSION['message'] = true;
             $_SESSION['success-message'] = "The category has been updated.";
-            header("location:../edit-category.php?category_id=$category_id");
+            header("location:../edit-category-form-base.php?category_id=$category_id");
         } else {
             mysqli_close($conn);
             $_SESSION['is-error'] = false;
             $_SESSION['message'] = true;
             $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating the category details.";
-            header("location:../edit-category.php?category_id=$category_id");
+            header("location:../edit-category-form-base.php?category_id=$category_id");
         }
     } else {
         // The parent category has not been changed but the change_parent_category has been set to YES.
@@ -46,13 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['is-error'] = false;
                 $_SESSION['message'] = true;
                 $_SESSION['success-message'] = "The category has been updated.";
-                header("location:../edit-category.php?category_id=$category_id");
+                header("location:../edit-category-form-base.php?category_id=$category_id");
             } else {
                 mysqli_close($conn);
                 $_SESSION['is-error'] = false;
                 $_SESSION['message'] = true;
                 $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating the category details.";
-                header("location:../edit-category.php?category_id=$category_id");
+                header("location:../edit-category-form-base.php?category_id=$category_id");
             }
         }
         //Needs to change the sub category and make it a parent category.
@@ -82,20 +82,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['is-error'] = false;
                     $_SESSION['message'] = true;
                     $_SESSION['success-message'] = "The category has been updated.";
-                    header("location:../edit-category.php?category_id=$category_id");
+                    header("location:../edit-category-form-base.php?category_id=$category_id");
                 } else {
                     mysqli_close($conn);
                     $_SESSION['is-error'] = false;
                     $_SESSION['message'] = true;
                     $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating its parent category.";
-                    header("location:../edit-category.php?category_id=$category_id");
+                    header("location:../edit-category-form-base.php?category_id=$category_id");
                 }
             } else {
                 mysqli_close($conn);
                 $_SESSION['is-error'] = false;
                 $_SESSION['message'] = true;
                 $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating the category details.";
-                header("location:../edit-category.php?category_id=$category_id");
+                header("location:../edit-category-form-base.php?category_id=$category_id");
             }
         }
         // The parent of the sub category has been changed. 
@@ -139,27 +139,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $_SESSION['is-error'] = false;
                         $_SESSION['message'] = true;
                         $_SESSION['success-message'] = "The category has been updated.";
-                        header("location:../edit-category.php?category_id=$category_id");
+                        header("location:../edit-category-form-base.php?category_id=$category_id");
                     } else {
                         mysqli_close($conn);
                         $_SESSION['is-error'] = false;
                         $_SESSION['message'] = true;
                         $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating its new parent category.";
-                        header("location:../edit-category.php?category_id=$category_id");
+                        header("location:../edit-category-form-base.php?category_id=$category_id");
                     }
                 } else {
                     mysqli_close($conn);
                     $_SESSION['is-error'] = false;
                     $_SESSION['message'] = true;
                     $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating its current parent category.";
-                    header("location:../edit-category.php?category_id=$category_id");
+                    header("location:../edit-category-form-base.php?category_id=$category_id");
                 }
             } else {
                 mysqli_close($conn);
                 $_SESSION['is-error'] = false;
                 $_SESSION['message'] = true;
                 $_SESSION['error-message'] = "The category has not been updated because an error has been caused while updating the category details.";
-                header("location:../edit-category.php?category_id=$category_id");
+                header("location:../edit-category-form-base.php?category_id=$category_id");
             }
         }
     }

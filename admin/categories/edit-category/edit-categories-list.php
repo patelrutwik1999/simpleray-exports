@@ -30,7 +30,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="header-title">Categories</h4>
+                            <h4 class="header-title">Modify Categories</h4>
                             <p class="card-title-desc">You can have a view at all categories and can modify or delete any category you want. Clicking update button it
                                 will open a form with detailed information of the category.You can just change the content you want. <br>
                                 For Delete, just press the trash icon.
@@ -101,7 +101,7 @@
                                             </td>
                                             <td>
                                                 <a href="categories/edit-category/edit-category-form-base.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="fas fa-pencil-alt"></i> </a>
-                                                <a class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></a>
+                                                <a href="categories/delete-category/delete-category.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     <?php
