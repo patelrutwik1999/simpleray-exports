@@ -9,7 +9,7 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="categories/category-list/display-categories.php">Categories</a></li>
-                            <li class="breadcrumb-item active">Categories List</li>
+                            <li class="breadcrumb-item active">Modify Categories List</li>
                         </ol>
                     </div>
                 </div>
@@ -30,9 +30,10 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="header-title">Categories</h4>
-                            <p class="card-title-desc">You can have a view at all categories. Also, you can search any category by entering its related information.
-                                You can export the data to excel or pdf, as you wish. You can remove some columns from column visibility, if you do not want it.
+                            <h4 class="header-title">Modify Categories</h4>
+                            <p class="card-title-desc">You can have a view at all categories and can modify or delete any category you want. Clicking update button it
+                                will open a form with detailed information of the category.You can just change the content you want. <br>
+                                For Delete, just press the trash icon.
                             </p>
 
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -41,8 +42,7 @@
                                         <th>Category Name</th>
                                         <th>Parent Category, if any</th>
                                         <th>Sub Categories, if any</th>
-                                        <th>Added On</th>
-                                        <th>Updated On</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
 
@@ -88,7 +88,6 @@
                                                     while ($child_categories = mysqli_fetch_array($retrieved_child_category_names)) {
                                                         if ($childCategoriesList == "") {
                                                             $childCategoriesList = $child_categories['category_name'];
-                                                            // echo $childCategoriesList;
                                                         } else {
                                                             $childCategoriesList = $childCategoriesList . ", <br> " . $child_categories['category_name'];
                                                         }
@@ -100,17 +99,10 @@
                                                 }
                                                 ?>
                                             </td>
-                                            <td><?php echo $retrieved_categories['added_on']; ?></td>
                                             <td>
-                                                <?php
-                                                if ($retrieved_categories['updated_on'] == null) {
-                                                    echo "Not updated yet";
-                                                } else {
-                                                    echo $retrieved_categories['updated_on'];
-                                                }
-                                                ?>
+                                                <a href="categories/edit-category/edit-category-form-base.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="fas fa-pencil-alt"></i> </a>
+                                                <button class="btn btn-outline-primary btn-sm waves-effect waves-light" id="sa-success"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></button>
                                             </td>
-
                                         </tr>
                                     <?php
                                     }
