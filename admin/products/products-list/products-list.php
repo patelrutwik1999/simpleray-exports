@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="float-end d-none d-sm-block">
-                        <a href="products/add-products/insert-product.php" class="btn btn-success">Add Product</a>
+                        <a href="products/add-product/insert-product.php" class="btn btn-success">Add Product</a>
                     </div>
                 </div>
             </div>
