@@ -62,8 +62,8 @@
                                     <li>
                                         <div class="col-mail col-mail-1">
                                             <div class="checkbox-wrapper-mail">
-                                                <input type="checkbox" id="chk19">
-                                                <label for="chk19" class="toggle"></label>
+                                                <input type="checkbox" id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
+                                                <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>" class="toggle"></label>
                                             </div>
                                             <a href="#" class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
