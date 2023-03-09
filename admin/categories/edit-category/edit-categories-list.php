@@ -101,7 +101,7 @@
                                             </td>
                                             <td>
                                                 <a href="categories/edit-category/edit-category-form-base.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="fas fa-pencil-alt"></i> </a>
-                                                <a href="categories/delete-category/delete-category.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></a>
+                                                <button class="btn btn-outline-primary btn-sm waves-effect waves-light" id="sa-success"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></button>
                                             </td>
                                         </tr>
                                     <?php
