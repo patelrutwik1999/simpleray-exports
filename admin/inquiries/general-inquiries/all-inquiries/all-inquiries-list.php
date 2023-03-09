@@ -30,10 +30,6 @@
     <div class="container-fluid">
 
         <div class="page-content-wrapper">
-
-
-
-
             <div class="row">
                 <div class="col-12">
                     <!-- Right Sidebar -->
@@ -50,8 +46,6 @@
                                     <input type="text" id="search-input">
 
                                 </div>
-
-
                             </div>
                             <ul class="message-list">
                                 <?php
@@ -60,6 +54,7 @@
                                 $get_general_inquiries = "select * from general_inquiries order by submitted_on desc";
                                 $result = mysqli_query($conn, $get_general_inquiries);
                                 $num = mysqli_num_rows($result);
+
                                 while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {
                                     ?>
                                     <li>
@@ -68,14 +63,28 @@
                                                 <input type="checkbox" id="chk19">
                                                 <label for="chk19" class="toggle"></label>
                                             </div>
-                                            <a href="#" class="title"><?php echo $retrieved_general_inquiries["full_name"]; ?></a>
+                                            <a href="#" class="title">
+                                                <?php echo $retrieved_general_inquiries["full_name"]; ?>
+                                            </a>
                                             <!-- <span class="star-toggle far fa-star"></span> -->
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="#" class="subject"><strong><?php $retrieved_general_inquiries['subject']; ?> - </strong>
-                                                <span class="teaser"><?php $retrieved_general_inquiries['description']; ?></span>
+                                            <a href="#" class="subject"><strong>
+                                                    <?php echo $retrieved_general_inquiries['subject']; ?> -
+                                                </strong>
+                                                <span class="teaser">
+                                                    <?php echo $retrieved_general_inquiries['description']; ?>
+                                                </span>
                                             </a>
-                                            <div class="date"><?php $retrieved_general_inquiries['submitted_on']; ?></div>
+                                            <div class="date">
+                                                <?php  $date = substr($retrieved_general_inquiries['submitted_on'], 0, 10);
+                                                    $month = substr(date('F', strtotime($date)), 0, 3);
+                                                    $year = date('Y', strtotime($date));
+                                                    // // $name_day = date('l',$convert_date);
+                                                    $day = date('j', strtotime($date));
+                                                    $date_of_submission = $month . " " . $day . ", " . $year;
+                                                    echo $date_of_submission;
+                                            ?></div>
                                         </div>
                                     </li>
                                     <?php
