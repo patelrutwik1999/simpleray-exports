@@ -49,8 +49,12 @@
                                         <img class="d-flex me-3 rounded-circle avatar-sm" src="assets/images/person.png"
                                             alt="Generic placeholder image">
                                         <div class="media-body">
-                                            <h5 class="font-size-14 mt-1"><?php echo $row['full_name'] ?></h5>
-                                            <small class="text-muted"><?php echo $row['email'] ?></small><br>
+                                            <h5 class="font-size-14 mt-1">
+                                                <?php echo $row['full_name'] ?>
+                                            </h5>
+                                            <small class="text-muted">
+                                                <?php echo $row['email'] ?>
+                                            </small><br>
                                         </div>
                                     </div>
 
@@ -58,15 +62,48 @@
                                             <?php echo $row['subject'] ?>
                                         </strong></h4>
 
-                                    <p><?php echo $row['description'] ?></p>
+                                    <p>
+                                        <?php echo $row['description'] ?>
+                                    </p>
                                     <br>
                                     <br>
                                     <hr />
 
+                                    <h4 class="mt-2 mb-3 font-size-22">Sender Information</h4>
+                                    <div class="table-responsive">
+                                        <table class="table mb-5">
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th>Full Name</th>
+                                                    <th>Email</th>
+                                                    <th>Phone No</th>
+                                                    <th>Inquiry Received</th>
+                                                    <th>Last Read</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    
+                                                    <td><?php echo $row['full_name'] ?></td>
+                                                    <td><?php echo $row['email'] ?></td>
+                                                    <td><?php echo $row['phone_no'] ?></td>
+                                                    <td><?php echo $row['submitted_on'] ?></td>
+                                                    <td><?php 
+                                                    if($row['updated_on'] == null) {
+                                                        echo "<p>New Inquiry</p>";
+                                                    } else {
+                                                    echo $row['updated_on']; 
+                                                    }
+                                                    ?>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
 
-                                    <h4 class="mt-2 mb-3 font-size-22">Sender Information</h4>                
-
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-xl-2 col-6">
                                             <div class="card">
                                                 <img class="card-img-top img-fluid" src="assets/images/small/img-3.jpg"
@@ -85,7 +122,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <a href="email-compose.html" class="btn btn-secondary waves-effect mt-4"><i
                                             class="mdi mdi-reply"></i> Reply</a>
@@ -98,6 +135,15 @@
                 </div>
             </div>
             <?php
+            if ($row['read_status'] == 0) {
+                $update_status = "
+                    update general_inquiries set
+                    read_status = 1
+                    where
+                    inquiry_id = '$inquiryId'
+                ";
+                mysqli_query($conn, $update_status);
+            }
             }
             ?>
     </div>
