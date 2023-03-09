@@ -57,9 +57,16 @@
                                 $num = mysqli_num_rows($result);
 
                                 while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {
+                                    if ($retrieved_general_inquiries['read_status'] == 1) {
+                                        ?>
+                                        <li>
+                                            <?php
+                                    } else {
+                                        ?>
+                                        <li class="unread">
+                                            <?php
+                                    }
                                     ?>
-
-                                    <li>
                                         <div class="col-mail col-mail-1">
                                             <div class="checkbox-wrapper-mail">
                                                 <input type="checkbox"
@@ -80,13 +87,13 @@
                                                     <span class="bg-danger badge me-2">
                                                         Processed
                                                     </span>
-                                                <?php
+                                                    <?php
                                                 } else {
                                                     ?>
                                                     <span class="bg-success badge me-2">
                                                         &nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;
                                                     </span>
-                                                <?php
+                                                    <?php
                                                 }
                                                 ?>
                                                 <strong>
@@ -115,21 +122,23 @@
 
                         </div> <!-- card -->
 
+                        <?php 
+                        $i = 1;
+                        $records_per_page = 5;
+                        $sum = 0;
+                        $count_query = "SELECT COUNT(*) FROM general_inquiries";
+                        $count_query_execute = mysqli_query($conn, $count_query);
+                        $count_query_rows = mysqli_fetch_row($count_query_execute);
+                        $total_records = $count_query_rows[0];
+                        ?>
                         <div class="row">
-                            <div class="col-7">
-                                Showing 1 - 20 of 1,524
+                            <div class="col">
+                                Found total of <?php echo $total_records; ?> records
                             </div>
-                            <div class="col-5">
+                            <div class="col">
                                 <ul class="pagination">
                                     <!-- <li class="page-item"><a class="page-link">Previous</a></li> -->
                                     <?php
-                                    $i = 1;
-                                    $records_per_page = 3;
-                                    $sum = 0;
-                                    $count_query = "SELECT COUNT(*) FROM general_inquiries";
-                                    $count_query_execute = mysqli_query($conn, $count_query);
-                                    $count_query_rows = mysqli_fetch_row($count_query_execute);
-                                    $total_records = $count_query_rows[0];
                                     while ($sum < $total_records) {
                                         ?>
                                         <li class="page-item"><a class="page-link">

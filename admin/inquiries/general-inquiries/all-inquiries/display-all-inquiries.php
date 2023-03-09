@@ -50,7 +50,7 @@
     <script src="assets/js/pages/datatables.init.js"></script>
 
     <script>
-        var itemsPerPage = 3;
+        var itemsPerPage = 5;
         var currentPage = 1;
 
         function showPage(page) {
