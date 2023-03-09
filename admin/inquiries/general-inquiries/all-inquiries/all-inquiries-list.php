@@ -15,7 +15,7 @@
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Simpleray Exports</a></li>
                             <li class="breadcrumb-item"><a
-                                    href="inquiries/general-inquiries/all-inquiries/all-inquiries.php">General
+                                    href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">General
                                     Inquiries</a></li>
                             <li class="breadcrumb-item active">All Inquiries</li>
                         </ol>
