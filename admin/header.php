@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div data-simplebar style="max-height: 230px;">
-                        <a href="" class="text-reset notification-item">
+                        <a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php" class="text-reset notification-item">
                             <div class="media">
                                 <div class="avatar-xs me-3">
                                     <!-- <span class="avatar-title bg-primary rounded-circle font-size-16">
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="text-reset notification-item">
+                        <a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php" class="text-reset notification-item">
                         <div class="media">
                                 <div class="avatar-xs me-3">
                                     <!-- <span class="avatar-title bg-primary rounded-circle font-size-16">

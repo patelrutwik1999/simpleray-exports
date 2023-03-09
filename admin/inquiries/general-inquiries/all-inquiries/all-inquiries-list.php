@@ -47,6 +47,7 @@
 
                                 </div>
                             </div>
+
                             <ul class="message-list">
                                 <?php
                                 include '../../../../config/config.php';
@@ -57,6 +58,7 @@
 
                                 while ($retrieved_general_inquiries = mysqli_fetch_array($result)) {
                                     ?>
+
                                     <li>
                                         <div class="col-mail col-mail-1">
                                             <div class="checkbox-wrapper-mail">
@@ -66,10 +68,26 @@
                                             <a href="#" class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
-                                            <!-- <span class="star-toggle far fa-star"></span> -->
+                                            <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
-                                            <a href="#" class="subject"><strong>
+                                            <a href="#" class="subject">
+                                                <?php 
+                                                if($retrieved_general_inquiries['read_status'] == 1) {
+                                                ?>
+                                                <span class="bg-danger badge me-2">
+                                                    Processed
+                                                </span>
+                                                <?php 
+                                                } else {
+                                                ?>
+                                                <span class="bg-success badge me-2">
+                                                &nbsp;&nbsp;&nbsp;New&nbsp;&nbsp;&nbsp;
+                                                </span>
+                                                <?php 
+                                                }
+                                                ?>
+                                                <strong>
                                                     <?php echo $retrieved_general_inquiries['subject']; ?> -
                                                 </strong>
                                                 <span class="teaser">
@@ -90,25 +108,6 @@
                                     <?php
                                 }
                                 ?>
-                                <li>
-                                    <div class="col-mail col-mail-1">
-                                        <div class="checkbox-wrapper-mail">
-                                            <input type="checkbox" id="chk20">
-                                            <label for="chk20" class="toggle"></label>
-                                        </div>
-                                        <a href="#" class="title">me, Susanna (7)</a><span
-                                            class="star-toggle far fa-star"></span>
-                                    </div>
-                                    <div class="col-mail col-mail-2">
-                                        <a href="#" class="subject"><span
-                                                class="bg-warning badge me-2">Freelance</span>Since you asked... and i'm
-                                            inconceivably bored at the train station –
-                                            <span class="teaser">Alright thanks. I'll have to re-book that somehow, i'll
-                                                get back to you.</span>
-                                        </a>
-                                        <div class="date">Mar. 6</div>
-                                    </div>
-                                </li>
                             </ul>
 
                         </div> <!-- card -->
