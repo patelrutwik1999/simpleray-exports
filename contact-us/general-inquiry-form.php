@@ -142,6 +142,9 @@
                         <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone">
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="3"
                             placeholder="Message"></textarea>
                     </div>

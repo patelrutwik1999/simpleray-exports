@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = $_POST['fullname'];
     $email = $_POST['email'];
     $phoneNumber = $_POST['phonenumber'];
+    $subject = $_POST['subject'];
     $description = $_POST['description'];
 
     date_default_timezone_set("Asia/Kolkata");
@@ -28,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             full_name,
             email,
             phone_no,
+            subject,
             description,
             submitted_on,
             read_status
@@ -36,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             '$fullName',
             '$email',
             '$phoneNumber',
+            '$subject',
             '$description',
             '$submittedOn',
             '$readStatus'

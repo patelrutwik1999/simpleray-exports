@@ -11,7 +11,9 @@
                     <span class="avatar-online bg-success"></span>
                 </div>
                 <div class="user-info">
-                    <h5 class="mt-3 font-size-16 text-white"><?php echo $_SESSION['username']; ?></h5>
+                    <h5 class="mt-3 font-size-16 text-white">
+                        <?php echo $_SESSION['username']; ?>
+                    </h5>
                     <span class="font-size-13 text-white-50">Administrator</span>
                 </div>
             </div>
@@ -58,7 +60,29 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="products/products-list/display-products.php">Products List</a></li>
                         <li><a href="products/add-product/insert-product.php">Add Product</a></li>
-                        <li><a href="products/edit-product/edit-product.php">Edit Product</a></li>
+                        <!-- <li><a href="products/edit-product/edit-product.php">Edit Product</a></li> -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="dripicons-tags"></i>
+                        <span>General Inquiry</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">All Inquiries</a></li>
+                        <!-- <li><a href="products/add-product/insert-product.php">New Inquiries</a></li>
+                        <li><a href="products/edit-product/edit-product.php">Processed Inquiries</a></li> -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="dripicons-tags"></i>
+                        <span>Product Inquiry</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">All Inquiries</a></li>
+                        <!-- <li><a href="products/add-product/insert-product.php">New Inquiries</a></li>
+                        <li><a href="products/edit-product/edit-product.php">Processed Inquiries</a></li> -->
                     </ul>
                 </li>
             </ul>
