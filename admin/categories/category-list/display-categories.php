@@ -19,8 +19,15 @@
 <body>
     <div id="layout-wrapper">
         <?php
-
+        include '../../header.php';
+        include '../../sidebar/menu-sidebar.php';
         ?>
+        <div class="main-content">
+            <?php
+            include 'categories-list.php';
+            include '../../footer.php';
+            ?>
+        </div>
 
     </div>
 

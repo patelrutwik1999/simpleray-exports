@@ -39,14 +39,8 @@
                         <span>Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ecommerce-products.html">Products</a></li>
-                        <li><a href="ecommerce-product-detail.html">Product Detail</a></li>
-                        <li><a href="ecommerce-orders.html">Orders</a></li>
-                        <li><a href="ecommerce-customers.html">Customers</a></li>
-                        <li><a href="ecommerce-cart.html">Cart</a></li>
-                        <li><a href="ecommerce-checkout.html">Checkout</a></li>
-                        <li><a href="ecommerce-shops.html">Shops</a></li>
-                        <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                        <li><a href="categories/category-list/display-categories.php">Categories List</a></li>
+                        <li><a href="categories/add-category/insert-category.php">Add Category</a></li>
                     </ul>
                 </li>
 
