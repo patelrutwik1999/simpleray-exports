@@ -33,17 +33,19 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Right Sidebar -->
-                    <div class="email-rightbar mb-3 col-lg-12" style="margin: auto;">
+                    <div class="email-rightbar mb-3" style="margin: auto;">
 
                         <div class="card">
                             <div class="btn-toolbar p-3" role="toolbar">
-                                <div class="btn-group me-2 mb-2 mb-sm-0">
-                                    <button type="button" class="btn btn-primary waves-light waves-effect"><i
-                                            class="far fa-trash-alt"></i></button>
+                                <div class="col-md-8">
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <button type="button" class="btn btn-primary waves-light waves-effect"><i
+                                                class="far fa-trash-alt"></i></button>
+                                    </div>
                                 </div>
 
-                                <div class="me-2 mb-2 mb-sm-0 mt-1">
-                                    <input type="text" id="search-input">
+                                <div class="col-lg-4">
+                                        <input class="btn-group mb-2 mb-sm-0" style="width: 100%" type="text" id="search-input" placeholder="Search..." >
 
                                 </div>
                             </div>
@@ -122,7 +124,7 @@
 
                         </div> <!-- card -->
 
-                        <?php 
+                        <?php
                         $i = 1;
                         $records_per_page = 5;
                         $sum = 0;
@@ -133,7 +135,8 @@
                         ?>
                         <div class="row">
                             <div class="col">
-                                Found total of <?php echo $total_records; ?> records
+                                Found total of
+                                <?php echo $total_records; ?> records
                             </div>
                             <div class="col">
                                 <ul class="pagination">

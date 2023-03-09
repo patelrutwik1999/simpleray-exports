@@ -2,7 +2,7 @@
 
 <head>
     <!-- Title Page-->
-    <title>Products List</title>
+    <title>General Inquiries List</title>
 
     <?php
     session_start();
