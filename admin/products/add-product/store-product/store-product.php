@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $_SESSION['is-error'] = true;
         $_SESSION['message'] = true;
-        $_SESSION['error-message'] = "The product has not been added.";
+        $_SESSION['error-message'] = "Opps! The product has not been added.";
         header("location:../insert-product.php");
     }
 }
