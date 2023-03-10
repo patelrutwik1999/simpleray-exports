@@ -5,7 +5,7 @@
             <div class="row align-items-center">
                 <div class="col-sm-6">
                     <div class="page-title">
-                        <h4>Categories List</h4>
+                        <h4>Modify Product</h4>
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="landing-page/dashboard.php">Dashboard</a></li>
                             <li class="breadcrumb-item"><a

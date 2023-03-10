@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <title>Edit Product</title>
+    <title>Modify Product</title>
     <?php
     session_start();
     include '../../../config/config.php';
