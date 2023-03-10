@@ -4,7 +4,7 @@
 
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark mt-0">
+                <a href="landing-page/dashboard.php" class="logo logo-dark mt-0">
                     <span class="logo-sm mt-3">
                         <img src="assets/images/favicon.png" alt="" height="35">
                     </span>
@@ -84,9 +84,9 @@
                             <div class="col">
                                 <h6 class="m-0"> Notifications </h6>
                             </div>
-                            <div class="col-auto">
+                            <!-- <div class="col-auto">
                                 <a href="#!" class="small"> View All</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div data-simplebar style="max-height: 230px;">
