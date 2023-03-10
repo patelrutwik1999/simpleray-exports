@@ -19,9 +19,9 @@
             $path = $_GET['path'];
             ?>
             <img src="<?php echo $path ?>" alt="Product Image" />
-            <?php
+            <!-- <?php
             include '../../footer.php';
-            ?>
+            ?> -->
         </div>
         <!-- end main content-->
     </div>

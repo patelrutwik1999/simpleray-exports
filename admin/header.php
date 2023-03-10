@@ -4,7 +4,7 @@
 
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark mt-0">
+                <a href="landing-page/dashboard.php" class="logo logo-dark mt-0">
                     <span class="logo-sm mt-3">
                         <img src="assets/images/favicon.png" alt="" height="35">
                     </span>
@@ -84,9 +84,9 @@
                             <div class="col">
                                 <h6 class="m-0"> Notifications </h6>
                             </div>
-                            <div class="col-auto">
+                            <!-- <div class="col-auto">
                                 <a href="#!" class="small"> View All</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div data-simplebar style="max-height: 230px;">
@@ -150,7 +150,7 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-7.jpg" alt="Header Avatar">
+                    <img class="rounded-circle header-profile-user" src="assets/images/person.png" alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1">
                         <?php echo $_SESSION['username']; ?>
                     </span>

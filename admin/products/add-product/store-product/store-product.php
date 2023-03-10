@@ -20,12 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $productId = str_replace(array('.'), '', uniqid('prod', true));
 
     //Uploads the file at specific location and stores the path info in the database
-    $target_dir = "../../../../admin/assets/product-images/";
+    $target_dir = "../../../assets/product-images/";
     $target_file = $target_dir . basename($_FILES["product_photo"]["name"]);
 
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
     $image = basename($_FILES["product_photo"]["name"], $imageFileType); // used to store the filename in a variable
     $imageFileType = strtolower($imageFileType);
+
     if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
         echo "File Format Not Suppoted";
     } else {
@@ -35,6 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<h3>  Failed to upload image!</h3>";
         }
     }
+
+
+    $filePathForHtml = substr($target_file, 9);
 
     //Finds the parent category name from the parent category id.
     $findCategoryName = "select category_name from categories where category_id = '$parentCategoryId'";
@@ -61,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 '$parentCategoryId',
                 '$parentCategoryName',
                 '$productAddedOn',
-                '$target_file'
+                '$filePathForHtml'
             )";
 
     if (mysqli_query($conn, $insert_product)) {
@@ -73,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $_SESSION['is-error'] = true;
         $_SESSION['message'] = true;
-        $_SESSION['error-message'] = "The product has not been added.";
+        $_SESSION['error-message'] = "Opps! The product has not been added.";
         header("location:../insert-product.php");
     }
 }

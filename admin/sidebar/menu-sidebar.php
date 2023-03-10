@@ -7,7 +7,7 @@
         <div class="user-sidebar text-center">
             <div class="dropdown">
                 <div class="user-img">
-                    <img src="assets/images/users/avatar-7.jpg" alt="" class="rounded-circle">
+                    <img src="assets/images/person.png" alt="" class="rounded-circle">
                     <span class="avatar-online bg-success"></span>
                 </div>
                 <div class="user-info">
@@ -55,7 +55,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="products/products-list/display-products.php">Products List</a></li>
                         <li><a href="products/add-product/insert-product.php">Add Product</a></li>
-                        <!-- <li><a href="products/edit-product/edit-product.php">Edit Product</a></li> -->
+                        <li><a href="products/edit-product/edit-product.php">Modify Product</a></li>
                     </ul>
                 </li>
                 <li>
@@ -77,8 +77,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">All Inquiries</a></li>
                         <li><a href="inquiries/product-inquiries/new-inquiries/display-new-inquiries.php">New Inquiries</a></li>
-                        <!-- <li><a href="products/add-product/insert-product.php">New Inquiries</a></li>
-                        <li><a href="products/edit-product/edit-product.php">Processed Inquiries</a></li> -->
+                        <li><a href="inquiries/product-inquiries/processed-inquiries/display-processed-inquiries.php">Processed Inquiries</a></li>
                     </ul>
                 </li>
             </ul>
