@@ -55,7 +55,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="products/products-list/display-products.php">Products List</a></li>
                         <li><a href="products/add-product/insert-product.php">Add Product</a></li>
-                        <!-- <li><a href="products/edit-product/edit-product.php">Edit Product</a></li> -->
+                        <li><a href="products/edit-product/edit-product.php">Modify Product</a></li>
                     </ul>
                 </li>
                 <li>
