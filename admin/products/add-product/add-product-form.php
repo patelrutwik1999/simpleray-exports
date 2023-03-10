@@ -37,7 +37,9 @@
                             <h4 class="header-title" style="color: #525ce5">Insert Product Details</h4>
                             <!-- <p class="card-title-desc">Here are examples of <code class="highlighter-rouge">.form-control</code> applied to each
                                                 textual HTML5 <code class="highlighter-rouge">&lt;input&gt;</code> <code class="highlighter-rouge">type</code>.</p> -->
-                            <form class="custom-validation" action="products/add-product/store-product/store-product.php" method="POST">
+                            <form class="custom-validation"
+                                action="products/add-product/store-product/store-product.php" method="POST"
+                                enctype="multipart/form-data">
                                 <div class="row mb-3 mt-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Product Name</label>
                                     <div class="col-sm-10">
@@ -63,9 +65,10 @@
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label">Parent Category</label>
                                     <div class="col-sm-10">
-                                        <select class="form-select" aria-label="Default select example" name="parent_category">
+                                        <select class="form-select" aria-label="Default select example"
+                                            name="parent_category">
                                             <option selected="">Open this select menu</option>
-                                            
+
                                             <?php
                                             include '../../../config/config.php';
                                             $get_categories = "select category_id, category_name from categories where hasSubCategory = 0";
@@ -73,7 +76,7 @@
                                             while ($categories = mysqli_fetch_array($retrieved_categories)) {
                                                 ?>
                                                 <option value="<?php echo $categories['category_id'] ?>"><?php echo $categories['category_name'] ?></option>
-                                            <?php
+                                                <?php
                                             }
                                             mysqli_close($conn);
                                             ?>
@@ -84,17 +87,17 @@
                                     <label for="example-color-input" class="col-sm-2 col-form-label">Product
                                         Photo</label>
                                     <div class="col-sm-10">
-                                        <input type="file" class="form-control form-control-color w-100"
-                                            id="customFile" name="product_photo">
+                                        <input type="file" class="form-control form-control-color w-100" id="customFile"
+                                            name="product_photo" accept="image/*">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <div>
                                         <!-- <a href="products/add-product/store-product/store-product.php"> -->
-                                            <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                                
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
+
                                             Submit
-                                            </button>
+                                        </button>
                                         <!-- </a> -->
                                         <!-- <a href="products/products-list/display-products.php">
                                             <button type="reset" class="btn btn-secondary waves-effect">

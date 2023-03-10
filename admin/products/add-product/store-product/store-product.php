@@ -20,12 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $productId = str_replace(array('.'), '', uniqid('prod', true));
 
     //Uploads the file at specific location and stores the path info in the database
-    $target_dir = "../../../../admin/assets/product-images/";
+    $target_dir = "../../../assets/product-images/";
     $target_file = $target_dir . basename($_FILES["product_photo"]["name"]);
 
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
     $image = basename($_FILES["product_photo"]["name"], $imageFileType); // used to store the filename in a variable
     $imageFileType = strtolower($imageFileType);
+
     if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
         echo "File Format Not Suppoted";
     } else {
