@@ -79,7 +79,7 @@
                                             </div>
                                             <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
                                                 class="title">
-                                                <?php echo $retrieved_product_inquiries["full_name"]; ?>
+                                                <?php echo $retrieved_product_inquiries["first_name"] . " " . $retrieved_product_inquiries["last_name"]; ?>
                                             </a>
                                             <span class="star-toggle far fa-star"></span>
                                         </div>
@@ -108,7 +108,7 @@
                                                     <?php echo $retrieved_product_inquiries['description']; ?>
                                                 </span>
                                             </a>
-                                            <div class="date">
+                                            <div class="date me-4">
                                                 <?php $date = substr($retrieved_product_inquiries['submitted_on'], 0, 10);
                                                 $month = substr(date('F', strtotime($date)), 0, 3);
                                                 $year = date('Y', strtotime($date));

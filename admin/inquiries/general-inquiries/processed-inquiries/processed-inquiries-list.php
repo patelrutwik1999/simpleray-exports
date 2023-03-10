@@ -108,7 +108,7 @@
                                                     <?php echo $retrieved_general_inquiries['description']; ?>
                                                 </span>
                                             </a>
-                                            <div class="date">
+                                            <div class="date me-4">
                                                 <?php $date = substr($retrieved_general_inquiries['submitted_on'], 0, 10);
                                                 $month = substr(date('F', strtotime($date)), 0, 3);
                                                 $year = date('Y', strtotime($date));
