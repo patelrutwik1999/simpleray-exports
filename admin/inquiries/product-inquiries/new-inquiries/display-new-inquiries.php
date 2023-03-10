@@ -2,14 +2,14 @@
 
 <head>
     <!-- Title Page-->
-    <title>Product Inquiries List - All</title>
+    <title>Product Inquiries List - New</title>
 
     <?php
     session_start();
     include '../../../../config/config.php';
     include '../../../top-header.php';
     ?>
-    <link href="inquiries/product-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+    <link href="inquiries/product-inquiries/new-inquiries/new-inquiries-list.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         ?>
         <div class="main-content">
             <?php
-            include 'all-inquiries-list.php';
+            include 'new-inquiries-list.php';
             include '../../../footer.php';
             ?>
         </div>

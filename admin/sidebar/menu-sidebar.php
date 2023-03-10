@@ -76,6 +76,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">All Inquiries</a></li>
+                        <li><a href="inquiries/product-inquiries/new-inquiries/display-new-inquiries.php">New Inquiries</a></li>
                         <!-- <li><a href="products/add-product/insert-product.php">New Inquiries</a></li>
                         <li><a href="products/edit-product/edit-product.php">Processed Inquiries</a></li> -->
                     </ul>
