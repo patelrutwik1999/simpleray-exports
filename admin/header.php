@@ -150,7 +150,7 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-7.jpg" alt="Header Avatar">
+                    <img class="rounded-circle header-profile-user" src="assets/images/person.png" alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1">
                         <?php echo $_SESSION['username']; ?>
                     </span>
