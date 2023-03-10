@@ -37,6 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+
+    $filePathForHtml = substr($target_file, 9);
+
     //Finds the parent category name from the parent category id.
     $findCategoryName = "select category_name from categories where category_id = '$parentCategoryId'";
 
@@ -62,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 '$parentCategoryId',
                 '$parentCategoryName',
                 '$productAddedOn',
-                '$target_file'
+                '$filePathForHtml'
             )";
 
     if (mysqli_query($conn, $insert_product)) {
