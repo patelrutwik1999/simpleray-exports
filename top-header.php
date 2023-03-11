@@ -1,5 +1,5 @@
-<base href="http://localhost/simpleray-exports/">
-<!-- <base href="https://simplerayexports.herokuapp.com/"> -->
+<!-- <base href="http://localhost/simpleray-exports/"> -->
+<base href="https://simplerayexports.herokuapp.com/">
 
 <meta charset="UTF-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
