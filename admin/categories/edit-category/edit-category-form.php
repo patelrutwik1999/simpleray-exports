@@ -94,7 +94,7 @@ if ($num == 1) {
                                 }
                                 ?>
 
-                                <form class="custom-validation" action="categories/edit-category/store-category/store-category.php" method="POST">
+                                <form class="custom-validation" action="categories/edit-category/store-updated-category/store-updated-category.php" method="POST" enctype="multipart/form-data">
                                     <div class="row mb-3 mt-3">
                                         <label for="example-text-input" class="col-sm-2 col-form-label">Category Id</label>
                                         <div class="col-sm-10">
@@ -158,6 +158,34 @@ if ($num == 1) {
                                         </div>
                                     </div>
                                     <input type="hidden" value="<?php echo $row['parent_category_id'] ?>" name="current_parent_category_id">
+
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Category Photo</label>
+                                        <div class="col-sm-10">
+                                            <a class="mt-1 btn btn-outline-success waves-effect waves-light" target="_blank" href="products/view-image/view.php?path=<?php echo $row['category_image'] ?>">
+                                                Click here to view</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Do you want to change category photo?</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-select" id="change-category-image" aria-label="Default select example" required name="change_category_image">
+                                                <option selected="" value="0">Want to change Parent Category Photo?
+                                                </option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="example-color-input" class="col-sm-2 col-form-label">Upload New Photo</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="form-control form-control-color w-100" id="new-category-name" name="new_photo" accept="image/*" disabled='false' required>
+                                        </div>
+                                    </div>
+
                                     <div class="row mb-3">
                                         <label class="col-sm-2 col-form-label">Do you want to change parent category?</label>
                                         <div class="col-sm-10">

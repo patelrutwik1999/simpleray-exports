@@ -40,6 +40,7 @@
                                 <thead>
                                     <tr>
                                         <th>Category Name</th>
+                                        <th>Category Image</th>
                                         <th>Parent Category, if any</th>
                                         <th>Sub Categories, if any</th>
                                         <th>Action</th>
@@ -57,6 +58,11 @@
                                     ?>
                                         <tr style="word-wrap: break-word;">
                                             <td><?php echo $retrieved_categories['category_name']; ?></td>
+                                            <td>
+                                                <a href="categories/view-image/view-image.php?path=<?php echo $retrieved_categories['category_image'] ?>">
+                                                    Image
+                                                </a>
+                                            </td>
                                             <td>
                                                 <?php
                                                 if ($retrieved_categories['hasParentCategory'] == 1) {
@@ -101,7 +107,7 @@
                                             </td>
                                             <td>
                                                 <a href="categories/edit-category/edit-category-form-base.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm edit"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="fas fa-pencil-alt"></i> </a>
-                                                <button class="btn btn-outline-primary btn-sm waves-effect waves-light" id="sa-success"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></button>
+                                                <a href="categories/delete-category/delete-category.php?category_id=<?php echo $retrieved_categories['category_id']; ?>" class="btn btn-outline-primary btn-sm waves-effect waves-light"><i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     <?php
