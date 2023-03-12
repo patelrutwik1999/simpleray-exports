@@ -13,10 +13,15 @@
                         </ol>
                     </div>
                 </div>
+
                 <div class="col-sm-6">
                     <div class="float-end d-none d-sm-block">
-                        <a href="" class="btn btn-success">Add Widget</a>
+                        <a href="products/add-product/insert-product.php" class="btn btn-success">Add Product</a>
                     </div>
+                    <div class="float-end d-none d-sm-block">
+                        <a href="categories/add-category/insert-category.php" class="btn btn-success">Add Category</a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -97,14 +102,12 @@
                                         <div class="media mt-4 dash-main-border pb-2">
                                             <div class="avatar-sm mb-3 mt-2">
                                                 <span class="avatar-title rounded-circle bg-white shadow">
-                                                    <i
-                                                        class="mdi mdi-credit-card-outline text-primary font-size-18"></i>
+                                                    <i class="mdi mdi-credit-card-outline text-primary font-size-18"></i>
                                                 </span>
                                             </div>
                                             <div class="media-body ps-3">
                                                 <h4 class="font-size-20">$1598</h4>
-                                                <p class="text-muted">To Paid <a href="#" class="text-primary">Pay <i
-                                                            class="mdi mdi-arrow-right"></i></a></p>
+                                                <p class="text-muted">To Paid <a href="#" class="text-primary">Pay <i class="mdi mdi-arrow-right"></i></a></p>
                                             </div>
                                         </div>
 
@@ -118,9 +121,7 @@
                                             </div>
                                             <div class="media-body ps-3">
                                                 <h4 class="font-size-20">1230</h4>
-                                                <p class="text-muted mb-0">To Online <a href="#"
-                                                        class="text-primary">View <i
-                                                            class="mdi mdi-arrow-right"></i></a></p>
+                                                <p class="text-muted mb-0">To Online <a href="#" class="text-primary">View <i class="mdi mdi-arrow-right"></i></a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,9 +153,7 @@
                                         <p class="text-muted">70% Target</p>
 
                                         <div class="progress mt-3" style="height: 4px;">
-                                            <div class="progress-bar progress-bar bg-primary" role="progressbar"
-                                                style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                                                aria-valuemax="70">
+                                            <div class="progress-bar progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70">
                                             </div>
 
                                         </div>
@@ -180,9 +179,7 @@
                                         <p class="text-muted">80% Target</p>
 
                                         <div class="progress mt-3" style="height: 4px;">
-                                            <div class="progress-bar progress-bar bg-success" role="progressbar"
-                                                style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="80">
+                                            <div class="progress-bar progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80">
                                             </div>
 
                                         </div>
@@ -206,9 +203,7 @@
                                 <div class="media-body ps-3">
 
                                     <div class="dropdown">
-                                        <button class="btn btn-light btn-sm dropdown-toggle" type="button"
-                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
+                                        <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Today<i class="mdi mdi-chevron-down ms-1"></i>
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -245,8 +240,7 @@
                                 <li class="activity-list activity-border">
                                     <div class="activity-icon avatar-sm">
 
-                                        <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle"
-                                            alt="">
+                                        <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
 
                                     </div>
                                     <div class="media">
@@ -257,8 +251,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3
                                                     days</p>
                                             </div>
                                         </div>
@@ -280,8 +273,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1
                                                     days</p>
                                             </div>
                                         </div>
@@ -304,8 +296,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i>
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i>
                                                     Today</p>
                                             </div>
                                         </div>
@@ -315,8 +306,7 @@
                                 <li class="activity-list activity-border">
                                     <div class="activity-icon avatar-sm">
 
-                                        <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle"
-                                            alt="">
+                                        <img src="assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle" alt="">
 
                                     </div>
                                     <div class="media">
@@ -327,8 +317,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 3
                                                     days</p>
                                             </div>
                                         </div>
@@ -350,8 +339,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i> 1
                                                     days</p>
                                             </div>
                                         </div>
@@ -373,8 +361,7 @@
 
                                         <div class="media-body">
                                             <div class="text-end d-none d-md-block">
-                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i
-                                                        class="mdi mdi-timer-outline font-size-15 text-primary"></i>
+                                                <p class="text-muted font-size-13 mt-2 pt-1 mb-0"><i class="mdi mdi-timer-outline font-size-15 text-primary"></i>
                                                     Today</p>
                                             </div>
                                         </div>
@@ -440,21 +427,16 @@
 
                             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="0" class="active" aria-current="true"
-                                        aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <div class="carousel-inner">
 
                                     <div class="carousel-item active">
                                         <div class="row align-items-center mb-5">
                                             <div class="col-md-4">
-                                                <img src="assets/images/product/img-3.png" class="img-fluid me-3"
-                                                    alt="">
+                                                <img src="assets/images/product/img-3.png" class="img-fluid me-3" alt="">
                                             </div>
                                             <div class="col-md-7 offset-md-1">
 
@@ -504,8 +486,7 @@
                                     <div class="carousel-item">
                                         <div class="row align-items-center mb-5">
                                             <div class="col-md-4">
-                                                <img src="assets/images/product/img-5.png" class="img-fluid me-3"
-                                                    alt="">
+                                                <img src="assets/images/product/img-5.png" class="img-fluid me-3" alt="">
                                             </div>
                                             <div class="col-md-7 offset-md-1">
 
@@ -557,8 +538,7 @@
                                     <div class="carousel-item">
                                         <div class="row align-items-center mb-5">
                                             <div class="col-md-4">
-                                                <img src="assets/images/product/img-1.png" class="img-fluid me-3"
-                                                    alt="">
+                                                <img src="assets/images/product/img-1.png" class="img-fluid me-3" alt="">
                                             </div>
                                             <div class="col-md-7 offset-md-1">
 
@@ -633,22 +613,19 @@
                             <div class="px-4 py-3 mt-4">
                                 <p class="mb-1">USA <span class="float-right">75%</span></p>
                                 <div class="progress mt-2" style="height: 6px;">
-                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar"
-                                        style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75">
+                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75">
                                     </div>
                                 </div>
 
                                 <p class="mt-3 mb-1">Russia <span class="float-right">55%</span></p>
                                 <div class="progress mt-2" style="height: 6px;">
-                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar"
-                                        style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55">
+                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55">
                                     </div>
                                 </div>
 
                                 <p class="mt-3 mb-1">Australia <span class="float-right">85%</span></p>
                                 <div class="progress mt-2" style="height: 6px;">
-                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar"
-                                        style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="85">
+                                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="85">
                                     </div>
                                 </div>
                             </div>
@@ -805,25 +782,21 @@
                                     <tbody>
                                         <tr>
                                             <td>#2356</td>
-                                            <td><img src="assets/images/product/img-7.png" width="42" class="me-3"
-                                                    alt="">Green Chair</td>
+                                            <td><img src="assets/images/product/img-7.png" width="42" class="me-3" alt="">Green Chair</td>
                                             <td>Kenneth Gittens</td>
                                             <td>$200.00</td>
                                             <td>42</td>
-                                            <td><span
-                                                    class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
+                                            <td><span class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>#2564</td>
-                                            <td><img src="assets/images/product/img-8.png" width="42" class="me-3"
-                                                    alt="">Office Chair</td>
+                                            <td><img src="assets/images/product/img-8.png" width="42" class="me-3" alt="">Office Chair</td>
                                             <td>Alfred Gordon</td>
                                             <td>$242.00</td>
                                             <td>54</td>
-                                            <td><span
-                                                    class="badge badge-pill badge-soft-success font-size-13">Active</span>
+                                            <td><span class="badge badge-pill badge-soft-success font-size-13">Active</span>
                                             </td>
                                         </tr>
 
@@ -831,37 +804,31 @@
 
                                         <tr>
                                             <td>#2125</td>
-                                            <td><img src="assets/images/product/img-10.png" width="42" class="me-3"
-                                                    alt="">Gray Chair</td>
+                                            <td><img src="assets/images/product/img-10.png" width="42" class="me-3" alt="">Gray Chair</td>
                                             <td>Keena Reyes</td>
                                             <td>$320.00</td>
                                             <td>65</td>
-                                            <td><span
-                                                    class="badge badge-pill badge-soft-success font-size-13">Active</span>
+                                            <td><span class="badge badge-pill badge-soft-success font-size-13">Active</span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>#8587</td>
-                                            <td><img src="assets/images/product/img-11.png" width="42" class="me-3"
-                                                    alt="">Steel Chair</td>
+                                            <td><img src="assets/images/product/img-11.png" width="42" class="me-3" alt="">Steel Chair</td>
                                             <td>Timothy Zuniga</td>
                                             <td>$342.00</td>
                                             <td>52</td>
-                                            <td><span
-                                                    class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
+                                            <td><span class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td>#2354</td>
-                                            <td><img src="assets/images/product/img-12.png" width="42" class="me-3"
-                                                    alt="">Home Chair</td>
+                                            <td><img src="assets/images/product/img-12.png" width="42" class="me-3" alt="">Home Chair</td>
                                             <td>Joann Wiliams</td>
                                             <td>$320.00</td>
                                             <td>25</td>
-                                            <td><span
-                                                    class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
+                                            <td><span class="badge badge-pill badge-soft-primary font-size-13">Pending</span>
                                             </td>
                                         </tr>
 
