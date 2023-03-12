@@ -180,7 +180,7 @@ if ($num == 1) {
                                         <label class="col-sm-2 col-form-label">Want to change product photo?</label>
                                         <div class="col-sm-10">
                                             <select class="form-select" aria-label="Default select example"
-                                                id="change_photo">
+                                                id="change_photo" name="change_photo">
                                                 <option value="0">No</option>
                                                 <option value="1">Yes</option>
                                             </select>
@@ -191,7 +191,7 @@ if ($num == 1) {
                                         <label for="example-color-input" class="col-sm-2 col-form-label">Upload New Photo</label>
                                         <div class="col-sm-10 mt-2">
                                             <input type="file" class="form-control form-control-color w-100" id="customFile"
-                                                name="new_photo" accept="image/*" disabled='false'>
+                                                name="new_photo" accept="image/*" disabled='false' required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
