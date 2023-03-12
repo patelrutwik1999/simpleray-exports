@@ -27,15 +27,15 @@
         <!-- end main content-->
     </div>
 
-    <!-- <script>
-        document.getElementById('change-parent-category').onchange = function() {
+    <script>
+        document.getElementById('change_photo').onchange = function() {
             if (this.value == '0') {
-                document.getElementById("select-parent-category").disabled = true;
+                document.getElementById("add_button").disabled = false;
             } else {
-                document.getElementById("select-parent-category").disabled = false;
+                document.getElementById("add_button").disabled = true;
             }
         }
-    </script> -->
+    </script>
     <script src="assets/libs/parsleyjs/parsley.min.js"></script>
 
     <script src="assets/js/pages/form-validation.init.js"></script>

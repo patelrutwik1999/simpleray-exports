@@ -135,7 +135,7 @@ if ($num == 1) {
                                         <div class="col-sm-10">
                                             <textarea required class="form-control" rows="5" placeholder="Type here"
                                                 id="example-text-input" name="product_description"><?php echo $row['description']; ?>
-                                                                            </textarea>
+                                                                                        </textarea>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -170,17 +170,29 @@ if ($num == 1) {
                                     <div class="row mb-3">
                                         <label class="col-sm-2 col-form-label">Product Photo</label>
                                         <div class="col-sm-10">
-                                        <a class="mt-1 btn btn-outline-success waves-effect waves-light"
-                                                    href="products/view-image/view.php?path=<?php echo $row['photo'] ?>">
-                                                    Click here to view</a>
+                                            <a class="mt-1 btn btn-outline-success waves-effect waves-light"
+                                                href="products/view-image/view.php?path=<?php echo $row['photo'] ?>">
+                                                Click here to view</a>
                                         </div>
                                     </div>
+
                                     <div class="row mb-3">
-                                        <label for="example-color-input" class="col-sm-2 col-form-label">Want to change
-                                            product photo? Upload New one.</label>
+                                        <label class="col-sm-2 col-form-label">Want to change product photo?</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-select" aria-label="Default select example"
+                                                id="change_photo">
+                                                <option value="">Select</option>
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="example-color-input" class="col-sm-2 col-form-label">Upload New Photo</label>
                                         <div class="col-sm-10 mt-2">
                                             <input type="file" class="form-control form-control-color w-100" id="customFile"
-                                                name="product_photo" accept="image/*">
+                                                name="new_photo" accept="image/*" id="add_button" disabled='false'>
                                         </div>
                                     </div>
                                     <div class="row mb-3">

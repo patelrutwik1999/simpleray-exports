@@ -1,6 +1,6 @@
-<!-- <base href="http://localhost/simpleray-exports/admin/"> -->
+<base href="http://localhost/simpleray-exports/admin/">
 
-<base href="https://simplerayexports.herokuapp.com/admin/">
+<!-- <base href="https://simplerayexports.herokuapp.com/admin/"> -->
 
 <?php header("Access-Control-Allow-Origin: *"); ?>
 <!-- Required meta tags -->
