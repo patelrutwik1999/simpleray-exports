@@ -196,7 +196,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="header-title mb-4">Revenue Stastics</h4>
+                            <h4 class="header-title mb-4">Revenue Statistics</h4>
 
                             <div class="media">
 

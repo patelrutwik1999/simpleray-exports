@@ -26,10 +26,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $categoryId = $categories['category_id'];
 
     //Finds the product id from the product name.
-    $findProductId = "select product_id from products where product_name = '$productName'";
+    $findProductId = "select product_id, total_inquiries from products where product_name = '$productName'";
     $retrieved_products = mysqli_query($conn, $findProductId);
     $products = mysqli_fetch_array($retrieved_products);
     $productId = $products['product_id'];
+    $totalInquiries = $products['total_inquiries'];
+    $totalInquiries = $totalInquiries + 1;
 
     date_default_timezone_set("Asia/Kolkata");
     $submittedOn = date("Y-m-d h:i:s");
@@ -71,6 +73,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ";
     
     if (mysqli_query($conn, $insert_inquiry)) {
+        $update_total_inquiry = "update products set
+            total_inquiries = '$totalInquiries' 
+            where product_id = '$productId';
+        ";
+
+        mysqli_query($conn, $update_total_inquiry);
+
         mysqli_close($conn);
         $_SESSION['is-error'] = false;
         $_SESSION['message'] = true;
