@@ -31,9 +31,12 @@
                         <div class="card-body">
 
                             <h4 class="header-title">Modify Categories</h4>
-                            <p class="card-title-desc">You can have a view at all categories and can modify or delete any category you want. Clicking update button it
+                            <p class="card-title-desc">You can have a view at all categories and can modify or delete any category you want. Clicking &nbsp; <i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="fas fa-pencil-alt btn btn-outline-primary btn-sm edit">
+                                </i> &nbsp; button it
                                 will open a form with detailed information of the category.You can just change the content you want. <br>
-                                For Delete, just press the trash icon.
+                                For Delete, just click on &nbsp; <i style="line-height: 1.5rem; margin: auto auto; font-size:larger;" class="far fa-trash-alt btn btn-outline-primary btn-sm waves-effect waves-light">
+                                </i>
+                                &nbsp; icon.
                             </p>
 
                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
