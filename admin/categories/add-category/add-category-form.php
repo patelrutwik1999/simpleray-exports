@@ -46,7 +46,7 @@
                                                         <i class="mdi mdi-checkbox-marked-circle-outline display-4 text-success"></i>
                                                     </div>
                                                     <h4 class="alert-heading font-size-18">Well done!</h4>
-                                                    <p>The category has been added successfully.</p>
+                                                    <p><?php echo $_SESSION['success-message'] ?></p>
 
                                                 </div>
                                             </div>
@@ -73,7 +73,7 @@
                                                         <i class="mdi mdi-alert-outline display-4 text-danger"></i>
                                                     </div>
                                                     <h4 class="alert-heading font-size-18">Something went wrong</h4>
-                                                    <p>Sorry ! The category was not added.</p>
+                                                    <p><?php echo $_SESSION['error-message'] ?></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,11 +85,18 @@
 
                             <!-- <p class="card-title-desc">Here are examples of <code class="highlighter-rouge">.form-control</code> applied to each
                                                 textual HTML5 <code class="highlighter-rouge">&lt;input&gt;</code> <code class="highlighter-rouge">type</code>.</p> -->
-                            <form class="custom-validation" action="categories/add-category/store-category/store-category.php" method="POST">
+                            <form class="custom-validation" action="categories/add-category/store-category/store-category.php" method="POST" enctype="multipart/form-data">
                                 <div class="row mb-3 mt-3">
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Category Name</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" type="text" placeholder="Category Name" name="category_name" id="example-text-input" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-color-input" class="col-sm-2 col-form-label">Category
+                                        Photo</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" class="form-control form-control-color w-100" id="customFile" name="category_photo" accept="image/*">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
