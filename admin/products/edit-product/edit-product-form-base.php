@@ -30,9 +30,9 @@
     <script>
         document.getElementById('change_photo').onchange = function() {
             if (this.value == '0') {
-                document.getElementById("add_button").disabled = false;
+                document.getElementById("customFile").disabled = true;
             } else {
-                document.getElementById("add_button").disabled = true;
+                document.getElementById("customFile").disabled = false;
             }
         }
     </script>
