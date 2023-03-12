@@ -41,6 +41,7 @@
                                         <th>Category Name</th>
                                         <th>Parent Category, if any</th>
                                         <th>Sub Categories, if any</th>
+                                        <th>Image</th>
                                         <th>Added On</th>
                                         <th>Updated On</th>
                                     </tr>
@@ -99,6 +100,11 @@
                                                     echo "No sub-category";
                                                 }
                                                 ?>
+                                            </td>
+                                            <td>
+                                                <a href="categories/view-image/view-image.php?path=<?php echo $retrieved_categories['category_image'] ?>">
+                                                    Image
+                                                </a>
                                             </td>
                                             <td><?php echo $retrieved_categories['added_on']; ?></td>
                                             <td>

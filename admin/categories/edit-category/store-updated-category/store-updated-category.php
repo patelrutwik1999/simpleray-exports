@@ -24,8 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Basically it remove the link with its parent category and stay as an independent category.
     if ($change_parent_category == 0) {
         $update_category = "update categories SET category_name = '$category_name', updated_on='$updated_on' WHERE category_id = '$category_id'";
+
         if (mysqli_query($conn, $update_category)) {
-            mysqli_close($conn, $updateChildrenCategories);
+            echo $update_category;
+            mysqli_close($conn);
             $_SESSION['is-error'] = false;
             $_SESSION['message'] = true;
             $_SESSION['success-message'] = "The category has been updated.";
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($parent_category_Id == 0) {
             $update_category = "update categories SET category_name = '$category_name', updated_on='$updated_on' WHERE category_id = '$category_id'";
             if (mysqli_query($conn, $update_category)) {
-                mysqli_close($conn, $updateChildrenCategories);
+                mysqli_close($conn);
                 $_SESSION['is-error'] = false;
                 $_SESSION['message'] = true;
                 $_SESSION['success-message'] = "The category has been updated.";
@@ -68,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 //Decreasing the count of children by 1.
                 $childrenCount = $childrens['childrenCount'];
                 $hasChildrenCategories = $childrens['hasSubCategory'];
-                if ($childrenCount >= 1 && $hasChildrenCategories == 1) {
+                if ($childrenCount >= 1) {
                     $childrenCount = $childrenCount - 1;
                 }
                 if ($childrenCount == 0) {
@@ -100,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         // The parent of the sub category has been changed. 
         else {
-            $update_category = "update categories SET category_name = '$category_name', parent_category_id='$parent_category_Id', updated_on='$updated_on' WHERE category_id = '$category_id'";
+            $update_category = "update categories SET category_name = '$category_name', hasParentCategory = '1', parent_category_id='$parent_category_Id', updated_on='$updated_on' WHERE category_id = '$category_id'";
             if (mysqli_query($conn, $update_category)) {
                 $getParentCategoryId = "select childrenCount, hasSubCategory from categories where '$current_parent_category_id'";
                 $retreivedChildrenCount = mysqli_query($conn, $getParentCategoryId);
@@ -108,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $childrenCount = $childrens['childrenCount'];
                 $hasChildrenCategories = $childrens['hasSubCategory'];
-                if ($childrenCount >= 1 && $hasChildrenCategories == 1) {
+                if ($childrenCount >= 1) {
                     $childrenCount = $childrenCount - 1;
                 }
                 if ($childrenCount == 0) {

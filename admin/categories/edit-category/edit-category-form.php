@@ -94,7 +94,7 @@ if ($num == 1) {
                                 }
                                 ?>
 
-                                <form class="custom-validation" action="categories/edit-category/store-category/store-category.php" method="POST">
+                                <form class="custom-validation" action="categories/edit-category/store-updated-category/store-updated-category.php" method="POST">
                                     <div class="row mb-3 mt-3">
                                         <label for="example-text-input" class="col-sm-2 col-form-label">Category Id</label>
                                         <div class="col-sm-10">
