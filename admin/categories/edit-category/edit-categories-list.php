@@ -40,6 +40,7 @@
                                 <thead>
                                     <tr>
                                         <th>Category Name</th>
+                                        <th>Category Image</th>
                                         <th>Parent Category, if any</th>
                                         <th>Sub Categories, if any</th>
                                         <th>Action</th>
@@ -57,6 +58,11 @@
                                     ?>
                                         <tr style="word-wrap: break-word;">
                                             <td><?php echo $retrieved_categories['category_name']; ?></td>
+                                            <td>
+                                                <a href="categories/view-image/view-image.php?path=<?php echo $retrieved_categories['category_image'] ?>">
+                                                    Image
+                                                </a>
+                                            </td>
                                             <td>
                                                 <?php
                                                 if ($retrieved_categories['hasParentCategory'] == 1) {
