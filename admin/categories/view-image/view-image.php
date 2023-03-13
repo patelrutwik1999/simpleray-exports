@@ -18,7 +18,7 @@
             <?php
             $path = $_GET['path'];
             ?>
-            <img src="<?php echo $path ?>" alt="Category Image" />
+            <img src="<?php echo $path ?>" alt="Category Image"  />
             <!-- <?php
                     include '../../footer.php';
                     ?> -->
