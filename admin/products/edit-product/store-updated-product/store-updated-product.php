@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //$num = 1 means that product name already exists.
     if ($num == 1) {
-        $_SESSION['is-error'] = false;
+        $_SESSION['is-error'] = true;
         $_SESSION['message'] = true;
         $_SESSION['error-message'] = "The product name already exist. Please change the product name.";
         header("location:../edit-product-form-base.php?product_id=$productId");
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
 
                 mysqli_close($conn);
-                $_SESSION['is-error'] = false;
+                $_SESSION['is-error'] = true;
                 $_SESSION['message'] = true;
                 $_SESSION['error-message'] = "File format is not supported.";
                 header("location:../edit-product-form-base.php?product_id=$productId");
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
                 } else {
                     mysqli_close($conn);
-                    $_SESSION['is-error'] = false;
+                    $_SESSION['is-error'] = true;
                     $_SESSION['message'] = true;
                     $_SESSION['error-message'] = "Error is occurred in uploading image. Please try again.";
                     header("location:../edit-product-form-base.php?product_id=$productId");
