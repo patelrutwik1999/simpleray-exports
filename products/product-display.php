@@ -16,9 +16,9 @@
     include '../sliding-checkout/sliding-checkout.php';
     include '../categories-catalog/categories-catalog.php';
     ?>
-    
+
     <?php
-    include "products-page/product.php";
+    include "products-catalog/product.php";
     include '../footer.php';
     include '../sub-footer.php';
     ?>

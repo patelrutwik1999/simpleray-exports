@@ -17,6 +17,7 @@
     include 'sliding-checkout/sliding-checkout.php';
     include 'sliding-images/sliding-images.php';
     include 'categories-catalog/categories-catalog.php';
+    include 'categories/category-display.php';
     include 'footer.php';
     include 'sub-footer.php';
     ?>
