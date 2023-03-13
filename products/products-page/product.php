@@ -146,7 +146,7 @@ if ($subCategoryResult == 1) {
                             $temp =  mysqli_num_rows($retrievedChildCategory);
                             while ($childCategory = mysqli_fetch_array($retrievedChildCategory)) {
                             ?>
-                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#<?php echo $childCategory['category_name'] ?>"><?php echo $childCategory['category_name']; ?></a></li>
+                                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#<?php echo $childCategory['category_id'] ?>"><?php echo $childCategory['category_name']; ?></a></li>
                             <?php
                             }
                             ?>
@@ -619,15 +619,14 @@ if ($subCategoryResult == 1) {
                             <!-- 1st Product tab end -->
 
                             <?php
-                            $getChildCategoryForModal = "select category_id, category_name from categories where parent_category_id = '$categoryId'";
+                            $getChildCategoryForModal = "select * from categories where parent_category_id = '$categoryId'";
                             $retrievedChildCategoryForModal = mysqli_query($conn, $getChildCategoryForModal);
                             $temp =  mysqli_num_rows($retrievedChildCategoryForModal);
                             while ($childCategoryForModal = mysqli_fetch_array($retrievedChildCategoryForModal)) {
 
                             ?>
                                 <!-- 2nd Product tab start -->
-                                <div class="tab-pane fade" id="<?php echo $childCategoryForModal['category_name'] ?>">
-                                    <p><?php echo $childCategoryForModal["category_id"] ?> </p>
+                                <div class="tab-pane fade" id="<?php echo $childCategoryForModal['category_id'] ?>">
                                     <div class="row">
                                         <div class="col-md-4 col-sm-6 col-xs-6 gi-col-5 gi-product-box">
                                             <div class="gi-product-content">
@@ -638,8 +637,9 @@ if ($subCategoryResult == 1) {
                                                                 <span class="label veg">
                                                                     <span class="dot"></span>
                                                                 </span>
-                                                                <img class="main-image" src="assets/img/product-images/1_1.jpg" alt="Product">
-                                                                <img class="hover-image" src="assets/img/product-images/1_2.jpg" alt="Product">
+
+                                                                <img class="main-image" src="admin/<?php echo $childCategoryForModal['category_image'] ?>" alt="Product">
+                                                                <img class="hover-image" src="admin/<?php echo $childCategoryForModal['category_image'] ?>" alt="Product">
                                                             </a>
                                                             <div class="gi-pro-actions">
                                                                 <a class="gi-btn-group wishlist" title="Wishlist"><i class="fi-rr-heart"></i></a>
@@ -651,7 +651,7 @@ if ($subCategoryResult == 1) {
                                                     </div>
                                                     <div class="gi-pro-content">
                                                         <a href="shop-left-sidebar-col-3.html">
-                                                            <h6 class="gi-pro-stitle">chips & fries</h6>
+                                                            <h6 class="gi-pro-stitle"><?php echo $childCategoryForModal['category'] ?></h6>
                                                         </a>
                                                         <h5 class="gi-pro-title"><a href="product-left-sidebar.html">Crunchy
                                                                 Triangle Chips Snacks</a></h5>
