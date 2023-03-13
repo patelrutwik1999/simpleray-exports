@@ -58,12 +58,10 @@ if ($subCategoryResult == 1) {
                                                                 <span class="label veg">
                                                                     <span class="dot"></span>
                                                                 </span>
-                                                                <img class="main-image" src="assets/img/product-images/2_1.jpg" alt="Product">
-                                                                <img class="hover-image" src="assets/img/product-images/2_2.jpg" alt="Product">
+                                                                <img class="main-image" src="admin/<?php echo $allProducts['photo'] ?>" alt="Product">
+                                                                <img class="hover-image" src="admin/<?php echo $allProducts['photo'] ?>" alt="Product">
                                                             </a>
-                                                            <span class="flags">
-                                                                <span class="sale">Sale</span>
-                                                            </span>
+
                                                             <div class="gi-pro-actions">
                                                                 <a class="gi-btn-group wishlist" title="Wishlist"><i class="fi-rr-heart"></i></a>
                                                                 <a href="#" class="gi-btn-group quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal" data-bs-target="#gi_quickview_modal"><i class="fi-rr-eye"></i></a>
@@ -79,13 +77,7 @@ if ($subCategoryResult == 1) {
                                                         <h5 class="gi-pro-title"><a href="product-left-sidebar.html"><?php echo $allProducts['product_name']; ?></a></h5>
                                                         <p class="gi-info"><?php echo $allProducts['description']; ?></p>
                                                         <div class="gi-pro-rat-price">
-                                                            <span class="gi-pro-rating">
-                                                                <i class="gicon gi-star fill"></i>
-                                                                <i class="gicon gi-star fill"></i>
-                                                                <i class="gicon gi-star fill"></i>
-                                                                <i class="gicon gi-star"></i>
-                                                                <i class="gicon gi-star"></i>
-                                                            </span>
+
                                                             <span class="gi-price">
                                                                 <span class="new-price">&#8377; <?php echo $allProducts['price']; ?></span>
                                                                 <!-- <span class="old-price">$85.00</span> -->
@@ -202,6 +194,7 @@ if ($subCategoryResult == 1) {
                                                             <h5 class="gi-pro-title"><a href="product-left-sidebar.html">
                                                                     <?php echo $products['product_name'] ?>
                                                                 </a></h5>
+                                                            <p class="gi-info"><?php echo $products['description']; ?></p>
                                                             <div class="gi-pro-rat-price">
                                                                 <span class="gi-price">
                                                                     <span class="new-price">&#8377; <?php echo $products['price'] ?></span>
@@ -264,6 +257,7 @@ if ($subCategoryResult == 1) {
                                                             <h5 class="gi-pro-title"><a href="product-left-sidebar.html">
                                                                     <?php echo $allProducts['product_name'] ?>
                                                                 </a></h5>
+                                                            <p class="gi-info"><?php echo $allProducts['description']; ?></p>
                                                             <div class="gi-pro-rat-price">
                                                                 <span class="gi-price">
                                                                     <span class="new-price">&#8377; <?php echo $allProducts['price'] ?></span>

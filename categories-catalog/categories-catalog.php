@@ -22,7 +22,7 @@
                     ?>
                         <div class="gi-cat-box <?php echo $className ?>">
                             <div class="gi-cat-icon">
-                                <i class="fi fi-tr-peach"></i>
+                                <img src="admin/<?php echo $category['category_image'] ?>"></img>
                                 <div class="gi-cat-detail">
                                     <a href="products/product-display.php?categoryId=<?php echo $category['category_id']; ?>">
                                         <!-- <a href="shop-left-sidebar-col-3.html"> -->
