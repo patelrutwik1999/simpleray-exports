@@ -35,7 +35,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         parent_category_name = '$parentCategoryName',
         updated_on = '$updated_on',
         where product_id = '$productId'
-    ";
+        ";
+
+        if (mysqli_query($conn, $update_product)) {
+            mysqli_close($conn);
+            $_SESSION['is-error'] = false;
+            $_SESSION['message'] = true;
+            $_SESSION['success-message'] = "The product has been updated.";
+            header("location:../edit-product-form-base.php?product_id=$productId");
+        } else {
+            mysqli_close($conn);
+            $_SESSION['is-error'] = true;
+            $_SESSION['message'] = true;
+            $_SESSION['error-message'] = "The product has not been updated.";
+            header("location:../edit-product-form-base.php?product_id=$productId");
+        }
     } else {
         //Uploads the file at specific location and stores the path info in the database
         $target_dir = "../../../assets/product-images/";
@@ -46,30 +60,66 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $imageFileType = strtolower($imageFileType);
 
         if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
-            echo "File Format Not Suppoted";
+
+            mysqli_close($conn);
+            $_SESSION['is-error'] = false;
+            $_SESSION['message'] = true;
+            $_SESSION['error-message'] = "File format is not supported.";
+            header("location:../edit-product-form-base.php?product_id=$productId");
+
         } else {
             if (move_uploaded_file($_FILES["new_photo"]["tmp_name"], $target_file)) {
-                echo "<h3>  Image uploaded successfully!</h3>";
+
+                $filePathForHtml = substr($target_file, 9);
+
+                $update_product = "update products set
+                product_name = '$productName',
+                description = '$productDescription',
+                price = '$productPrice',
+                parent_category_id = '$parentCategoryId',
+                parent_category_name = '$parentCategoryName',
+                updated_on = '$updated_on',
+                photo = '$filePathForHtml'
+                where product_id = '$productId'
+                ";
+
+                if (mysqli_query($conn, $update_product)) {
+                    mysqli_close($conn);
+                    $_SESSION['is-error'] = false;
+                    $_SESSION['message'] = true;
+                    $_SESSION['success-message'] = "The product has been updated.";
+                    header("location:../edit-product-form-base.php?product_id=$productId");
+                } else {
+                    mysqli_close($conn);
+                    $_SESSION['is-error'] = true;
+                    $_SESSION['message'] = true;
+                    $_SESSION['error-message'] = "The product has not been updated.";
+                    header("location:../edit-product-form-base.php?product_id=$productId");
+                }
             } else {
-                echo "<h3>  Failed to upload image!</h3>";
+                mysqli_close($conn);
+                    $_SESSION['is-error'] = false;
+                    $_SESSION['message'] = true;
+                    $_SESSION['success-message'] = "Error is occurred in uploading image. Please try again.";
+                    header("location:../edit-product-form-base.php?product_id=$productId");
             }
         }
-
-
-        $filePathForHtml = substr($target_file, 9);
-
-        $update_product = "update products set
-        product_name = '$productName',
-        description = '$productDescription',
-        price = '$productPrice',
-        parent_category_id = '$parentCategoryId',
-        parent_category_name = '$parentCategoryName',
-        updated_on = '$updated_on',
-        photo = '$filePathForHtml'
-        where product_id = '$productId'
-    ";
-
     }
+}
+    //     $filePathForHtml = substr($target_file, 9);
+
+    //     $update_product = "update products set
+    //     product_name = '$productName',
+    //     description = '$productDescription',
+    //     price = '$productPrice',
+    //     parent_category_id = '$parentCategoryId',
+    //     parent_category_name = '$parentCategoryName',
+    //     updated_on = '$updated_on',
+    //     photo = '$filePathForHtml'
+    //     where product_id = '$productId'
+    // ";
+
+    
 
     // //Checks the photo has been changed or not.
     // //Fetches photo from database.
@@ -90,20 +140,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // }
 
 
-    if (mysqli_query($conn, $update_product)) {
-        mysqli_close($conn);
-        $_SESSION['is-error'] = false;
-        $_SESSION['message'] = true;
-        $_SESSION['success-message'] = "The product has been updated.";
-        echo "Success";
-        header("location:../edit-product-form-base.php?product_id=$productId");
-    } else {
-        mysqli_close($conn);
-        $_SESSION['is-error'] = true;
-        $_SESSION['message'] = true;
-        $_SESSION['error-message'] = "The category has not been updated.";
-        echo "Failure";
-        header("location:../edit-product-form-base.php?product_id=$productId");
-    }
-}
+    // if (mysqli_query($conn, $update_product)) {
+    //     mysqli_close($conn);
+    //     $_SESSION['is-error'] = false;
+    //     $_SESSION['message'] = true;
+    //     $_SESSION['success-message'] = "The product has been updated.";
+    //     echo "Success";
+    //     header("location:../edit-product-form-base.php?product_id=$productId");
+    // } else {
+    //     mysqli_close($conn);
+    //     $_SESSION['is-error'] = true;
+    //     $_SESSION['message'] = true;
+    //     $_SESSION['error-message'] = "The category has not been updated.";
+    //     echo "Failure";
+    //     header("location:../edit-product-form-base.php?product_id=$productId");
+    // }
+
 ?>
