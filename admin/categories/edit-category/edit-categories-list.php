@@ -62,7 +62,7 @@
                                         <tr style="word-wrap: break-word;">
                                             <td><?php echo $retrieved_categories['category_name']; ?></td>
                                             <td>
-                                                <a href="categories/view-image/view-image.php?path=<?php echo $retrieved_categories['category_image'] ?>">
+                                                <a href="categories/view-image/view-image.php?path=<?php echo $retrieved_categories['category_image'] ?>" target="_blank">
                                                     Image
                                                 </a>
                                             </td>
