@@ -1,7 +1,7 @@
 <?php
 include '../../../config/config.php';
 session_start();
-$category_id_to_delete = $_GET['category_id'];
+$category_id_to_delete = $_POST['category_id'];
 
 //We will check if the category has any related categories.
 
@@ -9,6 +9,7 @@ $getSubCategoriesQuery = "select category_id, category_name from categories wher
 $subCategories = mysqli_query($conn, $getSubCategoriesQuery);
 $numberOfSubCategories = mysqli_num_rows($subCategories);
 
+$responseMessage = array();
 //If the number of sub-categories is more than 1, then we will first delete the sub-categories, its related products and then the category itself.
 if ($numberOfSubCategories >= 1) {
     while ($categories = mysqli_fetch_array($subCategories)) {
@@ -20,30 +21,26 @@ if ($numberOfSubCategories >= 1) {
                 $category_deletion = "delete from categories where category_id = '$category_id_to_delete'";
                 if ($conn->query($category_deletion) === TRUE) {
                     mysqli_close($conn);
-                    $_SESSION['is-error'] = false;
-                    $_SESSION['message'] = true;
-                    $_SESSION['success-message'] = "The category and its related sub-categories, and products are deleted.";
-                    header("location:../edit-category/edit-category.php");
+                    $responseMessage['status'] = 'success';
+                    $responseMessage['message'] = " 1 The category and its related sub-categories, and products are deleted.";
+                    #  header("location:../edit-category/edit-category.php");
                 } else {
                     mysqli_close($conn);
-                    $_SESSION['is-error'] = true;
-                    $_SESSION['message'] = true;
-                    $_SESSION['error-message'] = "The category and its related sub-categories, and products are not deleted.";
-                    header("location:../category-list/display-categories.php");
+                    $responseMessage['status'] = 'error';
+                    $responseMessage['message'] = "The category and its related sub-categories, and products are not deleted.";
+                    # header("location:../category-list/display-categories.php");
                 }
             } else {
                 mysqli_close($conn);
-                $_SESSION['is-error'] = true;
-                $_SESSION['message'] = true;
-                $_SESSION['error-message'] = "There has been an error deleting the category.";
-                header("location:../edit-category/edit-category.php");
+                $responseMessage['status'] = 'error';
+                $responseMessage['message'] = "There has been an error deleting the category.";
+                # header("location:../edit-category/edit-category.php");
             }
         } else {
             mysqli_close($conn);
-            $_SESSION['is-error'] = true;
-            $_SESSION['message'] = true;
-            $_SESSION['error-message'] = "There has been error deleting the realated products of sub-categories.";
-            header("location:../edit-category/edit-category.php");
+            $responseMessage['status'] = 'error';
+            $responseMessage['message'] = "There has been error deleting the realated products of sub-categories.";
+            # header("location:../edit-category/edit-category.php");
         }
     }
 } else {
@@ -52,22 +49,21 @@ if ($numberOfSubCategories >= 1) {
         $category_deletion = "delete from categories where category_id = '$category_id_to_delete'";
         if ($conn->query($category_deletion) === TRUE) {
             mysqli_close($conn);
-            $_SESSION['is-error'] = false;
-            $_SESSION['message'] = true;
-            $_SESSION['success-message'] = "The category and its related sub-categories, and products are deleted.";
-            header("location:../edit-category/edit-category.php");
+            $responseMessage['status'] = 'success';
+            $responseMessage['message'] = "The category and its related sub-categories, and products are deleted.";
+            #header("location:../edit-category/edit-category.php");
         } else {
             mysqli_close($conn);
-            $_SESSION['is-error'] = true;
-            $_SESSION['message'] = true;
-            $_SESSION['error-message'] = "The category and its related sub-categories, and products are not deleted.";
-            header("location:../edit-category/edit-category.php");
+            $responseMessage['status'] = 'error';
+            $responseMessage['message'] = "The category and its related sub-categories, and products are not deleted.";
+            #   header("location:../edit-category/edit-category.php");
         }
     } else {
         mysqli_close($conn);
-        $_SESSION['is-error'] = false;
-        $_SESSION['message'] = true;
-        $_SESSION['error-message'] = "The category and its related sub-categories, and products are not deleted.";
-        header("location:../edit-category/edit-category.php");
+        $responseMessage['status'] = 'error';
+        $responseMessage['message'] = "The category and its related sub-categories, and products are not deleted.";
+        #header("location:../edit-category/edit-category.php");
     }
 }
+
+echo json_encode($responseMessage);
