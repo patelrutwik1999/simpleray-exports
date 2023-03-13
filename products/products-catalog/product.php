@@ -74,7 +74,7 @@ if ($subCategoryResult == 1) {
                                                         <a href="shop-left-sidebar-col-3.html">
                                                             <h6 class="gi-pro-stitle"><?php echo $allProducts['parent_category_name']; ?></h6>
                                                         </a>
-                                                        <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?category_id=<?php echo $allProducts['product_id']; ?>"><?php echo $allProducts['product_name']; ?></a></h5>
+                                                        <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?product_id=<?php echo $allProducts['product_id']; ?>"><?php echo $allProducts['product_name']; ?></a></h5>
                                                         <p class="gi-info"><?php echo $allProducts['description']; ?></p>
                                                         <div class="gi-pro-rat-price">
 
@@ -191,7 +191,7 @@ if ($subCategoryResult == 1) {
                                                             <a href="shop-left-sidebar-col-3.html">
                                                                 <h6 class="gi-pro-stitle"><?php echo $products['parent_category_name'] ?></h6>
                                                             </a>
-                                                            <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?category_id=<?php echo $products['product_id']; ?>">
+                                                            <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?product_id=<?php echo $products['product_id']; ?>">
                                                                     <?php echo $products['product_name'] ?>
                                                                 </a></h5>
                                                             <p class="gi-info"><?php echo $products['description']; ?></p>
@@ -254,7 +254,7 @@ if ($subCategoryResult == 1) {
                                                             <a href="shop-left-sidebar-col-3.html">
                                                                 <h6 class="gi-pro-stitle"><?php echo $allProducts['parent_category_name'] ?></h6>
                                                             </a>
-                                                            <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?category_id=<?php echo $allProducts['product_id']; ?>">
+                                                            <h5 class="gi-pro-title"><a href="products/product-page/product-page.php?product_id=<?php echo $allProducts['product_id']; ?>">
                                                                     <?php echo $allProducts['product_name'] ?>
                                                                 </a></h5>
                                                             <p class="gi-info"><?php echo $allProducts['description']; ?></p>

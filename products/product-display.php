@@ -5,7 +5,7 @@
 <head>
     <?php
     include '../top-header.php';
-    include 'config/config.php';
+    include '../config/config.php';
     ?>
     <title>Products</title>
 </head>
