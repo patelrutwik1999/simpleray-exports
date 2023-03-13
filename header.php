@@ -104,8 +104,7 @@
                     <!-- Header Logo Start -->
                     <div class="align-self-center gi-header-logo">
                         <div class="header-logo">
-                            <a href="index.html"><img style="width: 230px" src="assets/img/logo/logo-1.png"
-                                    alt="Site Logo"></a>
+                            <a href="index.php"><img style="width: 230px" src="assets/img/logo/logo-1.png" alt="Site Logo"></a>
                         </div>
                     </div>
                     <!-- Header Logo End -->
@@ -124,8 +123,7 @@
                         <div class="gi-header-bottons">
                             <!-- Header User Start -->
                             <div class="gi-acc-drop">
-                                <a href="javascript:void(0)"
-                                    class="gi-header-btn gi-header-user dropdown-toggle gi-user-toggle" title="Account">
+                                <a href="javascript:void(0)" class="gi-header-btn gi-header-user dropdown-toggle gi-user-toggle" title="Account">
                                     <div class="header-icon">
                                         <i class="fi-rr-user"></i>
                                     </div>
@@ -188,135 +186,122 @@
                     <div class="gi-cat-dropdown">
                         <div class="gi-cat-block">
                             <div class="gi-cat-tab">
-                                <div class="gi-tab-list nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-home" type="button" role="tab"
-                                        aria-controls="v-pills-home" aria-selected="true"><i
-                                            class="fi-rr-cupcake"></i>Dairy & Bakery</button>
-                                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-profile" type="button" role="tab"
-                                        aria-controls="v-pills-profile" aria-selected="false"><i
-                                            class="fi fi-rs-apple-whole"></i>Fruits & Vegetable</button>
-                                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-messages" type="button" role="tab"
-                                        aria-controls="v-pills-messages" aria-selected="false"><i
-                                            class="fi fi-rr-popcorn"></i>Snack & Spice</button>
-                                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-settings" type="button" role="tab"
-                                        aria-controls="v-pills-settings" aria-selected="false"><i
-                                            class="fi fi-rr-drink-alt"></i>Juice & Drinks </button>
+                                <div class="gi-tab-list nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                                    <?php
+                                    $getFirstCategory = "select category_id, category_name from categories where hasParentCategory = 0 LIMIT 1";
+                                    $retrievedFirstCategory = mysqli_query($conn, $getFirstCategory);
+                                    $firstCategory = mysqli_fetch_assoc($retrievedFirstCategory);
+                                    $firstCategoryName = $firstCategory['category_name'];
+                                    $firstCategoryId = $firstCategory['category_id'];
+                                    ?>
+                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#<?php echo $firstCategoryId ?>" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><?php echo $firstCategoryName ?></button>
+                                    <?php
+                                    $getCategoriesForHeader = "select category_id, category_name from categories where hasParentCategory = 0 and category_id <> '$firstCategoryId'";
+                                    $retrievedCategoriesForHeader = mysqli_query($conn, $getCategoriesForHeader);
+                                    while ($categoriesForHeader = mysqli_fetch_array($retrievedCategoriesForHeader)) {
+                                    ?>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#<?php echo $categoriesForHeader['category_id'] ?>" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><?php echo $categoriesForHeader['category_name'] ?></button>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                                 <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                        aria-labelledby="v-pills-home-tab">
+                                    <!-- To show one active list -->
+                                    <div class="tab-pane fade show active" id="<?php echo $firstCategoryId ?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                         <div class="tab-list row">
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Dairy</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Milk</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Ice cream</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cheese</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Frozen custard</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Frozen yogurt</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Bakery</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cake and Pastry</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Rusk Toast</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Bread & Buns</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Chocolate Brownie</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cream Roll</a></li>
-                                                </ul>
-                                            </div>
+                                            <?php
+                                            $getFirstRelatedSubCategory = "select category_name, category_id from categories where parent_category_id = '$firstCategoryId'";
+                                            $retrievedFirstRelatedSubCategory = mysqli_query($conn, $getFirstRelatedSubCategory);
+                                            while ($firstRelatedSubCategory = mysqli_fetch_assoc($retrievedFirstRelatedSubCategory)) {
+                                            ?>
+                                                <div class="col">
+                                                    <h6 class="gi-col-title"><?php echo $firstRelatedSubCategory['category_name'] ?></h6>
+                                                    <ul class="cat-list">
+                                                        <?php
+                                                        $firstRelatedSubCategoryProduct = $firstRelatedSubCategory['category_id'];
+                                                        $getFirstCategoryProducts = "select product_id, product_name from products where parent_category_id = '$firstRelatedSubCategoryProduct'";
+                                                        $retrievedFirstCategoryProducts = mysqli_query($conn, $getFirstCategoryProducts);
+                                                        while ($relatedSubCategoryProduct = mysqli_fetch_assoc($retrievedFirstCategoryProducts)) {
+                                                        ?>
+                                                            <li><a href="products/product-page/product-page.php?product_id=<?php echo $relatedSubCategoryProduct['product_id'] ?>"><?php echo $relatedSubCategoryProduct['product_name'] ?></a></li>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </div>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                        aria-labelledby="v-pills-profile-tab">
-                                        <div class="tab-list row">
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Fruits</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cauliflower</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Bell Peppers</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Broccoli</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cabbage</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Tomato</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Vegetable</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cauliflower</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Bell Peppers</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Broccoli</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cabbage</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Tomato</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                        aria-labelledby="v-pills-messages-tab">
-                                        <div class="tab-list row">
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Snacks</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">French fries</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">potato chips</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Biscuits &
-                                                            Cookies</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Popcorn</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Rice Cakes</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Spice</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cinnamon Powder</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Cumin Powder</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Fenugreek Powder</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Pepper Powder</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Long Pepper</a></li>
-                                                </ul>
+
+                                    <!-- For those categories who doesnot have any sub categories -->
+                                    <?php
+                                    $getCategoriesWithNoSubCategory = "select category_name, category_id from categories where hasSubCategory = 0 and hasParentCategory = 0";
+                                    $retrievedCategoriesWithNoSubCategory = mysqli_query($conn, $getCategoriesWithNoSubCategory);
+                                    while ($categoriesWithNoSubCategory = mysqli_fetch_assoc($retrievedCategoriesWithNoSubCategory)) {
+                                    ?>
+                                        <div class="tab-pane fade show" id="<?php echo $categoriesWithNoSubCategory['category_id'] ?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                            <div class="tab-list row">
+                                                <div class="col">
+                                                    <h6 class="gi-col-title">Products</h6>
+                                                    <ul class="cat-list">
+                                                        <?php
+                                                        $productsOfCategoriesWithNoSubCategoryId = $categoriesWithNoSubCategory['category_id'];
+                                                        $getProductsOfCategoriesWithNoSubCategory = "select product_id, product_name from products where parent_category_id = '$productsOfCategoriesWithNoSubCategoryId'";
+                                                        $retrievedProductsOfCategoriesWithNoSubCategory = mysqli_query($conn, $getProductsOfCategoriesWithNoSubCategory);
+                                                        while ($productsOfCategoriesWithNoSubCategory = mysqli_fetch_assoc($retrievedProductsOfCategoriesWithNoSubCategory)) {
+                                                        ?>
+                                                            <li><a href="products/product-page/product-page.php?product_id=<?php echo $productsOfCategoriesWithNoSubCategory['product_id'] ?>"><?php echo $productsOfCategoriesWithNoSubCategory['product_name'] ?></a></li>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                        aria-labelledby="v-pills-settings-tab">
-                                        <div class="tab-list row">
-                                            <div class="col">
-                                                <h6 class="gi-col-title">Juice</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Mango Juice</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Coconut Water</a>
-                                                    </li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Tetra Pack</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Apple Juices</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Lychee Juice</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col">
-                                                <h6 class="gi-col-title">soft drink</h6>
-                                                <ul class="cat-list">
-                                                    <li><a href="shop-left-sidebar-col-3.html">Breizh Cola</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Green Cola</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Jolt Cola</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Mecca Cola</a></li>
-                                                    <li><a href="shop-left-sidebar-col-3.html">Topsia Cola</a></li>
-                                                </ul>
+                                    <?php
+                                    }
+                                    ?>
+
+                                    <!-- For all sub-categories and their products -->
+                                    <?php
+                                    $getRelatedSubCategories = "select category_id, category_name, parent_category_id from categories where hasParentCategory = 1";
+                                    $retrievedRelatedSubCategories = mysqli_query($conn, $getRelatedSubCategories);
+                                    while ($relatedSubCategories = mysqli_fetch_array($retrievedRelatedSubCategories)) {
+                                    ?>
+                                        <div class="tab-pane fade" id="<?php echo $relatedSubCategories['parent_category_id'] ?>" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                            <div class="tab-list row">
+                                                <?php
+                                                $correspondingIdToLookFor = $relatedSubCategories['parent_category_id'];
+                                                $getCorrespondingCategories = "select category_id, category_name from categories where parent_category_id = '$correspondingIdToLookFor'";
+                                                $retrievedCorrespondingCategories = mysqli_query($conn, $getCorrespondingCategories);
+                                                while ($correspondingCategories = mysqli_fetch_array($retrievedCorrespondingCategories)) {
+                                                ?>
+                                                    <div class="col">
+                                                        <h6 class="gi-col-title"><?php echo $correspondingCategories['category_name'] ?></h6>
+                                                        <ul class="cat-list">
+                                                            <?php
+                                                            $correspondingParentCategoryToLookFor = $correspondingCategories['category_id'];
+                                                            $getRelatedProductsOfSubCategories = "select product_id, product_name from products where parent_category_id = '$correspondingParentCategoryToLookFor'";
+                                                            $retrievedRelatedProductsOfSubCategories = mysqli_query($conn, $getRelatedProductsOfSubCategories);
+                                                            while ($relatedProductsOfSubCategories = mysqli_fetch_assoc($retrievedRelatedProductsOfSubCategories)) {
+                                                            ?>
+                                                                <li><a href="shop-left-sidebar-col-3.html"><?php echo $relatedProductsOfSubCategories['product_name'] ?></a></li>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </ul>
+                                                    </div>
+                                                <?php
+                                                }
+                                                ?>
                                             </div>
                                         </div>
-                                    </div>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -331,16 +316,14 @@
                                 <div class="gi-main-menu">
                                     <ul>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Home<i
-                                                    class="fi-rr-angle-small-right"></i></a>
+                                            <a href="javascript:void(0)" class="dropdown-arrow">Home<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
-                                                <li><a href="index.html">Grocery</a></li>
+                                                <li><a href="index.php">Grocery</a></li>
                                                 <li><a href="demo-2.html">Fashion</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown drop-list position-static">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Categories<i
-                                                    class="fi-rr-angle-small-right"></i></a>
+                                            <a href="javascript:void(0)" class="dropdown-arrow">Categories<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="mega-menu d-block">
                                                 <li class="d-flex">
                                                     <span class="bg"></span>
@@ -416,11 +399,9 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Products<i
-                                                    class="fi-rr-angle-small-right"></i></a>
+                                            <a href="javascript:void(0)" class="dropdown-arrow">Products<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
-                                                <li class="dropdown position-static"><a
-                                                        href="javascript:void(0)">Product page
+                                                <li class="dropdown position-static"><a href="javascript:void(0)">Product page
                                                         <i class="fi-rr-angle-small-right"></i></a>
                                                     <ul class="sub-menu sub-menu-child">
                                                         <li><a href="product-left-sidebar.html">Product left
@@ -429,8 +410,7 @@
                                                                 sidebar</a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="dropdown position-static"><a
-                                                        href="javascript:void(0)">Product Accordion
+                                                <li class="dropdown position-static"><a href="javascript:void(0)">Product Accordion
                                                         <i class="fi-rr-angle-small-right"></i></a>
                                                     <ul class="sub-menu sub-menu-child">
                                                         <li><a href="product-accordion-left-sidebar.html">left
@@ -446,8 +426,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Blog<i
-                                                    class="fi-rr-angle-small-right"></i></a>
+                                            <a href="javascript:void(0)" class="dropdown-arrow">Blog<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
                                                 <li><a href="blog-left-sidebar.html">left sidebar</a></li>
                                                 <li><a href="blog-right-sidebar.html">right sidebar</a></li>
@@ -460,8 +439,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Others<i
-                                                    class="fi-rr-angle-small-right"></i></a>
+                                            <a href="javascript:void(0)" class="dropdown-arrow">Others<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
                                                 <li><a href="about-us.html">About Us</a></li>
                                                 <li><a href="contact-us/contact-us.php">Contact Us</a></li>
@@ -551,7 +529,7 @@
                     <li class="dropdown drop-list">
                         <a href="javascript:void(0)" class="dropdown-arrow">Home</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Grocery</a></li>
+                            <li><a href="index.php">Grocery</a></li>
                             <li><a href="demo-2.html">Fashion</a></li>
                         </ul>
                     </li>

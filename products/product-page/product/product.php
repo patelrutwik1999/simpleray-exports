@@ -1,6 +1,6 @@
 <?php
-$categoryId = $_GET['category_id'];
-$getProduct = "select * from products where product_id = '$categoryId'";
+$productId = $_GET['product_id'];
+$getProduct = "select * from products where product_id = '$productId'";
 
 $retrievedProduct = mysqli_query($conn, $getProduct);
 $numofProduct = mysqli_num_rows($retrievedProduct);
