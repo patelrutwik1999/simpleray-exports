@@ -316,144 +316,46 @@
                                 <div class="gi-main-menu">
                                     <ul>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Home<i class="fi-rr-angle-small-right"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.php">Grocery</a></li>
-                                                <li><a href="demo-2.html">Fashion</a></li>
-                                            </ul>
+                                            <a href="index.php" class="dropdown-arrow">Home</a>
                                         </li>
-                                        <li class="dropdown drop-list position-static">
+                                        <li class="dropdown drop-list">
                                             <a href="javascript:void(0)" class="dropdown-arrow">Categories<i class="fi-rr-angle-small-right"></i></a>
-                                            <ul class="mega-menu d-block">
-                                                <li class="d-flex">
-                                                    <span class="bg"></span>
-                                                    <ul class="d-block mega-block">
-                                                        <li class="menu_title"><a href="javascript:void(0)">Classic</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar-col-3.html">Left sidebar 3
-                                                                column</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar-col-4.html">Left sidebar 4
-                                                                column</a>
-                                                        </li>
-                                                        <li><a href="shop-right-sidebar-col-3.html">Right sidebar 3
-                                                                column</a>
-                                                        </li>
-                                                        <li><a href="shop-right-sidebar-col-4.html">Right sidebar 4
-                                                                column</a>
-                                                        </li>
-                                                        <li><a href="shop-full-width.html">Full width 4 column</a>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="d-block mega-block">
-                                                        <li class="menu_title"><a href="javascript:void(0)">Banner</a>
-                                                        </li>
-                                                        <li><a href="shop-banner-left-sidebar-col-3.html">left
-                                                                sidebar 3
-                                                                column</a></li>
-                                                        <li><a href="shop-banner-left-sidebar-col-4.html">left
-                                                                sidebar 4
-                                                                column</a></li>
-                                                        <li><a href="shop-banner-right-sidebar-col-3.html">right
-                                                                sidebar
-                                                                3 column</a></li>
-                                                        <li><a href="shop-banner-right-sidebar-col-4.html">right
-                                                                sidebar
-                                                                4 column</a></li>
-                                                        <li><a href="shop-banner-full-width.html">Full width 4
-                                                                column</a>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="d-block mega-block">
-                                                        <li class="menu_title"><a href="javascript:void(0)">Columns</a>
-                                                        </li>
-                                                        <li><a href="shop-full-width-col-3.html">3 Columns full
-                                                                width</a></li>
-                                                        <li><a href="shop-full-width-col-4.html">4 Columns full
-                                                                width</a></li>
-                                                        <li><a href="shop-full-width-col-5.html">5 Columns full
-                                                                width</a></li>
-                                                        <li><a href="shop-full-width-col-6.html">6 Columns full
-                                                                width</a></li>
-                                                        <li><a href="shop-banner-full-width-col-3.html">Banner 3
-                                                                Columns</a>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="d-block mega-block">
-                                                        <li class="menu_title"><a href="javascript:void(0)">List</a>
-                                                        </li>
-                                                        <li><a href="shop-list-left-sidebar.html">Shop left
-                                                                sidebar</a></li>
-                                                        <li><a href="shop-list-right-sidebar.html">Shop right
-                                                                sidebar</a></li>
-                                                        <li><a href="shop-list-banner-left-sidebar.html">Banner left
-                                                                sidebar</a>
-                                                        </li>
-                                                        <li><a href="shop-list-banner-right-sidebar.html">Banner
-                                                                right
-                                                                sidebar</a></li>
-                                                        <li><a href="shop-list-full-col-2.html">Full width 2
-                                                                columns</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Products<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
-                                                <li class="dropdown position-static"><a href="javascript:void(0)">Product page
-                                                        <i class="fi-rr-angle-small-right"></i></a>
-                                                    <ul class="sub-menu sub-menu-child">
-                                                        <li><a href="product-left-sidebar.html">Product left
-                                                                sidebar</a></li>
-                                                        <li><a href="product-right-sidebar.html">Product right
-                                                                sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown position-static"><a href="javascript:void(0)">Product Accordion
-                                                        <i class="fi-rr-angle-small-right"></i></a>
-                                                    <ul class="sub-menu sub-menu-child">
-                                                        <li><a href="product-accordion-left-sidebar.html">left
-                                                                sidebar</a></li>
-                                                        <li><a href="product-accordion-right-sidebar.html">right
-                                                                sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="product-full-width.html">Product full width</a></li>
-                                                <li><a href="product-accordion-full-width.html">accordion full
-                                                        width</a>
-                                                </li>
+                                                <?php
+                                                $getCategoriesForTitleBar = "select category_name, category_id from categories where hasParentCategory = 0";
+                                                $retrievedCategoriesForTitleBar = mysqli_query($conn, $getCategoriesForTitleBar);
+                                                while ($categoriesForTitleBar = mysqli_fetch_assoc($retrievedCategoriesForTitleBar)) {
+
+                                                    $subCategoryIdToSearchFor = $categoriesForTitleBar['category_id'];
+                                                    $searchItsSubCategories = "select category_name, category_id from categories where parent_category_id = '$subCategoryIdToSearchFor'";
+                                                    $retrievedSearchSubCategories = mysqli_query($conn, $searchItsSubCategories);
+                                                    if (mysqli_num_rows($retrievedSearchSubCategories) > 0) {
+                                                ?>
+                                                        <li class="dropdown position-static"><a href="products/product-display.php?categoryId=<?php echo $categoriesForTitleBar['category_id'] ?>"><?php echo $categoriesForTitleBar['category_name'] ?>
+                                                                <i class="fi-rr-angle-small-right"></i></a>
+                                                            <ul class="sub-menu sub-menu-child">
+                                                                <?php
+                                                                while ($searchSubCategories = mysqli_fetch_assoc($retrievedSearchSubCategories)) {
+                                                                ?>
+                                                                    <li><a href="products/product-display.php?categoryId=<?php echo $searchSubCategories['category_id'] ?>"><?php echo $searchSubCategories['category_name'] ?></a></li>
+                                                                <?php
+                                                                }
+                                                                ?>
+                                                            </ul>
+                                                        </li>
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <li><a href="products/product-display.php?categoryId=<?php echo $categoriesForTitleBar['category_id'] ?>"><?php echo $categoriesForTitleBar['category_name'] ?></a></li>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                <?php
+                                                }
+                                                ?>
                                             </ul>
                                         </li>
-                                        <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Blog<i class="fi-rr-angle-small-right"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog-left-sidebar.html">left sidebar</a></li>
-                                                <li><a href="blog-right-sidebar.html">right sidebar</a></li>
-                                                <li><a href="blog-full-width.html">Full Width</a></li>
-                                                <li><a href="blog-detail-left-sidebar.html">Detail left sidebar</a>
-                                                </li>
-                                                <li><a href="blog-detail-right-sidebar.html">Detail right
-                                                        sidebar</a></li>
-                                                <li><a href="blog-detail-full-width.html">Detail Full Width</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Others<i class="fi-rr-angle-small-right"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="contact-us/contact-us.php">Contact Us</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="compare.html">Compare</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="register.html">Register</a></li>
-                                                <li><a href="track-order.html">Track Order</a></li>
-                                                <li><a href="terms-condition.html">Terms Condition</a></li>
-                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                            </ul>
-                                        </li>
+
                                         <li class="non-drop"><a href="contact-us/contact-us.php">
                                                 <i class="fa fa-address-book" aria-hidden="true"></i>Contact Us</a>
                                         </li>
