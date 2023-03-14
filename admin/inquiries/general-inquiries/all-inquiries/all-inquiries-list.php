@@ -39,8 +39,18 @@
                             <div class="btn-toolbar p-3" role="toolbar">
                                 <div class="col-md-8">
                                     <div class="btn-group me-2 mb-2 mb-sm-0">
-                                        <button type="button" class="btn btn-primary waves-light waves-effect"><i
-                                                class="far fa-trash-alt"></i></button>
+                                        <button type="button" class="btn btn-primary waves-light waves-effect"
+                                            id="delete_inquiry">All</button>
+
+                                    </div>
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <button type="button" class="btn btn-primary waves-light waves-effect"
+                                            id="delete_inquiry">New</button>
+
+                                    </div>
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <button type="button" class="btn btn-primary waves-light waves-effect"
+                                            id="delete_inquiry">processed</button>
                                     </div>
                                 </div>
 
@@ -71,17 +81,19 @@
                                     }
                                     ?>
                                         <div class="col-mail col-mail-1">
-                                            <div class="checkbox-wrapper-mail">
-                                                <input type="checkbox"
-                                                    id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>">
-                                                <label for="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
-                                                    class="toggle"></label>
+                                            <div>
+                                                <button type="button"
+                                                    class="btn btn-outline-primary btn-sm waves-effect waves-light ms-3 mt-2"
+                                                    id="delete_inquiry"
+                                                    data-id="<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"><i
+                                                        style="line-height: 1.5rem; margin: auto auto; font-size:large;"
+                                                        class="far fa-trash-alt"></i></button>
                                             </div>
                                             <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
                                                 class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
-                                            <span class="star-toggle far fa-star"></span>
+
                                         </div>
                                         <div class="col-mail col-mail-2">
                                             <a href="inquiries/general-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"
