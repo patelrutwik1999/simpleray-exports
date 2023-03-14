@@ -86,7 +86,7 @@
                                     }
                                     ?>
                                         <div class="col-mail col-mail-1">
-                                            <div class="checkbox-wrapper-mail">
+                                            <div>
                                                 <button type="button"
                                                     class="btn btn-outline-primary btn-sm waves-effect waves-light ms-3 mt-2"
                                                     id="delete_inquiry"
@@ -98,7 +98,6 @@
                                                 class="title">
                                                 <?php echo $retrieved_general_inquiries["full_name"]; ?>
                                             </a>
-                                            <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
                                             <a href="inquiries/general-inquiries/new-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_general_inquiries['inquiry_id'] ?>"

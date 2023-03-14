@@ -10,6 +10,9 @@
     include '../../../top-header.php';
     ?>
     <link href="inquiries/general-inquiries/new-inquiries/new-inquiries-list.css" rel="stylesheet" media="all">
+
+    <!-- Sweet Alert-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -32,7 +35,7 @@
     include '../../../sub-footer.php';
     ?>
 
-<script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function () {
 
             $(document).on('click', '#delete_inquiry', function () {
@@ -70,7 +73,7 @@
             });
         });
     </script>
-    
+
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -89,6 +92,12 @@
 
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweet-alerts.init.js"></script>
 
     <script>
         var itemsPerPage = 5;
