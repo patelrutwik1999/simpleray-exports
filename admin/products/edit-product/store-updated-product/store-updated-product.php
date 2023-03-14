@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if (mysqli_query($conn, $update_product)) {
                     mysqli_close($conn);
-                    $_SESSION['is-error'] = true;
+                    $_SESSION['is-error'] = false;
                     $_SESSION['message'] = true;
                     $_SESSION['success-message'] = "The product has been updated.";
                     header("location:../edit-product-form-base.php?product_id=$productId");
