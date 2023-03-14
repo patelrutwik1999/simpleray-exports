@@ -31,6 +31,46 @@
     include '../../../sidebar/right-sidebar.html';
     include '../../../sub-footer.php';
     ?>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            $(document).on('click', '#delete_inquiry', function () {
+                var id = $(this).data('id');
+
+                swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                }).then((result) => {
+                    if (result.value) {
+                        $.ajax({
+                            url: 'inquiries/general-inquiries/delete-inquiry/delete-inquiry.php',
+                            type: 'POST',
+                            data: 'inquiry_id=' + id,
+                            dataType: 'json'
+                        })
+                            .done(function (response) {
+                                swal.fire('Deleted!', response.message, response.status);
+                                setInterval(function () {
+                                    location.reload();
+                                }, 3000);
+                            })
+                            .fail(function () {
+                                swal.fire('Oops...', 'Something went wrong with ajax !', 'error');
+                            });
+                    }
+
+                })
+
+            });
+        });
+    </script>
+    
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>

@@ -39,25 +39,29 @@
                             <div class="btn-toolbar p-3" role="toolbar">
                                 <div class="col-md-8">
                                     <div class="btn-group me-2 mb-2 mb-sm-0">
-                                        <button type="button" class="btn btn-primary waves-light waves-effect"
-                                            id="delete_inquiry">All</button>
-
+                                        <a href="inquiries/general-inquiries/all-inquiries/display-all-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">All</button>
+                                        </a>
                                     </div>
                                     <div class="btn-group me-2 mb-2 mb-sm-0">
-                                        <button type="button" class="btn btn-primary waves-light waves-effect"
-                                            id="delete_inquiry">New</button>
-
+                                        <a href="inquiries/general-inquiries/new-inquiries/display-new-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">New</button>
+                                        </a>
                                     </div>
                                     <div class="btn-group me-2 mb-2 mb-sm-0">
-                                        <button type="button" class="btn btn-primary waves-light waves-effect"
-                                            id="delete_inquiry">processed</button>
+                                        <a
+                                            href="inquiries/general-inquiries/processed-inquiries/display-processed-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">processed</button>
+                                        </a>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4">
                                     <input class="btn-group mb-2 mb-sm-0" style="width: 100%" type="text"
                                         id="search-input" placeholder="Search...">
-
                                 </div>
                             </div>
 
