@@ -5,6 +5,7 @@
     <?php
     session_start();
     include '../top-header.php';
+    include '../config/config.php';
     ?>
     <title>Quick Inquiry</title>
 </head>
