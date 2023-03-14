@@ -39,8 +39,23 @@
                             <div class="btn-toolbar p-3" role="toolbar">
                                 <div class="col-md-8">
                                     <div class="btn-group me-2 mb-2 mb-sm-0">
-                                        <button type="button" class="btn btn-primary waves-light waves-effect"><i
-                                                class="far fa-trash-alt"></i></button>
+                                        <a href="inquiries/product-inquiries/all-inquiries/display-all-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">All</button>
+                                        </a>
+                                    </div>
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <a href="inquiries/product-inquiries/new-inquiries/display-new-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">New</button>
+                                        </a>
+                                    </div>
+                                    <div class="btn-group me-2 mb-2 mb-sm-0">
+                                        <a
+                                            href="inquiries/product-inquiries/processed-inquiries/display-processed-inquiries.php">
+                                            <button type="button"
+                                                class="btn btn-primary waves-light waves-effect">processed</button>
+                                        </a>
                                     </div>
                                 </div>
 
@@ -71,11 +86,13 @@
                                     }
                                     ?>
                                         <div class="col-mail col-mail-1">
-                                            <div class="checkbox-wrapper-mail">
-                                                <input type="checkbox"
-                                                    id="<?php echo $retrieved_product_inquiries['inquiry_id'] ?>">
-                                                <label for="<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
-                                                    class="toggle"></label>
+                                            <div>
+                                                <button type="button"
+                                                    class="btn btn-outline-primary btn-sm waves-effect waves-light ms-3 mt-2"
+                                                    id="delete_inquiry"
+                                                    data-id="<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"><i
+                                                        style="line-height: 1.5rem; margin: auto auto; font-size:large;"
+                                                        class="far fa-trash-alt"></i></button>
                                             </div>
                                             <a href="inquiries/product-inquiries/all-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
                                                 class="title">
