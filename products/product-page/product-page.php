@@ -19,6 +19,7 @@
 
     <?php
     include "product/product.php";
+    include "../../products-catalog/products-catalog.php";
     include '../../footer.php';
     include '../../sub-footer.php';
     ?>
