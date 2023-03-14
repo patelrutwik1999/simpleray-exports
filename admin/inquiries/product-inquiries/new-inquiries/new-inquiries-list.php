@@ -98,7 +98,6 @@
                                                 class="title">
                                                 <?php echo $retrieved_product_inquiries["first_name"] . " " . $retrieved_product_inquiries["first_name"]; ?>
                                             </a>
-                                            <span class="star-toggle far fa-star"></span>
                                         </div>
                                         <div class="col-mail col-mail-2">
                                             <a href="inquiries/product-inquiries/new-inquiries/view-specific-inquiry/view.php?id=<?php echo $retrieved_product_inquiries['inquiry_id'] ?>"
