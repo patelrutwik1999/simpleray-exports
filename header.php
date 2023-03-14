@@ -315,11 +315,11 @@
                             <div class="col-md-12 align-self-center">
                                 <div class="gi-main-menu">
                                     <ul>
-                                        <li class="dropdown drop-list">
-                                            <a href="index.php" class="dropdown-arrow">Home</a>
+                                        <li class="dropdown non-drop">
+                                            <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                                         </li>
                                         <li class="dropdown drop-list">
-                                            <a href="javascript:void(0)" class="dropdown-arrow">Categories<i class="fi-rr-angle-small-right"></i></a>
+                                            <a class="dropdown-arrow"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Categories<i class="fi-rr-angle-small-right"></i></a>
                                             <ul class="sub-menu">
                                                 <?php
                                                 $getCategoriesForTitleBar = "select category_name, category_id from categories where hasParentCategory = 0";
@@ -432,7 +432,7 @@
                         <a href="index.php" class="dropdown-arrow"> <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
                     </li>
 
-                    <li><a href="javascript:void(0)">Categories</a>
+                    <li><a href="javascript:void(0)"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Categories</a>
                         <ul class="sub-menu">
                             <?php
                             $getCategoriesForTitleBar = "select category_name, category_id from categories where hasParentCategory = 0";
@@ -469,12 +469,12 @@
                         </ul>
                     </li>
                     <li class="non-drop"><a href="contact-us/contact-us.php">
-                                                <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact Us</a>
-                                        </li>
-                                        <li class="non-drop"><a href="inquiry/submit-inquiry.php">
-                                                <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Quick
-                                                Inquiry</a>
-                                        </li>
+                            <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact Us</a>
+                    </li>
+                    <li class="non-drop"><a href="inquiry/submit-inquiry.php">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Quick
+                            Inquiry</a>
+                    </li>
                 </ul>
             </div>
             <div class="header-res-lan-curr">
