@@ -38,23 +38,45 @@
     <?php
     include '../../sub-footer.php';
     ?>
-    <!-- <script>
-        $('#sa-warning').click(function() {
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#1cbb8c",
-                cancelButtonColor: "#f14e4e",
-                confirmButtonText: "Yes, delete it!"
-            }).then(function(result) {
-                if (result.value) {
-                    Swal.fire("Deleted!", "Your file has been deleted.", "success");
-                }
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(document).on('click', '#delete_product', function() {
+                var id = $(this).data('id');
+
+                swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!',
+                }).then((result) => {
+                    if (result.value) {
+                        $.ajax({
+                                url: 'products/delete-product/delete-product.php',
+                                type: 'POST',
+                                data: 'product_id=' + id,
+                                dataType: 'json'
+                            })
+                            .done(function(response) {
+                                swal.fire('Deleted!', response.message, response.status);
+                                setInterval(function() {
+                                    location.reload();
+                                }, 3000);
+                            })
+                            .fail(function() {
+                                swal.fire('Oops...', 'Something went wrong with ajax !', 'error');
+                            });
+                    }
+
+                })
+
             });
         });
-    </script> -->
+    </script>
+
 
     <!-- Required datatable js -->
     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>

@@ -81,7 +81,7 @@
                                             </td>
                                             <td>
                                                 <a
-                                                    href="products/view-image/view.php?path=<?php echo $retrieved_products['photo'] ?>">
+                                                    href="products/view-image/view.php?path=<?php echo $retrieved_products['photo'] ?>" target = "_blank">
                                                     Image
                                                 </a>
                                             </td>

@@ -84,8 +84,8 @@
                                                 <?php echo $retrieved_products['parent_category_name'] ?>
                                             </td>
                                             <td>
-                                                <a
-                                                    href="products/view-image/view.php?path=<?php echo $retrieved_products['photo'] ?>">
+                                                <a href="products/view-image/view.php?path=<?php echo $retrieved_products['photo'] ?>"
+                                                    target="_blank">
                                                     Image
                                                 </a>
                                             </td>
@@ -95,9 +95,11 @@
                                                         style="line-height: 1.5rem; margin: auto auto; font-size:larger;"
                                                         class="fas fa-pencil-alt"></i>
                                                 </a>
-                                                <button class="btn btn-outline-primary btn-sm waves-effect waves-light"
-                                                    id="sa-success"><i
-                                                        style="line-height: 1.5rem; margin: auto auto; font-size:larger;"
+                                                <button type="button"
+                                                    class="btn btn-outline-primary btn-sm waves-effect waves-light"
+                                                    id="delete_product"
+                                                    data-id="<?php echo $retrieved_products['product_id'] ?>"><i
+                                                        style="line-height: 1.5rem; margin: auto auto; font-size:large;"
                                                         class="far fa-trash-alt"></i></button>
                                             </td>
                                         </tr>
