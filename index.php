@@ -18,6 +18,7 @@
     include 'sliding-images/sliding-images.php';
     include 'categories-catalog/categories-catalog.php';
     include 'categories/category-display.php';
+    include 'products-catalog/products-catalog.php';
     include 'footer.php';
     include 'sub-footer.php';
     ?>
