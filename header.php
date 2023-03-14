@@ -429,7 +429,7 @@
             <div class="gi-menu-content">
                 <ul>
                     <li class="dropdown drop-list">
-                        <a href="index.php" class="dropdown-arrow">Home</a>
+                        <a href="index.php" class="dropdown-arrow"> <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Home</a>
                     </li>
 
                     <li><a href="javascript:void(0)">Categories</a>
@@ -468,6 +468,13 @@
                             ?>
                         </ul>
                     </li>
+                    <li class="non-drop"><a href="contact-us/contact-us.php">
+                                                <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact Us</a>
+                                        </li>
+                                        <li class="non-drop"><a href="inquiry/submit-inquiry.php">
+                                                <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Quick
+                                                Inquiry</a>
+                                        </li>
                 </ul>
             </div>
             <div class="header-res-lan-curr">

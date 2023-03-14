@@ -10,6 +10,9 @@
     include '../../../top-header.php';
     ?>
     <link href="inquiries/product-inquiries/all-inquiries/all-inquiries-list.css" rel="stylesheet" media="all">
+
+    <!-- Sweet Alert-->
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -89,6 +92,12 @@
 
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="assets/js/pages/sweet-alerts.init.js"></script>
 
     <script>
         var itemsPerPage = 5;
